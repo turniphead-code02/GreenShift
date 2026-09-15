@@ -1,0 +1,10 @@
+GREENSHIFT — PHIẾU HƯỚNG DẪN KẾ TOÁN 3 PHÚT
+
+1. Chuẩn bị hóa đơn điện, nhiên liệu và số liệu sản lượng.
+2. Nhập kWh điện, lít/kg/m3 nhiên liệu và sản lượng đúng đơn vị.
+3. Với Scope 3, nhập Activity Data + EF khi có; nếu đã có kết quả tCO2e đã tính thì dùng ô trực tiếp.
+4. Kiểm tra cảnh báo bất thường trên Dashboard.
+5. Bấm “Lưu Dữ liệu Năm” để lưu bản cục bộ và đồng bộ bản sao lên Blob theo cấu hình triển khai.
+6. Xuất Excel và kiểm tra lại 9 phần trước khi gửi chuyên gia/thẩm tra.
+
+Lưu ý: GreenShift là công cụ hỗ trợ kiểm kê; việc xác minh độc lập/ISO 14064-3 vẫn do bên thẩm tra thực hiện.

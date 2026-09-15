@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Đăng nhập - GreenShift Intelligence</title>
+  <link rel="icon" type="image/png" href="Images/logo_ico.png">
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    body {
+      background-color: #f8fafc;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      font-family: var(--font-sans, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif);
+      margin: 0;
+      padding: 1rem;
+    }
+    .login-container {
+      background: white;
+      padding: 2.5rem;
+      border-radius: 12px;
+      box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+      width: 100%;
+      max-width: 440px;
+      border: 1px solid #e2e8f0;
+    }
+    .login-header {
+      text-align: center;
+      margin-bottom: 1.75rem;
+    }
+    .login-logo {
+      font-size: 2rem;
+      color: #1a7f4b;
+      font-weight: 800;
+      margin-bottom: 0.5rem;
+    }
+    .form-group {
+      margin-bottom: 1.25rem;
+    }
+    .form-group label {
+      display: block;
+      margin-bottom: 0.4rem;
+      font-size: 0.88rem;
+      font-weight: 600;
+      color: #334155;
+    }
+    .form-control {
+      width: 100%;
+      padding: 0.75rem 1rem;
+      border: 1px solid #cbd5e1;
+      border-radius: 6px;
+      font-size: 0.95rem;
+      box-sizing: border-box;
+      transition: all 0.2s;
+    }
+    .form-control:focus {
+      outline: none;
+      border-color: #1a7f4b;
+      box-shadow: 0 0 0 3px rgba(26, 127, 75, 0.15);
+    }
+    .btn-login {
+      width: 100%;
+      padding: 0.85rem;
+      background: #1a7f4b;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      font-size: 1rem;
+      font-weight: 700;
+      cursor: pointer;
+      transition: background 0.2s;
+      margin-top: 0.5rem;
+    }
+    .btn-login:hover {
+      background: #0f4a2b;
+    }
+    .system-hint {
+      background: #ecfdf5;
+      border: 1px solid #a7f3d0;
+      border-radius: 8px;
+      padding: 0.85rem 1rem;
+      margin-bottom: 1.5rem;
+      font-size: 0.85rem;
+      color: #065f46;
+      line-height: 1.6;
+    }
+    .system-hint code {
+      background: white;
+      padding: 0.15rem 0.4rem;
+      border-radius: 4px;
+      border: 1px solid #a7f3d0;
+      font-weight: 700;
+      color: #047857;
+    }
+    .back-home {
+      position: absolute;
+      top: 1.5rem;
+      left: 1.5rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      text-decoration: none;
+      color: #1a7f4b;
+      font-weight: 700;
+      font-size: 0.9rem;
+      padding: 0.5rem 1rem;
+      border-radius: 6px;
+      background: white;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.06);
+      border: 1px solid #e2e8f0;
+      transition: all 0.2s;
+    }
+    .back-home:hover {
+      background: #f1f5f9;
+      transform: translateX(-2px);
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Nút quay lại trang chủ -->
+  <a href="index.html" class="back-home">
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+    <span>Về trang chủ</span>
+  </a>
+
+  <div class="login-container">
+    <div class="login-header">
+      <div class="login-logo">GreenShift</div>
+      <h2 style="color: #0f172a; font-size: 1.35rem; margin: 0 0 0.25rem 0; font-weight: 800;">Đăng Nhập Hệ Thống</h2>
+      <p style="color: #64748b; font-size: 0.88rem; margin: 0;">Nền tảng Quản trị Phát thải Carbon &amp; ESG</p>
+    </div>
+
+    <!-- Thông tin tài khoản định danh hệ thống -->
+    <div class="system-hint">
+      <strong>Tài khoản hệ thống mặc định:</strong><br>
+      &bull; Tên đăng nhập: <code>greenshiftacl2026</code><br>
+      &bull; Mật khẩu: <code>1234</code>
+    </div>
+
+    <!-- Form Đăng Nhập Độc Lập (Không phụ thuộc localhost) -->
+    <form id="login-form">
+      <div class="form-group">
+        <label>Chọn Phân Hệ Quản Lý</label>
+        <select id="login-system" class="form-control" required>
+          <option value="carbon" selected>Carbon Inventory (Kiểm kê KNK ISO 14064)</option>
+          <option value="cbam">CBAM (Cơ chế Biên giới Carbon EU)</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label>Tài khoản</label>
+        <input type="text" id="login-username" class="form-control" placeholder="Nhập tài khoản" value="greenshiftacl2026" required>
+      </div>
+
+      <div class="form-group">
+        <label>Mật khẩu</label>
+        <div style="position: relative;">
+          <input type="password" id="login-password" class="form-control" placeholder="Nhập mật khẩu" value="1234" required style="padding-right: 2.5rem;">
+          <button type="button" tabindex="-1" onclick="togglePassword('login-password', this)" style="position: absolute; right: 0.5rem; top: 50%; transform: translateY(-50%); background: none; border: none; cursor: pointer; color: #9ca3af; padding: 0.25rem;">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path><circle cx="12" cy="12" r="3"></circle></svg>
+          </button>
+        </div>
+      </div>
+
+      <button type="submit" class="btn-login">Đăng Nhập Hệ Thống &rarr;</button>
+    </form>
+  </div>
+
+  <script>
+    // Toggle Password Visibility
+    function togglePassword(inputId, btn) {
+      const input = document.getElementById(inputId);
+      if (input.type === 'password') {
+        input.type = 'text';
+        btn.innerHTML = '<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17.94 17.94A10.07 10.07 0 0 1 12 20c-7 0-11-8-11-8a18.45 18.45 0 0 1 5.06-5.94M9.9 4.24A9.12 9.12 0 0 1 12 4c7 0 11 8 11 8a18.5 18.5 0 0 1-2.16 3.19m-6.72-1.07a3 3 0 1 1-4.24-4.24"></path><line x1="1" y1="1" x2="23" y2="23"></line></svg>';
+        btn.style.color = '#1a7f4b';
+      } else {
+        input.type = 'password';
+        btn.innerHTML = '<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path><circle cx="12" cy="12" r="3"></circle></svg>';
+        btn.style.color = '#9ca3af';
+      }
+    }
+
+    // Xử lý đăng nhập trực tiếp (Client-Side) - Hoạt động 100% trên cả Localhost và Vercel
+    const loginForm = document.getElementById('login-form');
+    loginForm.addEventListener('submit', function(e) {
+      e.preventDefault();
+      
+      const username = document.getElementById('login-username').value.trim();
+      const password = document.getElementById('login-password').value.trim();
+      const system = document.getElementById('login-system').value;
+
+      // Tài khoản duy nhất: greenshiftacl2026 / 1234
+      if (username === 'greenshiftacl2026' && password === '1234') {
+        // Lưu thông tin phiên đăng nhập
+        localStorage.setItem('gs_current_user', username);
+        
+        // Đảm bảo dữ liệu hồ sơ doanh nghiệp đã được khởi tạo trong LocalStorage
+        let users = JSON.parse(localStorage.getItem('gs_users')) || [];
+        let user = users.find(u => u.username === username);
+        if (!user) {
+          user = {
+            username: username,
+            company: {
+              name: 'GreenShift ACL Enterprise',
+              taxId: '0109998888',
+              address: 'Tòa nhà GreenShift, Hà Nội, Việt Nam',
+              sector: 'Sản xuất công nghiệp & Năng lượng'
+            }
+          };
+          users.push(user);
+          localStorage.setItem('gs_users', JSON.stringify(users));
+        }
+
+        // Chuyển hướng trực tiếp theo hệ thống đã chọn
+        if (system === 'carbon') {
+          window.location.href = 'carbon-inventory.html';
+        } else {
+          window.location.href = 'cbam-dashboard.html';
+        }
+      } else {
+        alert('Sai tài khoản hoặc mật khẩu!\nVui lòng đăng nhập với tài khoản: greenshiftacl2026\nMật khẩu: 1234');
+      }
+    });
+  </script>
+</body>
+</html>

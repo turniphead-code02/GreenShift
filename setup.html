@@ -1,0 +1,694 @@
+﻿<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Thiết lập thông tin | GreenShift</title>
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    body {
+      background-color: #f4f6f8;
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      min-height: 100vh;
+      padding: 2rem;
+    }
+    .setup-container {
+      background: white;
+      padding: 3rem;
+      border-radius: var(--radius-lg);
+      box-shadow: var(--shadow-lg);
+      width: 100%;
+      max-width: 600px;
+      margin: 2rem auto;
+    }
+    .setup-header {
+      text-align: center;
+      margin-bottom: 2.5rem;
+    }
+    .setup-header h2 {
+      color: var(--color-text-primary);
+      font-size: 1.75rem;
+    }
+    
+    /* Branch Form Styling */
+    .branch-card {
+      background: #fafafa;
+      border: 1px solid var(--color-border);
+      border-radius: var(--radius-md);
+      padding: 2rem;
+      margin-bottom: 2rem;
+    }
+    .branch-header {
+      font-size: 1.25rem;
+      font-weight: bold;
+      margin-bottom: 1.5rem;
+      color: var(--color-primary);
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <a href="index.html" style="position: absolute; top: 2rem; left: 2rem; display: flex; align-items: center; gap: 0.5rem; text-decoration: none; color: var(--color-primary); font-weight: 600; padding: 0.5rem 1rem; border-radius: 6px; background: white; box-shadow: 0 2px 4px rgba(0,0,0,0.05); transition: background 0.2s; z-index: 10;">
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+    Về trang chủ
+  </a>
+
+  <!-- Step 1: Main Company Form -->
+  <div class="setup-container" id="step1-container">
+    <div class="setup-header">
+      <h2>Thiết lập Công ty & Ngành nghề</h2>
+    </div>
+    <form id="setup-form">
+      
+      <div class="form-group">
+        <label>Tên công ty *</label>
+        <input type="text" id="setup-name" class="form-control" required placeholder="Nhập tên công ty">
+      </div>
+      
+      <div class="form-group">
+        <label>Mã số thuế</label>
+        <input type="text" id="setup-tax" class="form-control" placeholder="Nhập mã số thuế">
+      </div>
+
+      <div class="form-row">
+        <div class="form-group">
+          <label>Giấy phép ĐKKD / Quyết định thành lập</label>
+          <input type="text" id="setup-license" class="form-control" placeholder="Số giấy phép...">
+        </div>
+        <div class="form-group">
+          <label>Năm thành lập</label>
+          <input type="number" id="setup-founded-year" class="form-control" placeholder="Ví dụ: 2010">
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label>Địa chỉ cơ sở *</label>
+        <input type="text" id="setup-address" class="form-control" required placeholder="Số nhà, Đường, Quận/Huyện, Tỉnh/TP">
+      </div>
+      
+      <div class="form-row">
+        <div class="form-group">
+          <label>Cơ quan quản lý trực tiếp</label>
+          <input type="text" id="setup-manager-agency" class="form-control" placeholder="Ví dụ: Sở TNMT Tỉnh Đồng Nai">
+        </div>
+        <div class="form-group">
+          <label>Tọa độ địa lý (GPS)</label>
+          <input type="text" id="setup-gps" class="form-control" placeholder="Ví dụ: 10.7626, 106.6601">
+        </div>
+      </div>
+
+      <div class="form-row">
+        <div class="form-group">
+          <label>Số điện thoại liên hệ *</label>
+          <input type="text" id="setup-phone" class="form-control" required placeholder="SĐT công ty">
+        </div>
+        <div class="form-group">
+          <label>Email liên hệ *</label>
+          <input type="email" id="setup-email" class="form-control" required placeholder="Email công ty">
+        </div>
+        <div class="form-group">
+          <label>Website</label>
+          <input type="text" id="setup-website" class="form-control" placeholder="https://...">
+        </div>
+      </div>
+
+      <div style="border-top: 1px solid var(--color-border); margin: 2rem 0;"></div>
+      <h3 style="color: var(--color-primary); margin-bottom: 1rem;">Thông tin Người đại diện pháp luật</h3>
+      
+      <div class="form-row">
+        <div class="form-group">
+          <label>Họ và tên *</label>
+          <input type="text" id="setup-rep-name" class="form-control" required placeholder="Họ tên người đại diện">
+        </div>
+        <div class="form-group">
+          <label>Chức vụ *</label>
+          <input type="text" id="setup-rep-title" class="form-control" required placeholder="Giám đốc, Tổng giám đốc...">
+        </div>
+      </div>
+      <div class="form-row">
+        <div class="form-group">
+          <label>Điện thoại người đại diện</label>
+          <input type="text" id="setup-rep-phone" class="form-control" placeholder="SĐT người đại diện">
+        </div>
+        <div class="form-group">
+          <label>Email người đại diện</label>
+          <input type="email" id="setup-rep-email" class="form-control" placeholder="Email người đại diện">
+        </div>
+      </div>
+
+      <div style="border-top: 1px solid var(--color-border); margin: 2rem 0;"></div>
+      <h3 style="color: var(--color-primary); margin-bottom: 1rem;">Phân loại chuyên môn & Mô tả hạ tầng</h3>
+
+
+      <div class="form-group">
+        <label>Ngành nghề (Rất quan trọng) *</label>
+        <select id="setup-industry" class="form-control" required>
+          <option value="" disabled selected>Chọn ngành nghề</option>
+          <optgroup label="Bắt buộc kiểm kê (Nhóm hàng CBAM xuất khẩu EU)">
+            <option value="Sắt Thép">Sắt Thép</option>
+            <option value="Nhôm">Nhôm</option>
+            <option value="Xi măng">Xi măng</option>
+            <option value="Phân bón">Phân bón</option>
+            <option value="Nhiệt điện / Điện lực">Nhiệt điện / Điện lực</option>
+            <option value="Hydrogen">Hydrogen</option>
+          </optgroup>
+          <optgroup label="Bắt buộc kiểm kê (QĐ 42/2026/QĐ-TTg)">
+            <option value="Bao bì & Giấy">Bao bì & Giấy</option>
+            <option value="Dệt may">Dệt may</option>
+            <option value="Da giày">Da giày</option>
+            <option value="Nhựa & Hóa chất">Nhựa & Hóa chất</option>
+            <option value="Thực phẩm & Đồ uống">Thực phẩm & Đồ uống</option>
+            <option value="Cơ khí chế tạo">Cơ khí chế tạo</option>
+            <option value="Nông nghiệp">Nông nghiệp</option>
+            <option value="Vận tải & Logistics">Vận tải & Logistics</option>
+          </optgroup>
+          <optgroup label="Kiểm kê tự nguyện (Doanh nghiệp khác)">
+            <option value="Gỗ & Nội thất">Gỗ & Nội thất</option>
+            <option value="Điện tử">Điện tử</option>
+          </optgroup>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label>Chuẩn hệ số IPCC (GWP) *</label>
+        <select id="setup-ipcc-ar" class="form-control" required>
+          <option value="AR4-100">IPCC AR4 (100 năm)</option>
+          <option value="AR5-100" selected>IPCC AR5 (100 năm) - Chuẩn quốc tế hiện hành</option>
+          <option value="AR6-100">IPCC AR6 (100 năm) - Mới nhất</option>
+        </select>
+        <small style="color: gray; display: block; margin-top: 5px;">Hệ thống sẽ tự động sử dụng Hệ số GWP tương ứng với chuẩn đã chọn khi tính toán Rò rỉ khí.</small>
+      </div>
+
+      <div class="form-row">
+        <div class="form-group">
+          <label>Doanh thu (triệu VNĐ) *</label>
+          <input type="number" id="setup-revenue" class="form-control" required>
+        </div>
+        <div class="form-group">
+          <label>Số lao động *</label>
+          <input type="number" id="setup-employees" class="form-control" required>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label>Sản lượng năm (tấn/sản phẩm) *</label>
+        <input type="number" id="setup-production" class="form-control" required>
+      </div>
+
+      <div class="form-group">
+        <label>Số lượng Cơ sở/Chi nhánh</label>
+        <input type="number" id="setup-branches" class="form-control" min="0" value="0" required>
+      </div>
+      
+      <div style="display: flex; gap: 1rem; margin-top: 1.5rem;">
+        <button type="button" class="btn btn-outline" id="btn-mock-data" style="flex: 1; font-size: 1.1rem; padding: 1rem;">Điền dữ liệu mẫu (Test)</button>
+        <button type="submit" class="btn btn-primary" style="flex: 2; font-size: 1.1rem; padding: 1rem;">Lưu thông tin</button>
+      </div>
+
+
+    </form>
+  </div>
+
+  <!-- Step 2: Branches Form (Hidden by default) -->
+  <div class="setup-container" id="step2-container" style="display: none; max-width: 800px;">
+    <div class="setup-header">
+      <h2>Thiết lập cơ sở/chi nhánh</h2>
+    </div>
+    <form id="branches-form">
+      <div id="branches-wrapper">
+        <!-- Branch boxes will be injected here via JS -->
+      </div>
+      <div style="display: flex; gap: 1rem; margin-top: 1.5rem;">
+        <button type="button" id="btn-back-step1" class="btn btn-secondary" style="flex: 1; font-size: 1.1rem; padding: 1rem; background: #e5e7eb; color: #374151; border: none;">&larr; Quay lại</button>
+        <button type="submit" class="btn btn-primary" style="flex: 2; font-size: 1.1rem; padding: 1rem;">Lưu Cấu hình & Bắt đầu &rarr;</button>
+      </div>
+    </form>
+  </div>
+
+  <script src="js/ipcc-data.js"></script>
+  <script src="js/ef-master.js"></script>
+  <script>
+    // Authentication Check
+    const currentUser = localStorage.getItem('gs_current_user');
+    if (!currentUser) {
+      window.location.href = 'login.html';
+    }
+
+    const users = JSON.parse(localStorage.getItem('gs_users')) || [];
+    const user = users.find(u => u.username === currentUser);
+    
+    const isEditMode = window.location.search.includes('edit=true');
+
+    // Redirect if already configured AND not in edit mode
+    if (user && user.company && user.company.configured && !isEditMode) {
+      window.location.href = 'carbon-inventory.html';
+    }
+
+    let companyInfo = {};
+
+    // Prepopulate form if in edit mode
+    
+    if (isEditMode && user && user.company) {
+      document.getElementById('setup-name').value = user.company.name || '';
+      document.getElementById('setup-tax').value = user.company.tax || '';
+      document.getElementById('setup-license').value = user.company.license || '';
+      document.getElementById('setup-founded-year').value = user.company.foundedYear || '';
+      document.getElementById('setup-address').value = user.company.address || '';
+      document.getElementById('setup-manager-agency').value = user.company.managerAgency || '';
+      document.getElementById('setup-gps').value = user.company.gps || '';
+      document.getElementById('setup-phone').value = user.company.phone || '';
+      document.getElementById('setup-email').value = user.company.email || '';
+      document.getElementById('setup-website').value = user.company.website || '';
+      
+      document.getElementById('setup-rep-name').value = user.company.repName || '';
+      document.getElementById('setup-rep-title').value = user.company.repTitle || '';
+      document.getElementById('setup-rep-phone').value = user.company.repPhone || '';
+      document.getElementById('setup-rep-email').value = user.company.repEmail || '';
+      
+      
+      document.getElementById('setup-employees').value = user.company.employees || '';
+      
+      
+
+      
+      
+      
+
+      document.getElementById('setup-industry').value = user.company.industry || '';
+      if (user.company.ipccAR) {
+          document.getElementById('setup-ipcc-ar').value = user.company.ipccAR;
+      }
+      document.getElementById('setup-revenue').value = user.company.revenue || '';
+
+      document.getElementById('setup-employees').value = user.company.employees || '';
+      document.getElementById('setup-production').value = user.company.production || '';
+      document.getElementById('setup-branches').value = user.company.branchCount || 0;
+    }
+
+    // Handle Step 1
+    document.getElementById('setup-form').addEventListener('submit', function(e) {
+      e.preventDefault();
+      
+      const numBranches = parseInt(document.getElementById('setup-branches').value) || 0;
+
+      
+      companyInfo = {
+        name: document.getElementById('setup-name').value,
+        tax: document.getElementById('setup-tax').value,
+        license: document.getElementById('setup-license').value,
+        foundedYear: document.getElementById('setup-founded-year').value,
+        address: document.getElementById('setup-address').value,
+        managerAgency: document.getElementById('setup-manager-agency').value,
+        gps: document.getElementById('setup-gps').value,
+        phone: document.getElementById('setup-phone').value,
+        email: document.getElementById('setup-email').value,
+        website: document.getElementById('setup-website').value,
+        repName: document.getElementById('setup-rep-name').value,
+        repTitle: document.getElementById('setup-rep-title').value,
+        repPhone: document.getElementById('setup-rep-phone').value,
+        repEmail: document.getElementById('setup-rep-email').value,
+        industry: document.getElementById('setup-industry').value,
+        ipccAR: document.getElementById('setup-ipcc-ar').value,
+        
+        employees: document.getElementById('setup-employees').value,industry: document.getElementById('setup-industry').value,
+        revenue: document.getElementById('setup-revenue').value,
+
+        employees: document.getElementById('setup-employees').value,
+        production: document.getElementById('setup-production').value,
+        branchCount: numBranches,
+        branches: [],
+        configured: true // Flag to mark setup completion
+      };
+
+      if (numBranches === 0) {
+        // Direct save and redirect
+        saveAndRedirect();
+      } else {
+        // Show branches form
+        document.getElementById('step1-container').style.display = 'none';
+        
+        const wrapper = document.getElementById('branches-wrapper');
+        wrapper.innerHTML = ''; // Clear previous
+
+        for (let i = 1; i <= numBranches; i++) {
+          const bData = (isEditMode && user && user.company && user.company.branches && user.company.branches[i-1]) ? user.company.branches[i-1] : {};
+          wrapper.innerHTML += `
+            <div class="branch-card">
+              <div class="branch-header">Cơ sở / Chi nhánh ${i}</div>
+              <div class="form-group">
+                <label>Tên cơ sở/chi nhánh *</label>
+                <input type="text" id="branch-name-${i}" class="form-control" required placeholder="Nhập tên cơ sở" value="${bData.name || ''}">
+              </div>
+              <div class="form-group">
+                <label>Mã số thuế</label>
+                <input type="text" id="branch-tax-${i}" class="form-control" placeholder="Nhập mã số thuế" value="${bData.tax || ''}">
+              </div>
+              <div class="form-group">
+                <label>Ngành nghề (Rất quan trọng) *</label>
+                <select id="branch-industry-${i}" class="form-control" required>
+                  <option value="" disabled ${!bData.industry ? 'selected' : ''}>Chọn ngành nghề</option>
+                  <optgroup label="Bắt buộc kiểm kê (Nhóm hàng CBAM xuất khẩu EU)">
+                    <option value="Sắt Thép" ${bData.industry === 'Sắt Thép' ? 'selected' : ''}>Sắt Thép</option>
+                    <option value="Nhôm" ${bData.industry === 'Nhôm' ? 'selected' : ''}>Nhôm</option>
+                    <option value="Xi măng" ${bData.industry === 'Xi măng' ? 'selected' : ''}>Xi măng</option>
+                    <option value="Phân bón" ${bData.industry === 'Phân bón' ? 'selected' : ''}>Phân bón</option>
+                    <option value="Nhiệt điện / Điện lực" ${bData.industry === 'Nhiệt điện / Điện lực' ? 'selected' : ''}>Nhiệt điện / Điện lực</option>
+                    <option value="Hydrogen" ${bData.industry === 'Hydrogen' ? 'selected' : ''}>Hydrogen</option>
+                  </optgroup>
+                  <optgroup label="Bắt buộc kiểm kê (QĐ 42/2026/QĐ-TTg)">
+                    <option value="Bao bì & Giấy" ${bData.industry === 'Bao bì & Giấy' ? 'selected' : ''}>Bao bì & Giấy</option>
+                    <option value="Dệt may" ${bData.industry === 'Dệt may' ? 'selected' : ''}>Dệt may</option>
+                    <option value="Da giày" ${bData.industry === 'Da giày' ? 'selected' : ''}>Da giày</option>
+                    <option value="Nhựa & Hóa chất" ${bData.industry === 'Nhựa & Hóa chất' ? 'selected' : ''}>Nhựa & Hóa chất</option>
+                    <option value="Thực phẩm & Đồ uống" ${bData.industry === 'Thực phẩm & Đồ uống' ? 'selected' : ''}>Thực phẩm & Đồ uống</option>
+                    <option value="Cơ khí chế tạo" ${bData.industry === 'Cơ khí chế tạo' ? 'selected' : ''}>Cơ khí chế tạo</option>
+                    <option value="Nông nghiệp" ${bData.industry === 'Nông nghiệp' ? 'selected' : ''}>Nông nghiệp</option>
+                    <option value="Vận tải & Logistics" ${bData.industry === 'Vận tải & Logistics' ? 'selected' : ''}>Vận tải & Logistics</option>
+                  </optgroup>
+                  <optgroup label="Kiểm kê tự nguyện (Doanh nghiệp khác)">
+                    <option value="Gỗ & Nội thất" ${bData.industry === 'Gỗ & Nội thất' ? 'selected' : ''}>Gỗ & Nội thất</option>
+                    <option value="Điện tử" ${bData.industry === 'Điện tử' ? 'selected' : ''}>Điện tử</option>
+                  </optgroup>
+                </select>
+              </div>
+              <div class="form-row">
+                <div class="form-group">
+                  <label>Doanh thu (triệu VNĐ) *</label>
+                  <input type="number" id="branch-revenue-${i}" class="form-control" required value="${bData.revenue || ''}">
+                </div>
+                <div class="form-group">
+                  <label>Số lao động *</label>
+                  <input type="number" id="branch-employees-${i}" class="form-control" required value="${bData.employees || ''}">
+                </div>
+              </div>
+              <div class="form-group">
+                <label>Sản lượng năm (tấn/sản phẩm) *</label>
+                <input type="number" id="branch-production-${i}" class="form-control" required value="${bData.production || ''}">
+              </div>
+            </div>
+          `;
+        }
+        
+        document.getElementById('step2-container').style.display = 'block';
+        window.scrollTo(0, 0);
+      }
+    });
+
+    // Handle Step 2 (Branches)
+    document.getElementById('branches-form').addEventListener('submit', function(e) {
+      e.preventDefault();
+      
+      const numBranches = companyInfo.branchCount;
+      const branchesData = [];
+
+      for (let i = 1; i <= numBranches; i++) {
+        branchesData.push({
+          name: document.getElementById(`branch-name-${i}`).value,
+          tax: document.getElementById(`branch-tax-${i}`).value,
+          industry: document.getElementById(`branch-industry-${i}`).value,
+          revenue: document.getElementById(`branch-revenue-${i}`).value,
+          employees: document.getElementById(`branch-employees-${i}`).value,
+          production: document.getElementById(`branch-production-${i}`).value,
+        });
+      }
+
+      companyInfo.branches = branchesData;
+      saveAndRedirect();
+    });
+
+    document.getElementById('btn-back-step1').addEventListener('click', function() {
+      document.getElementById('step2-container').style.display = 'none';
+      document.getElementById('step1-container').style.display = 'block';
+      window.scrollTo(0, 0);
+    });
+
+    function saveAndRedirect() {
+      let userIndex = users.findIndex(u => u.username === currentUser);
+      if (userIndex === -1) {
+        // Fallback: If not found in localStorage (because they logged in via backend API),
+        // we just push a temporary one to avoid breaking the local storage logic.
+        userIndex = users.length;
+        users.push({ username: currentUser || 'guest', company: {} });
+      }
+      
+      users[userIndex].company = companyInfo;
+      localStorage.setItem('gs_users', JSON.stringify(users));
+
+      // -------------------------------------------------------------
+      // HOTFIX: Recalculate ALL activity records if AR version changed
+      // -------------------------------------------------------------
+      if (typeof window !== 'undefined' && window.IPCC_DB) {
+          const newAR = companyInfo.ipccAR || 'AR5-100';
+          const ipccDb = window.IPCC_DB;
+          
+          const branchNames = ['Trụ sở chính'];
+          if (companyInfo.branches) {
+              companyInfo.branches.forEach(b => { if (b.name) branchNames.push(b.name); });
+          }
+          const branchKeys = branchNames.map(name => name.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '').replace(/\s+/g, '_').replace(/[^a-z0-9_]/g, ''));
+          
+          branchKeys.forEach(bKey => {
+              const storageKey = `gs_data_${currentUser}_${bKey}_activity`;
+              let activities = [];
+              try {
+                  activities = JSON.parse(localStorage.getItem(storageKey) || '[]');
+              } catch(e) {}
+              
+              let changed = false;
+              activities.forEach(act => {
+                  const typeStr = (act.sourceType || '').toLowerCase();
+                  const eqStr = (act.sourceName || '').toLowerCase();
+                  const isWW = typeStr.includes('nước thải') || typeStr.includes('tự hoại') || eqStr.includes('nước thải') || eqStr.includes('tự hoại') || eqStr.includes('hiếu khí') || eqStr.includes('kỵ khí') || eqStr.includes('bùn') || typeStr.includes('waste');
+                  
+                  if (isWW) {
+                      const ch4Gwp = (ipccDb[newAR] && ipccDb[newAR]['Methane']) ? ipccDb[newAR]['Methane'] : 28;
+                      const ch4Emission = ((act.amount - (act.wwS || 0)) * act.finalFactor) - (act.wwR || 0);
+                      const co2eCalc = Math.max(0, ch4Emission) * ch4Gwp;
+                      act.co2e = co2eCalc.toFixed(2);
+                      changed = true;
+                  } else if (act.refName) {
+                      // It's a regular refrigerant
+                      if (ipccDb[newAR] && ipccDb[newAR][act.refName] !== undefined) {
+                          act.finalFactor = ipccDb[newAR][act.refName];
+                          const co2eCalc = act.amount * act.finalFactor;
+                          act.co2e = co2eCalc.toFixed(2);
+                          changed = true;
+                      }
+                  }
+              });
+              
+              if (changed) {
+                  localStorage.setItem(storageKey, JSON.stringify(activities));
+              }
+          });
+      }
+      // -------------------------------------------------------------
+
+      alert('Lưu thông tin thành công!');
+      window.location.href = 'carbon-inventory.html';
+    }
+  
+    // TỰ ĐỘNG ĐỒNG BỘ KHI THAY ĐỔI AR (KHÔNG CẦN BẤM LƯU 2 BƯỚC)
+    const arDropdown = document.getElementById('setup-ipcc-ar');
+    if (arDropdown) {
+        arDropdown.addEventListener('change', function(e) {
+            const newAR = e.target.value;
+            const userIndex = users.findIndex(u => u.username === currentUser);
+            if (userIndex !== -1 && users[userIndex].company) {
+                // Lưu cấu hình ngay lập tức vào bộ nhớ
+                users[userIndex].company.ipccAR = newAR;
+                localStorage.setItem('gs_users', JSON.stringify(users));
+                
+                // Chạy vòng lặp đồng bộ hệ số như trong saveAndRedirect
+                if (typeof window !== 'undefined' && window.IPCC_DB) {
+                    const ipccDb = window.IPCC_DB;
+                    const branchNames = ['Trụ sở chính'];
+                    if (users[userIndex].company.branches) {
+                        users[userIndex].company.branches.forEach(b => { if (b.name) branchNames.push(b.name); });
+                    }
+                    const branchKeys = branchNames.map(name => name.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '').replace(/\s+/g, '_').replace(/[^a-z0-9_]/g, ''));
+                    
+                    let totalSynced = 0;
+                    branchKeys.forEach(bKey => {
+                        const storageKey = `gs_data_${currentUser}_${bKey}_activity`;
+                        let activities = [];
+                        try { activities = JSON.parse(localStorage.getItem(storageKey) || '[]'); } catch(e) {}
+                        
+                        let changed = false;
+                        activities.forEach(act => {
+                            const typeStr = (act.sourceType || '').toLowerCase();
+                            const eqStr = (act.sourceName || '').toLowerCase();
+                            const isWW = typeStr.includes('nước thải') || typeStr.includes('tự hoại') || eqStr.includes('nước thải') || eqStr.includes('tự hoại') || eqStr.includes('hiếu khí') || eqStr.includes('kỵ khí') || eqStr.includes('bùn') || typeStr.includes('waste');
+                            
+                            const ch4Gwp = (ipccDb[newAR] && ipccDb[newAR]['Methane']) ? ipccDb[newAR]['Methane'] : 28;
+                            const n2oGwp = (ipccDb[newAR] && ipccDb[newAR]['Nitrous oxide']) ? ipccDb[newAR]['Nitrous oxide'] : 265;
+                            
+                            if (isWW) {
+                                const ch4Emission = ((act.amount - (act.wwS || 0)) * act.finalFactor) - (act.wwR || 0);
+                                const co2eCalc = Math.max(0, ch4Emission) * ch4Gwp;
+                                if (act.co2e !== co2eCalc.toFixed(2)) {
+                                    act.co2e = co2eCalc.toFixed(2);
+                                    changed = true;
+                                    totalSynced++;
+                                }
+                            } else if (act.efName && window.EF_MASTER) {
+                                // Lookup fuel item for fossil fuel recalculation
+                                let fuelItem = null;
+                                for (const stdKey in EF_MASTER) {
+                                    for (const cat in EF_MASTER[stdKey]) {
+                                        for (const key in EF_MASTER[stdKey][cat]) {
+                                            const item = EF_MASTER[stdKey][cat][key];
+                                            if (item.name === act.efName || (act.efName.includes(item.name))) {
+                                                fuelItem = item; break;
+                                            }
+                                        }
+                                    }
+                                }
+                                
+                                if (fuelItem && fuelItem.ncv) {
+                                    let massKg = act.amount;
+                                    const unitLower = (act.unit || '').toLowerCase();
+                                    if ((unitLower.includes('lít') || unitLower.includes('lit') || unitLower === 'l' || unitLower === 'm3') && fuelItem.density) {
+                                        massKg = act.amount * fuelItem.density;
+                                    }
+                                    const energyTJ = (massKg / 1000000) * fuelItem.ncv;
+                                    const co2_kg = energyTJ * (fuelItem.ef_co2_tj || 0);
+                                    const ch4_kg = energyTJ * (fuelItem.ef_ch4_tj || 0);
+                                    const n2o_kg = energyTJ * (fuelItem.ef_n2o_tj || 0);
+                                    
+                                    const co2eCalc = co2_kg + (ch4_kg * ch4Gwp) + (n2o_kg * n2oGwp);
+                                    const newFactor = act.amount > 0 ? (co2eCalc / act.amount) : act.finalFactor;
+                                    
+                                    if (act.co2e !== co2eCalc.toFixed(2) || act.finalFactor !== newFactor) {
+                                        act.co2e = co2eCalc.toFixed(2);
+                                        act.finalFactor = newFactor;
+                                        changed = true;
+                                        totalSynced++;
+                                    }
+                                }
+                            }
+                            
+                            if (act.refName) {
+                                if (ipccDb[newAR] && ipccDb[newAR][act.refName] !== undefined) {
+                                    act.finalFactor = ipccDb[newAR][act.refName];
+                                    const co2eCalc = act.amount * act.finalFactor;
+                                    if (act.co2e !== co2eCalc.toFixed(2)) {
+                                        act.co2e = co2eCalc.toFixed(2);
+                                        changed = true;
+                                        totalSynced++;
+                                    }
+                                }
+                            }
+                        });
+                        if (changed) {
+                            localStorage.setItem(storageKey, JSON.stringify(activities));
+                        }
+                    });
+                    console.log(`Đã tự động đồng bộ ${totalSynced} bản ghi sang ${newAR}.`);
+                }
+            }
+        });
+    }
+
+    
+    // --- MOCK DATA TẠM THỜI ĐỂ TEST BÁO CÁO MẪU ---
+    // Chỉ hiện nút này nếu là phamngocminh026@gmail.com hoặc phamngocminh026
+    const btnMockData = document.getElementById('btn-mock-data');
+    if (btnMockData) {
+      if (currentUser === 'phamngocminh026@gmail.com' || currentUser === 'phamngocminh026') {
+        btnMockData.style.display = 'block';
+      } else {
+        btnMockData.style.display = 'none';
+      }
+      
+      btnMockData.addEventListener('click', function() {
+        document.getElementById('setup-name').value = "Công ty TNHH Sắt Thép Hòa Bình";
+        document.getElementById('setup-tax').value = "0101234567";
+        document.getElementById('setup-license').value = "Số 123/QĐ-BCT cấp ngày 15/05/2018";
+        document.getElementById('setup-founded-year').value = "2018";
+        document.getElementById('setup-address').value = "Lô B1, KCN Phú Mỹ 1, Phường Phú Mỹ, Thị xã Phú Mỹ, Tỉnh Bà Rịa - Vũng Tàu";
+        document.getElementById('setup-manager-agency').value = "Sở Tài nguyên và Môi trường tỉnh Bà Rịa - Vũng Tàu";
+        document.getElementById('setup-gps').value = "10.590123, 107.031567";
+        document.getElementById('setup-phone').value = "0254 3123 456";
+        document.getElementById('setup-email').value = "info@satthephoabinh.vn";
+        document.getElementById('setup-website').value = "https://satthephoabinh.vn";
+        
+        document.getElementById('setup-rep-name').value = "Nguyễn Văn Kiểm Kê";
+        document.getElementById('setup-rep-title').value = "Tổng Giám Đốc";
+        document.getElementById('setup-rep-phone').value = "0988 123 456";
+        document.getElementById('setup-rep-email').value = "ceonguyen@satthephoabinh.vn";
+        
+        document.getElementById('setup-industry').value = "Sắt Thép";
+        document.getElementById('setup-revenue').value = "150000";
+        document.getElementById('setup-employees').value = "1200";
+        document.getElementById('setup-production').value = "50000";
+        document.getElementById('setup-branches').value = "3";
+        
+        
+        
+        
+        
+        
+
+
+        // TIÊM DỮ LIỆU THIẾT BỊ CHI TIẾT ĐỂ XUẤT BÁO CÁO WORD THEO CHUẨN (BẢNG 3.11, 3.16...)
+        const activities = [
+            { id: "act_pccc", category: "Phạm vi 1", sourceGroup: "Đốt nhiên liệu cố định", sourceName: "Máy bơm chữa cháy HÒA BÌNH", fuelId: "diesel", unit: "Lít", amount: "555", note: "Bơm dự phòng" },
+            { id: "act_forklift", category: "Phạm vi 1", sourceGroup: "Nguồn đốt di động", sourceName: "Đội Xe Nâng Siêu Tốc", fuelId: "diesel", unit: "Lít", amount: "99999", note: "Vận chuyển nội bộ" },
+            { id: "act_grid", category: "Phạm vi 2", sourceGroup: "Điện mua ngoài", sourceName: "Điện lưới KCN Hòa Bình", fuelId: "grid_kwh", unit: "kWh", amount: "8888888", note: "Điện lưới quốc gia" }
+        ];
+        localStorage.setItem('gs_v2_activity_main', JSON.stringify(activities));
+
+        // TIÊM DỮ LIỆU HOẠT ĐỘNG CHO NĂM 2025 VÀ 2026 (DỮ LIỆU TỔNG CHO DASHBOARD)
+        const yearData = JSON.parse(localStorage.getItem('gs_v2_annual_data')) || {};
+        const mockPayload = {
+            s1_diesel: "100554", // 555 + 99999
+            s2_grid_kwh: "8888888", // 8.888.888 kWh
+            s3c1_water_supply: "15000"
+        };
+        yearData['2025'] = mockPayload;
+        yearData['2026'] = mockPayload;
+        localStorage.setItem('gs_v2_annual_data', JSON.stringify(yearData));
+
+        // LƯU CÔNG TY LUÔN ĐỂ TRÁNH LỖI NGƯỜI DÙNG QUÊN BẤM LƯU
+        const companyObj = {
+            name: "Công ty TNHH Sắt Thép Hòa Bình",
+            tax: "0101234567",
+            license: "Số 123/QĐ-BCT cấp ngày 15/05/2018",
+            foundedYear: "2018",
+            address: "Lô B1, KCN Phú Mỹ 1, Phường Phú Mỹ, Thị xã Phú Mỹ, Tỉnh Bà Rịa - Vũng Tàu",
+            managerAgency: "Sở Tài nguyên và Môi trường tỉnh Bà Rịa - Vũng Tàu",
+            gps: "10.590123, 107.031567",
+            phone: "0254 3123 456",
+            email: "info@satthephoabinh.vn",
+            website: "https://satthephoabinh.vn",
+            repName: "Nguyễn Văn Kiểm Kê",
+            repTitle: "Tổng Giám Đốc",
+            repPhone: "0988 123 456",
+            repEmail: "ceonguyen@satthephoabinh.vn",
+            industry: "Sắt Thép",
+            revenue: "150000",
+            employees: "1200",
+            production: "50000",
+            branches: "3"
+        };
+        localStorage.setItem('gs_v2_company', JSON.stringify(companyObj));
+        
+        if (typeof users !== 'undefined' && userIndex !== -1) {
+            users[userIndex].company = companyObj;
+            localStorage.setItem('gs_users', JSON.stringify(users));
+        }
+
+        alert("Đã tiêm thành công Dữ liệu công ty (Sắt Thép Hòa Bình) và Dữ liệu hoạt động (năm 2025, 2026)! Vui lòng quay lại tab Báo cáo để xuất Word.");
+      });
+    }
+
+
+  </script>
+  <script src="js/page-transition.js"></script>
+</body>
+</html>
+
+

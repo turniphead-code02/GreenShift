@@ -1,0 +1,13 @@
+GREENSHIFT — CBAM READINESS CHECKLIST
+
+[ ] Xác định ranh giới tổ chức và vận hành.
+[ ] Chốt năm báo cáo và năm cơ sở.
+[ ] Có hóa đơn điện/nhiên liệu và hồ sơ sản lượng.
+[ ] Kiểm tra Scope 1: cố định, di động, fugitive, process.
+[ ] Kiểm tra Scope 2: location-based và market-based nếu áp dụng.
+[ ] Kiểm tra Scope 3 Cat.1–15 và loại bỏ cộng trùng.
+[ ] Kiểm tra EF và nguồn EF.
+[ ] Kiểm tra benchmark/cảnh báo bất thường.
+[ ] Kiểm tra embedded emissions và dữ liệu thực tế cho sản phẩm CBAM.
+[ ] Lưu hồ sơ chứng từ.
+[ ] Nếu cần: gửi báo cáo cho bên thẩm tra độc lập.

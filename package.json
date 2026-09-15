@@ -1,0 +1,7 @@
+{
+  "dependencies": {
+    "@vercel/blob": "^2.8.0",
+    "docxtemplater": "^3.69.3",
+    "pizzip": "^3.2.0"
+  }
+}

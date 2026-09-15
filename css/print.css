@@ -1,0 +1,92 @@
+@media print {
+ 
+  body {
+    background: white;
+    font-size: 11pt;
+    color: black;
+  }
+  
+  .navbar, .sidebar, .btn, .page-header, .hero, .pain-points, .how-it-works, .badges-section, .business-model, footer {
+    display: none !important;
+  }
+  
+  .app-container, .main-content {
+    display: block;
+    height: auto;
+    overflow: visible;
+    padding: 0;
+    margin: 0;
+    background: white;
+  }
+  
+  .report-container {
+    box-shadow: none;
+    max-width: none;
+    width: 100%;
+    margin: 0;
+  }
+  
+  .report-page {
+    padding: 0;
+    margin: 0;
+    min-height: 0;
+    border: none;
+    page-break-after: always;
+  }
+
+  .report-page:last-child {
+    page-break-after: auto;
+  }
+  
+  .cover-page {
+    height: 100vh;
+    border-left: 20px solid #1a7f4b !important;
+    padding-left: 2cm !important;
+    justify-content: center;
+  }
+  
+  .report-section {
+    page-break-inside: avoid;
+    margin-bottom: 2cm;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    page-break-after: avoid;
+  }
+  
+  table {
+    page-break-inside: auto;
+  }
+  
+  tr {
+    page-break-inside: avoid;
+    page-break-after: auto;
+  }
+  
+  th {
+    background-color: #f3f4f6 !important;
+    -webkit-print-color-adjust: exact;
+    color-adjust: exact;
+  }
+  
+  .action-card {
+    page-break-inside: avoid;
+    background-color: #f0faf5 !important;
+    border-left: 4px solid #10b981 !important;
+    -webkit-print-color-adjust: exact;
+    color-adjust: exact;
+  }
+  
+  /* Ensure backgrounds and charts render */
+  * {
+    -webkit-print-color-adjust: exact !important;
+    color-adjust: exact !important;
+    print-color-adjust: exact !important;
+  }
+  
+  canvas {
+    max-width: 100%;
+    page-break-inside: avoid;
+  }
+}
+

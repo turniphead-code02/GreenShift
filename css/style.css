@@ -1,0 +1,1478 @@
+/* =============================================
+   OFFLINE FONTS — Local @font-face declarations
+   Inter 400 downloaded to libs/fonts/
+   Fallback: system-ui → Segoe UI → sans-serif
+   ============================================= */
+
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('../libs/fonts/inter-400.woff2') format('woff2'),
+       local('Inter Regular'),
+       local('Inter');
+}
+
+/* System font stack for weights 500/600 (no download needed — browser synthesizes) */
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 500 600;
+  font-display: swap;
+  src: local('Inter Medium'),
+       local('Inter SemiBold'),
+       local('Inter');
+}
+
+/* Plus Jakarta Sans — use system fallback (Trebuchet MS is similar bold geometric) */
+@font-face {
+  font-family: 'Plus Jakarta Sans';
+  font-style: normal;
+  font-weight: 700 800;
+  font-display: swap;
+  src: local('Plus Jakarta Sans Bold'),
+       local('Plus Jakarta Sans');
+}
+
+/* JetBrains Mono — fallback to Consolas/Courier */
+@font-face {
+  font-family: 'JetBrains Mono';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: local('JetBrains Mono'),
+       local('Consolas');
+}
+
+
+:root {
+  --color-primary: #1a7f4b;
+  --color-accent: #10b981;
+  --color-dark-bg: #0a1f14;
+  --color-card-bg: #f0faf5;
+  --color-text-primary: #111827;
+  --color-text-secondary: #6b7280;
+  --color-warning: #f59e0b;
+  --color-danger: #ef4444;
+  --color-success: #10b981;
+  --color-white: #ffffff;
+  --color-border: #e5e7eb;
+  --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  --shadow-hover: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+  --radius-md: 0.5rem;
+  --radius-lg: 1rem;
+  --radius-xl: 1.5rem;
+  --font-heading: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  --font-body: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  --font-mono: 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace;
+  --transition: all 0.3s ease;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body, * {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif !important;
+}
+
+body {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  color: var(--color-text-primary);
+  line-height: 1.6;
+  background-color: #f8fafc;
+}
+
+h1, h2, h3, h4, h5, h6 {
+   font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+button {
+  cursor: pointer;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  border: none;
+  outline: none;
+}
+
+/* UI Elements */
+.btn {
+   font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.75rem 1.5rem;
+  border-radius: var(--radius-md);
+  font-weight: 600;
+  transition: var(--transition);
+  text-align: center;
+  gap: 0.5rem;
+}
+
+.btn-primary {
+  background-color: var(--color-accent);
+  color: var(--color-white);
+}
+
+.btn-primary:hover {
+  background-color: #0d9488;
+  transform: scale(1.02);
+  box-shadow: var(--shadow-md);
+}
+
+.btn-outline {
+  background-color: transparent;
+  border: 2px solid var(--color-accent);
+  color: var(--color-accent);
+}
+
+.btn-outline:hover {
+  background-color: rgba(16, 185, 129, 0.1);
+  transform: scale(1.02);
+}
+
+.btn-secondary {
+  background-color: var(--color-white);
+  color: var(--color-text-primary);
+  border: 1px solid var(--color-border);
+}
+
+.btn-secondary:hover {
+  background-color: #f9fafb;
+}
+
+.btn-danger {
+  background-color: var(--color-danger);
+  color: var(--color-white);
+}
+
+.card {
+  background: var(--color-white);
+  border-radius: var(--radius-lg);
+  padding: 1.5rem;
+  box-shadow: var(--shadow-md);
+  transition: var(--transition);
+  border: 1px solid var(--color-border);
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-hover);
+}
+
+.badge {
+  display: inline-block;
+  padding: 0.25rem 0.75rem;
+  border-radius: 9999px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.badge-amber {
+  background-color: rgba(245, 158, 11, 0.2);
+  color: #b45309;
+}
+
+.badge-green {
+  background-color: rgba(12, 231, 158, 0.2);
+  color: var(--color-primary);
+}
+ html{
+  scroll-behavior: smooth;
+  scroll-padding-top: 0px;
+}
+/* Landing Page */
+.navbar {
+   font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 5%;
+  background: transparent;
+  /* backdrop-filter removed */
+  /* -webkit-backdrop-filter removed */
+  z-index: 1000;
+  border-bottom: none;
+  color: var(--color-white);
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: var(--color-white);
+}
+
+.logo a,
+.logo-link {
+  display: inline-flex;
+  align-items: center;
+  text-decoration: none;
+  line-height: 1;
+}
+
+.navbar-logo-img {
+  height: 68px;
+  width: auto;
+  object-fit: contain;
+  display: block;
+  filter: brightness(1.15) drop-shadow(0 2px 8px rgba(0, 0, 0, 0.35));
+  transition: transform 0.25s ease, filter 0.25s ease;
+}
+
+.logo-link:hover .navbar-logo-img,
+.logo a:hover img {
+  transform: scale(1.04);
+  filter: brightness(1.25) drop-shadow(0 4px 14px rgba(16, 185, 129, 0.35));
+}
+
+
+.nav-links {
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+}
+
+.nav-links a {
+  font-weight: 500;
+  transition: var(--transition);
+}
+
+.nav-links a:hover {
+  color: var(--color-accent);
+}
+
+.hero {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  
+  background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("../Images/eco2.jpeg");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  min-height: 100vh;
+  width: 100%;
+  background-color: var(--color-dark-bg);
+  /*background: linear-gradient(135deg, #0a1f14 0%, #0f2d1c 50%, #1a4a2e 100%);*/
+  display: flex;
+  align-items: center;
+  padding: 6rem 5% 2rem;
+  color: var(--color-white);
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-content {
+  text-align: center;
+  width: 100%; max-width: 1000px;
+  margin: 0 auto;
+  max-width: 100%; max-width: 1000px;
+  z-index: 2;
+}
+
+.hero h1 {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  text-align: center;
+  width: 100%; max-width: 1100px;
+  margin: 0 auto;
+  
+  font-size: 3rem;
+  margin-bottom: 1.5rem;
+}
+
+.hero h1 span {
+  text-align: center;
+  width: 100%; max-width: 1000px;
+  margin: 0 auto;
+  color: var(--color-accent);
+}
+
+.hero p.sub {
+  text-align: center;
+  width: 100%; max-width: 1000px;
+  margin: 0 auto;
+  font-size: 1.25rem;
+  margin-bottom: 2.5rem;
+  color: #ffffff;
+}
+
+.hero-cta {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 3rem;
+}
+
+.stats-counter {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 3rem;
+}
+
+.stat-item h3 {
+  font-size: 2.5rem;
+  color: var(--color-accent);
+  margin-bottom: 0.25rem;
+ font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+}
+
+.stat-item p {
+   font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  color: #ffffff;
+  font-size: 0.875rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.hero-visual {
+  position: absolute;
+  right: 3%;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 400px;
+  height: 400px;
+  z-index: 1;
+}
+
+.floating-card {
+   font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+   font-size: 1.1rem;
+  background: rgba(255, 255, 255, 0.08);
+  /* backdrop-filter removed */
+  border: 1px solid rgba(255,255,255,0.1);
+  padding: 1.5rem;
+  border-radius: var(--radius-lg);
+  color: white;
+  position: absolute;
+  animation: float 6s ease-in-out infinite;
+}
+
+.fc-1 { top: 20%; right: 20%; animation-delay: 0s; }
+.fc-2 { bottom: 20%; right: 40%; animation-delay: 2s; }
+.fc-3 { top: 60%; left: 8%; animation-delay: 4s; }
+
+@keyframes float {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-20px); }
+  100% { transform: translateY(0px); }
+}
+
+.section {
+  padding: 5rem 5%;
+}
+
+.section-title {
+   font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 3rem;
+  color: var(--color-dark-bg);
+}
+
+.pain-points {
+  background: var(--color-white);
+}
+
+.grid-3 {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
+.pain-card {
+   font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  text-align: center;
+  padding: 2rem;
+}
+
+.pain-card .icon {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.how-it-works {
+   font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  background: #f8fafc;
+}
+
+.steps-container {
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+}
+
+.steps-container::before {
+  content: '';
+  position: absolute;
+  top: 40px;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: var(--color-border);
+  z-index: 1;
+}
+
+.step {
+  text-align: center;
+  position: relative;
+  z-index: 2;
+  width: 22%;
+}
+
+.step-icon {
+  width: 80px;
+  height: 80px;
+  background: var(--color-white);
+  border: 2px solid var(--color-accent);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+  margin: 0 auto 1rem;
+  box-shadow: var(--shadow-sm);
+}
+
+.step h4 {
+  margin-bottom: 0.5rem;
+  color: var(--color-primary);
+}
+
+.badges-section {
+   font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  background: var(--color-white);
+  text-align: center;
+}
+
+.badges-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1.5rem;
+}
+
+.compliance-badge {
+  padding: 1rem 1.5rem;
+  background: var(--color-card-bg);
+  border: 1px solid var(--color-accent);
+  border-radius: var(--radius-md);
+  font-weight: 600;
+  color: var(--color-primary);
+}
+
+.business-model {
+   font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  background: var(--color-dark-bg);
+  color: var(--color-white);
+}
+
+.business-model .section-title {
+  color: var(--color-white);
+}
+
+.model-visual {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 100%; max-width: 1000px;
+  margin: 0 auto;
+  background: rgba(255,255,255,0.05);
+  padding: 3rem;
+  border-radius: var(--radius-xl);
+  border: 1px solid rgba(255,255,255,0.1);
+}
+
+.entity {
+  text-align: center;
+  width: 25%;
+}
+
+.entity .icon {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.arrow {
+  color: var(--color-accent);
+  font-size: 2rem;
+  width: 10%;
+  text-align: center;
+}
+
+.platform-entity {
+  width: 30%;
+  padding: 2rem;
+  background: rgba(16, 185, 129, 0.1);
+  border: 2px solid var(--color-accent);
+  border-radius: var(--radius-lg);
+}
+
+.platform-entity h3 {
+  color: var(--color-accent);
+}
+
+footer {
+  background: #05100a;
+  color: #9ca3af;
+  text-align: center;
+  padding: 2rem 5%;
+  border-top: 1px solid rgba(255,255,255,0.1);
+}
+
+/* APP Layout */
+.app-container {
+  display: flex;
+  height: 100vh;
+  overflow: hidden;
+  background-color: #f1f5f9;
+}
+
+.sidebar {
+  width: 280px;
+  background: var(--color-dark-bg);
+  color: white;
+  display: flex;
+  flex-direction: column;
+  flex-shrink: 0;
+}
+
+.sidebar-header {
+  padding: 1.5rem;
+  border-bottom: none;
+}
+
+.sidebar-nav {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  flex: 1;
+  padding: 1.5rem 0;
+  overflow-y: auto;
+}
+
+.nav-item {
+  display: flex;
+  align-items: center;
+  padding: 1rem 1.5rem;
+  color: #d1d5db;
+  gap: 1rem;
+  transition: var(--transition);
+  cursor: pointer;
+  border-left: 4px solid transparent;
+}
+
+.nav-item:hover {
+  background: rgba(255,255,255,0.05);
+  color: white;
+}
+
+.nav-item.active {
+  background: rgba(16, 185, 129, 0.1);
+  color: var(--color-accent);
+  border-left-color: var(--color-accent);
+}
+
+.sidebar-footer {
+  padding: 1.5rem;
+  border-top: 1px solid rgba(255,255,255,0.1);
+  font-size: 0.875rem;
+}
+
+.sidebar-footer .company-name {
+  font-weight: 600;
+  color: white;
+  margin-bottom: 0.25rem;
+}
+
+.main-content {
+  flex: 1;
+  overflow-y: auto;
+  padding: 2rem;
+  position: relative;
+}
+
+.view-section {
+  display: none;
+  animation: fadeIn 0.4s ease;
+}
+
+.view-section.active {
+  display: block;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.page-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+#view-setup .page-header {
+  justify-content: center;
+  text-align: center;
+}
+
+/* Forms */
+.form-group {
+  margin-bottom: 1.25rem;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+  color: var(--color-text-primary);
+}
+
+.form-control {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  transition: var(--transition);
+}
+
+.form-control:focus {
+  border-color: var(--color-accent);
+  box-shadow: 0 0 0 3px rgba(16, 185, 129, 0.2);
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+}
+
+/* Tables */
+.table-container {
+  overflow-x: auto;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th, td {
+  padding: 1rem;
+  text-align: left;
+  border-bottom: 1px solid var(--color-border);
+}
+
+th {
+  font-weight: 600;
+  color: var(--color-text-secondary);
+  background: #f9fafb;
+}
+
+.table-row:hover {
+  background: #f8fafc;
+}
+
+.mono-text {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+}
+
+/* Dashboard */
+.kpi-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.kpi-card {
+  padding: 1.5rem;
+  border-radius: var(--radius-lg);
+  background: white;
+  box-shadow: var(--shadow-sm);
+  border: 1px solid var(--color-border);
+}
+
+.kpi-title {
+  color: var(--color-text-secondary);
+  font-size: 0.875rem;
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+}
+
+.kpi-value {
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--color-text-primary);
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+}
+
+.kpi-unit {
+  font-size: 1rem;
+  color: var(--color-text-secondary);
+  font-weight: 400;
+}
+
+.charts-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.chart-card {
+  background: white;
+  padding: 1.5rem;
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--color-border);
+  box-shadow: var(--shadow-sm);
+}
+
+.benchmark-bar {
+  height: 24px;
+  background: #e5e7eb;
+  border-radius: 12px;
+  overflow: hidden;
+  position: relative;
+  margin-top: 1rem;
+}
+
+.benchmark-fill {
+  height: 100%;
+  background: var(--color-success);
+  transition: width 1s ease;
+}
+
+.benchmark-marker {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background: var(--color-text-primary);
+  z-index: 10;
+}
+
+/* Report */
+.report-container {
+  background: white;
+  max-width: 210mm;
+  margin: 0 auto;
+  box-shadow: var(--shadow-lg);
+}
+
+.report-page {
+  padding: 2cm;
+  min-height: 297mm;
+  border-bottom: 1px dashed #ccc;
+  position: relative;
+}
+
+.cover-page {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border-left: 20px solid var(--color-primary);
+}
+
+.cover-title {
+  font-size: 3rem;
+  color: var(--color-primary);
+  margin-bottom: 2rem;
+}
+
+.report-section {
+  margin-bottom: 3rem;
+}
+
+.report-section h3 {
+  color: var(--color-primary);
+  border-bottom: 2px solid var(--color-primary);
+  padding-bottom: 0.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.action-card {
+  background: var(--color-card-bg);
+  border-left: 4px solid var(--color-accent);
+  padding: 1.5rem;
+  border-radius: 0 var(--radius-md) var(--radius-md) 0;
+  margin-bottom: 1.5rem;
+}
+
+.action-card h4 {
+  color: var(--color-primary);
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.action-card ul {
+  list-style: none;
+}
+
+.action-card li {
+  margin-bottom: 0.5rem;
+  padding-left: 1.5rem;
+  position: relative;
+}
+
+.action-card li::before {
+  content: '→';
+  position: absolute;
+  left: 0;
+  color: var(--color-accent);
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .charts-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .navbar-logo-img {
+    height: 52px;
+  }
+  .app-container {
+    flex-direction: column;
+  }
+  .sidebar {
+    width: 100%;
+    height: auto;
+    flex-direction: row;
+    overflow-x: auto;
+  }
+  .sidebar-header {
+    display: none;
+  }
+  .sidebar-nav {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    display: flex;
+    padding: 0;
+  }
+  .nav-item {
+    padding: 1rem;
+    border-left: none;
+    border-bottom: 4px solid transparent;
+    white-space: nowrap;
+  }
+  .nav-item.active {
+    border-bottom-color: var(--color-accent);
+  }
+  .hero h1 {
+    font-size: 2.5rem;
+  }
+  .hero-visual {
+    display: none;
+  }
+  .steps-container {
+    flex-direction: column;
+    gap: 2rem;
+  }
+  .steps-container::before {
+    display: none;
+  }
+  .step {
+    width: 100%;
+  }
+  .model-visual {
+    flex-direction: column;
+    gap: 2rem;
+  }
+  .entity, .platform-entity {
+    width: 100%;
+  }
+  .arrow {
+    transform: rotate(90deg);
+  }
+}
+
+/* Charts Grid & Card Fix */
+.charts-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+  margin-top: 1.5rem;
+}
+@media (max-width: 768px) {
+  .charts-grid { grid-template-columns: 1fr; }
+}
+
+.chart-card {
+  background: var(--color-white);
+  border-radius: var(--radius-lg);
+  padding: 1.5rem;
+  box-shadow: var(--shadow-sm);
+  border: 1px solid var(--color-border);
+}
+
+.chart-card h3 {
+  margin-bottom: 1rem;
+  font-size: 1.1rem;
+}
+
+.chart-wrapper {
+  position: relative;
+  height: 260px;
+  width: 100%;
+}
+
+
+/* =============================================
+   REPORT STYLING — Clean, Full-Width Paper Layout
+   ============================================= */
+.report-container {
+  width: 100%;
+  max-width: 1100px;
+  margin: 0 auto;
+  background: var(--color-white);
+  padding: 2.5rem 3rem;
+  border-radius: var(--radius-lg);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+  border: 1px solid var(--color-border);
+  box-sizing: border-box;
+  color: var(--color-text-primary);
+}
+
+.report-section {
+  margin-bottom: 2.5rem;
+  padding-bottom: 1.5rem;
+  border-bottom: 1px dashed var(--color-border);
+}
+
+.report-section:last-child {
+  border-bottom: none;
+}
+
+.report-section h3 {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--color-primary);
+  margin-bottom: 1rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 2px solid var(--color-card-bg);
+}
+
+/* Report Lists — Fix indent & alignment */
+.report-container ul, .report-container ol {
+  padding-left: 1.75rem !important;
+  margin: 0.75rem 0 1.25rem 0 !important;
+  list-style-position: outside !important;
+}
+
+.report-container li {
+  margin-bottom: 0.5rem !important;
+  line-height: 1.6 !important;
+  color: var(--color-text-primary) !important;
+}
+
+/* Report Tables — Beautiful & Full Width */
+.report-container table {
+  width: 100% !important;
+  border-collapse: collapse !important;
+  margin: 1.25rem 0 !important;
+  font-size: 0.9rem !important;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.02);
+}
+
+.report-container th {
+  background-color: var(--color-card-bg) !important;
+  color: var(--color-primary) !important;
+  font-weight: 600 !important;
+  padding: 0.75rem 1rem !important;
+  border: 1px solid var(--color-border) !important;
+  text-align: left !important;
+}
+
+.report-container td {
+  padding: 0.75rem 1rem !important;
+  border: 1px solid var(--color-border) !important;
+  vertical-align: middle !important;
+}
+
+.report-container tr:nth-child(even) {
+  background-color: #f9fbf9 !important;
+}
+
+/* Grid & KPI Boxes in Report */
+.report-container .grid-3 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.report-container .grid-2 {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+}
+
+@media (max-width: 768px) {
+  .report-container {
+    padding: 1.5rem;
+  }
+  .report-container .grid-3, .report-container .grid-2 {
+    grid-template-columns: 1fr;
+  }
+}
+.footer{
+   font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+}
+
+
+/* GreenShift upgrade UI */
+.modal-overlay{position:fixed;inset:0;background:rgba(0,0,0,.55);display:flex;align-items:center;justify-content:center;padding:1rem;z-index:9999}
+.modal-card{position:relative;max-width:760px;width:100%;background:var(--color-card-bg,#fff);color:var(--color-text-primary,#111);padding:2rem;border-radius:14px;box-shadow:0 20px 60px rgba(0,0,0,.25)}
+.modal-close{position:absolute;right:12px;top:8px;border:0;background:none;font-size:2rem;cursor:pointer}
+.gs-warning{border-left:5px solid #ef4444;background:rgba(239,68,68,.09);padding:1rem;border-radius:8px;margin-top:1rem}
+.gs-success{border-left:5px solid #10b981;background:rgba(16,185,129,.09);padding:1rem;border-radius:8px;margin-top:1rem}
+.iap-card{border:1px solid var(--color-border,#ddd);border-radius:10px;padding:1rem;margin:.75rem 0}
+
+.reg-card {
+    background: white;
+    border-radius: 16px;
+    padding: 2rem 1.5rem;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+    border: 1px solid #e2e8f0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    transition: all 0.3s ease;
+}
+.reg-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+    border-color: #cbd5e1;
+}
+.reg-icon {
+    width: 72px;
+    height: 72px;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1.5rem;
+}
+.reg-content h3 {
+    font-size: 1.15rem;
+    font-weight: 700;
+    color: #1e293b;
+    margin-bottom: 0.75rem;
+    line-height: 1.4;
+    min-height: 2.8rem;
+}
+.reg-threshold {
+    font-size: 0.95rem;
+    color: #64748b;
+    margin-top: auto;
+}
+.reg-threshold span {
+    display: block;
+    font-size: 1.5rem;
+    font-weight: 800;
+    color: #f97316;
+    margin-top: 0.5rem;
+}
+
+
+/* Smooth scrolling and anchor offsets */
+html {
+  scroll-behavior: smooth;
+}
+section[id] {
+  scroll-margin-top: 0px;
+}
+
+
+/* Dropdown Menus */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #1a1a1a;
+  min-width: 220px;
+  box-shadow: 0px 10px 30px rgba(0,0,0,0.5);
+  z-index: 2000;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 8px;
+  padding: 8px 0;
+  border: 1px solid rgba(255,255,255,0.1);
+  margin-top: 20px;
+}
+
+/* Invisible bridge so hover doesn't break when moving mouse down */
+.dropdown::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  height: 25px;
+}
+
+.dropdown-content a {
+  color: #e5e7eb !important;
+  padding: 10px 20px;
+  text-decoration: none;
+  display: block;
+  font-size: 0.95rem;
+  font-weight: 400 !important;
+  text-align: left;
+  transition: all 0.2s ease;
+}
+
+.dropdown-content a:hover {
+  background-color: #333;
+  color: var(--color-accent) !important;
+  padding-left: 24px !important;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+  animation: fadeInDropdown 0.2s ease-in-out;
+}
+
+.dropdown-category {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  color: #9ca3af;
+  padding: 12px 20px 6px;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  text-align: left;
+}
+
+@keyframes fadeInDropdown {
+  from { opacity: 0; transform: translate(-50%, -10px); }
+  to { opacity: 1; transform: translate(-50%, 0); }
+}
+
+.dropbtn {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+
+/* About Us Section New Design */
+.about-right {
+  border-top-left-radius: 400px;
+  border-bottom-left-radius: 400px;
+}
+
+.slide-in-left {
+  opacity: 0;
+  transform: translateX(-100px);
+  transition: opacity 1.2s ease-out, transform 1.2s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+.slide-in-right {
+  opacity: 0;
+  transform: translateX(100px);
+  transition: opacity 1.2s ease-out, transform 1.2s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+.slide-in-left.appear, .slide-in-right.appear {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+@media (max-width: 992px) {
+  .about-right {
+    border-radius: 0 !important;
+    padding: 4rem 5% !important;
+  }
+  .about-left {
+    padding: 4rem 5% !important;
+  }
+}
+
+
+/* Nghi Dinh 06 Section */
+.nd-card {
+  background: white;
+  border-radius: 12px;
+  padding: 2.5rem 1rem 4rem; 
+  width: 250px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.06);
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-top: 5px solid transparent;
+}
+.outer-card { margin-top: 55px; }
+.inner-card { margin-top: 0px; }
+
+.nd-card:nth-child(1) { border-top-color: #8DC63F; }
+.nd-card:nth-child(2) { border-top-color: #00B37A; }
+.nd-card:nth-child(3) { border-top-color: #007BC3; }
+.nd-card:nth-child(4) { border-top-color: #005CB9; }
+
+.nd-card h4 { font-size: 0.95rem; font-weight: 700; color: #111827; margin-bottom: 1.5rem; min-height: 2.8rem; text-align: center; }
+.nd-label { font-size: 0.85rem; color: #6b7280; margin-bottom: 0.5rem; text-align: center; }
+.nd-value { font-size: 1.6rem; font-weight: 800; margin-bottom: 0; text-align: center; }
+
+.hexagon {
+  width: 70px;
+  height: 80px;
+  clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+  position: absolute;
+  bottom: -40px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.arch-dot {
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  position: absolute;
+  bottom: -80px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 3;
+}
+
+.fade-up {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+.fade-up.appear {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@media (max-width: 992px) {
+  .outer-card, .inner-card { margin-top: 0; margin-bottom: 4rem; }
+  .arch-container { display: none; }
+  .arch-dot { display: none; }
+}
+
+
+/* ISO 14064 Section */
+.iso-card {
+  display: flex;
+  align-items: stretch;
+  background: white;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.03);
+  border: 1px solid #f1f5f9;
+  transition: all 0.3s ease;
+}
+.iso-card:hover {
+  transform: translateX(10px);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+  border-color: #a7f3d0;
+}
+.iso-number {
+  background: linear-gradient(to bottom, #10b981, #059669);
+  color: white;
+  font-size: 1.4rem;
+  font-family: serif;
+  font-weight: 800;
+  padding: 0 1.2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 60px;
+}
+.iso-card:nth-child(4) .iso-number {
+  background: linear-gradient(to bottom, #0ea5e9, #0284c7);
+}
+.iso-content {
+  padding: 1rem 1.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.iso-content h4 {
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: #059669;
+  margin-bottom: 0.25rem;
+  font-family: monospace;
+  letter-spacing: 0.5px;
+}
+.iso-content p {
+  margin: 0;
+  color: #4b5563;
+  font-size: 0.95rem;
+  line-height: 1.45;
+}
+@media (max-width: 768px) {
+  .iso-card {
+    flex-direction: column;
+  }
+  .iso-number {
+    padding: 1rem;
+    min-width: 100%;
+  }
+  .iso-content {
+    padding: 1.2rem;
+  }
+}
+.footer-link {
+
+  color: #9ca3af;
+  text-decoration: none;
+  font-size: 0.9rem;
+  transition: color 0.2s ease;
+}
+.footer-link:hover {
+  color: #10b981;
+}
+
+
+/* --- Animations for ND06 Section --- */
+
+/* 1. Floating Cards */
+@keyframes float-card {
+  0% { transform: translateY(0); box-shadow: 0 10px 30px rgba(0,0,0,0.06); }
+  50% { transform: translateY(-8px); box-shadow: 0 20px 40px rgba(0,0,0,0.12); }
+  100% { transform: translateY(0); box-shadow: 0 10px 30px rgba(0,0,0,0.06); }
+}
+.nd-card {
+  animation: float-card 4s ease-in-out infinite;
+}
+.outer-card {
+  animation-delay: 0s;
+}
+.inner-card {
+  animation-delay: 2s; /* Staggered floating effect */
+}
+
+/* 2. Pulsing Dots */
+@keyframes pulse-dot {
+  0% { transform: translateX(-50%) scale(1); opacity: 0.8; box-shadow: 0 0 0px transparent; }
+  50% { transform: translateX(-50%) scale(1.4); opacity: 1; box-shadow: 0 0 12px currentColor; }
+  100% { transform: translateX(-50%) scale(1); opacity: 0.8; box-shadow: 0 0 0px transparent; }
+}
+.arch-dot {
+  animation: pulse-dot 2.5s infinite;
+}
+/* Stagger the dot pulses by targeting their respective cards */
+.nd-card:nth-child(1) .arch-dot { animation-delay: 0s; }
+.nd-card:nth-child(2) .arch-dot { animation-delay: 0.5s; }
+.nd-card:nth-child(3) .arch-dot { animation-delay: 1s; }
+.nd-card:nth-child(4) .arch-dot { animation-delay: 1.5s; }
+
+/* 3. Marching Ants (Energy Flow) on the SVG Arch */
+@keyframes energy-flow {
+  to { stroke-dashoffset: -200; }
+}
+.arch-container svg path {
+  animation: energy-flow 10s linear infinite;
+}
+
+/* Hover effects for hexagon to make it interactive */
+.hexagon {
+  transition: transform 0.3s ease, filter 0.3s ease;
+}
+.nd-card:hover .hexagon {
+  transform: translateX(-50%) scale(1.1);
+  filter: brightness(1.1);
+}
+
+/* =============================================
+   PAGE TRANSITION & GLOBAL ANIMATIONS
+   ============================================= */
+
+@view-transition {
+  navigation: auto;
+}
+
+::view-transition-old(root) {
+  animation: 200ms cubic-bezier(0.4, 0, 1, 1) both gs-fade-out;
+}
+
+::view-transition-new(root) {
+  animation: 300ms cubic-bezier(0, 0, 0.2, 1) both gs-slide-fade-in;
+}
+
+@keyframes gs-fade-out {
+  from { opacity: 1; transform: scale(1); }
+  to { opacity: 0; transform: scale(0.98); }
+}
+
+@keyframes gs-slide-fade-in {
+  from { opacity: 0; transform: translateY(8px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Universal MPA Page Transitions */
+.gs-page-transition-body {
+  opacity: 0;
+  transform: translateY(6px);
+  transition: opacity 0.3s cubic-bezier(0.16, 1, 0.3, 1), transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.gs-page-transition-body.gs-page-loaded {
+  opacity: 1;
+  transform: none !important;
+}
+
+.gs-page-transition-body.gs-page-leaving {
+  opacity: 0;
+  transform: translateY(-8px);
+  pointer-events: none;
+}
+
+/* Slim Glowing Top Progress Bar */
+#gs-page-progress-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 3px;
+  width: 0%;
+  background: linear-gradient(90deg, #10b981, #34d399, #6ee7b7);
+  box-shadow: 0 0 12px rgba(16, 185, 129, 0.8), 0 0 5px rgba(52, 211, 153, 0.6);
+  z-index: 9999999;
+  pointer-events: none;
+  transition: width 0.25s ease, opacity 0.25s ease;
+  opacity: 0;
+}
+
+#gs-page-progress-bar.gs-loading {
+  opacity: 1;
+  width: 80%;
+}
+
+#gs-page-progress-bar.gs-finished {
+  opacity: 1;
+  width: 100%;
+}
+

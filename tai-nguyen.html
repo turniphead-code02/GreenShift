@@ -1,0 +1,3875 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Trung Tâm Tài Nguyên & Tri Thức ESG - CBAM | GreenShift</title>
+  <link rel="stylesheet" href="css/style.css?v=1788057972">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,400;1,700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    /* ==========================================================================
+       GREENSHIFT EDITORIAL KNOWLEDGE HUB THEME
+       Sắp xếp nội dung chuyên nghiệp theo phong cách Editorial/Bloomberg
+       Màu sắc chuẩn nhận diện GreenShift (Forest Green, Emerald, Mint & White)
+       ========================================================================== */
+    :root {
+      --gs-primary: #1a7f4b;
+      --gs-primary-dark: #0f4a2b;
+      --gs-primary-light: #e8f5e9;
+      --gs-accent: #10b981;
+      --gs-accent-dark: #059669;
+      --gs-dark: #0a1f14;
+      --gs-text: #111827;
+      --gs-text-muted: #64748b;
+      --gs-border: #e2e8f0;
+      --gs-card-bg: #ffffff;
+      --gs-font-serif: 'Merriweather', Georgia, serif;
+      --gs-font-sans: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+    }
+
+    body {
+      background-color: #f8fafc;
+      color: var(--gs-text);
+      font-family: var(--gs-font-sans);
+      margin: 0;
+      padding: 0;
+      line-height: 1.6;
+    }
+
+    /* ==========================================================================
+       TOP GREEN NAVBAR BANNER
+       ========================================================================== */
+    .gs-header-banner {
+      background: linear-gradient(135deg, #1a7f4b 0%, #0f4a2b 100%);
+      color: #ffffff;
+      padding: 0.85rem 4%;
+      position: relative;
+      z-index: 1000;
+      box-shadow: 0 4px 15px rgba(10, 31, 20, 0.15);
+      border-bottom: 1px solid rgba(255,255,255,0.12);
+    }
+    .gs-navbar-container {
+      max-width: 1280px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 1.5rem;
+      flex-wrap: wrap;
+    }
+    .gs-nav-left {
+      display: flex;
+      align-items: center;
+      gap: 1.25rem;
+    }
+    .gs-btn-back {
+      background: rgba(255, 255, 255, 0.15);
+      color: #ffffff !important;
+      border: 1px solid rgba(255, 255, 255, 0.3);
+      padding: 0.45rem 0.95rem;
+      border-radius: 4px;
+      font-size: 0.84rem;
+      font-weight: 600;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.45rem;
+      transition: all 0.2s;
+      white-space: nowrap;
+    }
+    .gs-btn-back:hover {
+      background: #ffffff;
+      color: var(--gs-primary-dark) !important;
+      transform: translateX(-2px);
+    }
+    .gs-nav-logo-link {
+      display: inline-flex;
+      align-items: center;
+      text-decoration: none;
+    }
+    .gs-nav-logo-img {
+      height: 52px;
+      width: auto;
+      object-fit: contain;
+      display: block;
+    }
+    .gs-nav-right {
+      display: flex;
+      align-items: center;
+      gap: 1.75rem;
+    }
+    .gs-nav-item {
+      color: #ffffff !important;
+      text-decoration: none;
+      font-size: 0.92rem;
+      font-weight: 600;
+      transition: color 0.2s;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.35rem;
+      background: transparent;
+      border: none;
+      cursor: pointer;
+    }
+    .gs-nav-item:hover {
+      color: #a7f3d0 !important;
+    }
+    .gs-nav-item.active-page {
+      color: #a7f3d0 !important;
+      font-weight: 800;
+    }
+
+    /* Sub-Navigation Categories Bar */
+    .gs-subnav-bar {
+      background-color: #ffffff;
+      border-bottom: 1px solid var(--gs-border);
+      position: sticky;
+      top: 0;
+      z-index: 40;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.03);
+    }
+    .gs-subnav-container {
+      max-width: 1280px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      padding: 0 4%;
+      gap: 1.25rem;
+      overflow-x: auto;
+      scrollbar-width: none;
+      white-space: nowrap;
+    }
+    .gs-subnav-container::-webkit-scrollbar { display: none; }
+    
+    .gs-nav-pill {
+      color: #4b5563;
+      font-size: 0.88rem;
+      font-weight: 600;
+      text-decoration: none;
+      padding: 0.85rem 0.2rem;
+      position: relative;
+      transition: color 0.2s;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+    }
+    .gs-nav-pill:hover, .gs-nav-pill.active {
+      color: var(--gs-primary);
+    }
+    .gs-nav-pill.active::after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: 3px;
+      background-color: var(--gs-primary);
+      border-radius: 3px 3px 0 0;
+    }
+    .gs-nav-pill.highlight {
+      color: var(--gs-primary);
+      font-weight: 700;
+    }
+
+    /* Page Main Container */
+    .gs-main-layout {
+      max-width: 1280px;
+      margin: 2rem auto 4rem;
+      padding: 0 4%;
+    }
+
+    /* Section Masthead */
+    .gs-masthead-title {
+      font-family: var(--gs-font-serif);
+      font-size: 1.85rem;
+      font-weight: 900;
+      color: #0f172a;
+      margin: 0 0 1.5rem 0;
+      line-height: 1.25;
+      border-bottom: 2px solid var(--gs-primary);
+      padding-bottom: 0.75rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+    }
+    .gs-masthead-title span.subhead-date {
+      font-family: var(--gs-font-sans);
+      font-size: 0.85rem;
+      font-weight: 600;
+      color: var(--gs-text-muted);
+    }
+
+    /* ==========================================================================
+       THREE-COLUMN EDITORIAL FRONT PAGE GRID
+       ========================================================================== */
+    .gs-hero-grid {
+      display: grid;
+      grid-template-columns: 4.8fr 3.2fr 2.8fr;
+      gap: 2rem;
+      margin-bottom: 3.5rem;
+    }
+
+    /* Column 1: Lead Story */
+    .gs-hero-lead {
+      cursor: pointer;
+      display: flex;
+      flex-direction: column;
+    }
+    .gs-lead-img-box {
+      position: relative;
+      width: 100%;
+      height: 330px;
+      overflow: hidden;
+      border-radius: 6px;
+      margin-bottom: 1.25rem;
+      background-color: #f1f5f9;
+      border: 1px solid var(--gs-border);
+    }
+    .gs-lead-img-box img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.4s ease;
+    }
+    .gs-hero-lead:hover .gs-lead-img-box img {
+      transform: scale(1.03);
+    }
+    .gs-badge-lead {
+      position: absolute;
+      top: 14px;
+      left: 14px;
+      background: var(--gs-primary);
+      color: #ffffff;
+      font-size: 0.75rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      padding: 0.35rem 0.75rem;
+      border-radius: 3px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+    }
+    .gs-lead-title {
+      font-family: var(--gs-font-serif);
+      font-size: 1.6rem;
+      font-weight: 900;
+      color: #0f172a;
+      line-height: 1.35;
+      margin: 0 0 0.75rem 0;
+      transition: color 0.2s;
+    }
+    .gs-hero-lead:hover .gs-lead-title {
+      color: var(--gs-primary);
+    }
+    .gs-lead-sapo {
+      font-size: 0.95rem;
+      color: #475569;
+      line-height: 1.6;
+      margin: 0 0 1rem 0;
+    }
+    .gs-meta-row {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      font-size: 0.82rem;
+      color: var(--gs-text-muted);
+      font-weight: 600;
+      margin-top: auto;
+    }
+
+    /* Column 2: Weekly Highlights */
+    .gs-hero-mid {
+      border-left: 1px solid var(--gs-border);
+      border-right: 1px solid var(--gs-border);
+      padding: 0 1.5rem;
+      display: flex;
+      flex-direction: column;
+    }
+    .gs-mid-header {
+      font-size: 0.85rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.75px;
+      color: var(--gs-primary);
+      border-bottom: 2px solid var(--gs-primary);
+      padding-bottom: 0.5rem;
+      margin-bottom: 1.25rem;
+    }
+    .gs-news-list {
+      display: flex;
+      flex-direction: column;
+      gap: 1.25rem;
+    }
+    .gs-news-item {
+      cursor: pointer;
+      padding-bottom: 1.15rem;
+      border-bottom: 1px solid var(--gs-border);
+    }
+    .gs-news-item:last-child {
+      border-bottom: none;
+      padding-bottom: 0;
+    }
+    .gs-news-item-title {
+      font-family: var(--gs-font-serif);
+      font-size: 1rem;
+      font-weight: 700;
+      color: #1e293b;
+      line-height: 1.4;
+      margin-bottom: 0.4rem;
+      transition: color 0.2s;
+    }
+    .gs-news-item:hover .gs-news-item-title {
+      color: var(--gs-primary);
+    }
+    .gs-news-item-meta {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-size: 0.75rem;
+      color: var(--gs-text-muted);
+    }
+    .gs-tag-micro {
+      background: var(--gs-primary-light);
+      color: var(--gs-primary-dark);
+      font-weight: 700;
+      padding: 0.15rem 0.45rem;
+      border-radius: 2px;
+      font-size: 0.7rem;
+    }
+
+    /* Column 3: Data & Media Highlights */
+    .gs-hero-right {
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+    }
+    .gs-right-header {
+      font-size: 0.85rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.75px;
+      color: #334155;
+      border-bottom: 2px solid #334155;
+      padding-bottom: 0.5rem;
+    }
+    .gs-media-card {
+      cursor: pointer;
+      background: #ffffff;
+      border: 1px solid var(--gs-border);
+      border-radius: 6px;
+      overflow: hidden;
+      transition: all 0.2s;
+    }
+    .gs-media-card:hover {
+      box-shadow: 0 6px 16px rgba(0,0,0,0.06);
+      transform: translateY(-2px);
+    }
+    .gs-media-thumb {
+      width: 100%;
+      height: 135px;
+      position: relative;
+      background-color: #f1f5f9;
+    }
+    .gs-media-thumb img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    .gs-play-badge {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background: rgba(26, 127, 75, 0.9);
+      color: #ffffff;
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .gs-media-body {
+      padding: 1rem;
+    }
+    .gs-media-title {
+      font-size: 0.92rem;
+      font-weight: 700;
+      color: #0f172a;
+      line-height: 1.4;
+      margin: 0;
+      transition: color 0.2s;
+    }
+    .gs-media-card:hover .gs-media-title {
+      color: var(--gs-primary);
+    }
+
+    /* ==========================================================================
+       TRA CỨU DANH MỤC CƠ SỞ BẮT BUỘC KIỂM KÊ KNK (QĐ 42/2026/QĐ-TTg)
+       ========================================================================== */
+    .gs-lookup-wrapper {
+      margin: 3.5rem 0;
+      background: #ffffff;
+      border: 2px solid var(--gs-primary);
+      border-radius: 8px;
+      box-shadow: 0 10px 25px -5px rgba(26, 127, 75, 0.08);
+      overflow: hidden;
+    }
+    .gs-lookup-topbar {
+      background: linear-gradient(135deg, var(--gs-primary) 0%, var(--gs-primary-dark) 100%);
+      color: #ffffff;
+      padding: 1.25rem 1.75rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+    .gs-lookup-title-box h2 {
+      font-family: var(--gs-font-serif);
+      font-size: 1.35rem;
+      margin: 0 0 0.35rem 0;
+      color: #ffffff;
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+    }
+    .gs-lookup-title-box p {
+      margin: 0;
+      font-size: 0.84rem;
+      color: #d1fae5;
+      line-height: 1.4;
+    }
+    .gs-btn-download-doc {
+      background: #ffffff;
+      color: var(--gs-primary-dark);
+      padding: 0.55rem 1.1rem;
+      border-radius: 4px;
+      font-size: 0.82rem;
+      font-weight: 700;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      transition: all 0.2s;
+      border: none;
+      cursor: pointer;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
+    .gs-btn-download-doc:hover {
+      background: #f0fdf4;
+      transform: translateY(-1px);
+    }
+    .gs-lookup-tabs {
+      display: flex;
+      background: #f8fafc;
+      border-bottom: 1px solid var(--gs-border);
+      padding: 0 1.5rem;
+      gap: 0.5rem;
+      overflow-x: auto;
+    }
+    .gs-tab-pill {
+      padding: 0.9rem 1.4rem;
+      font-weight: 700;
+      font-size: 0.88rem;
+      color: #475569;
+      border: none;
+      background: transparent;
+      cursor: pointer;
+      border-bottom: 3px solid transparent;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      transition: all 0.2s;
+      white-space: nowrap;
+    }
+    .gs-tab-pill:hover {
+      color: var(--gs-primary);
+    }
+    .gs-tab-pill.active {
+      color: var(--gs-primary);
+      background: #ffffff;
+      border-bottom-color: var(--gs-primary);
+    }
+    .gs-lookup-body {
+      padding: 1.75rem;
+    }
+    .gs-search-grid {
+      display: grid;
+      grid-template-columns: 2fr 1.1fr 1.1fr 1.1fr;
+      gap: 0.85rem;
+      margin-bottom: 1.25rem;
+    }
+    @media (max-width: 900px) {
+      .gs-search-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+    .gs-input-wrap {
+      position: relative;
+    }
+    .gs-input-wrap input, .gs-input-wrap select {
+      width: 100%;
+      padding: 0.7rem 0.9rem 0.7rem 2.2rem;
+      border: 1px solid #cbd5e1;
+      border-radius: 4px;
+      font-size: 0.88rem;
+      font-family: var(--gs-font-sans);
+      outline: none;
+      background: #ffffff;
+      transition: border-color 0.2s;
+    }
+    .gs-input-wrap input:focus, .gs-input-wrap select:focus {
+      border-color: var(--gs-primary);
+      box-shadow: 0 0 0 3px rgba(26, 127, 75, 0.1);
+    }
+    .gs-input-wrap select {
+      padding-left: 0.9rem;
+      cursor: pointer;
+    }
+    .gs-input-wrap svg {
+      position: absolute;
+      left: 0.75rem;
+      top: 50%;
+      transform: translateY(-50%);
+      color: #94a3b8;
+      pointer-events: none;
+    }
+    .gs-stats-bar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 0.84rem;
+      color: #64748b;
+      margin-bottom: 1rem;
+      padding-bottom: 0.6rem;
+      border-bottom: 1px solid #f1f5f9;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+    }
+    .gs-facility-table-wrap {
+      overflow-x: auto;
+      border: 1px solid #e2e8f0;
+      border-radius: 4px;
+      max-height: 520px;
+    }
+    .gs-facility-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.84rem;
+      text-align: left;
+    }
+    .gs-facility-table th {
+      background: #f8fafc;
+      padding: 0.75rem 0.9rem;
+      font-weight: 700;
+      color: #334155;
+      border-bottom: 2px solid #cbd5e1;
+      white-space: nowrap;
+      position: sticky;
+      top: 0;
+      z-index: 2;
+    }
+    .gs-facility-table td {
+      padding: 0.75rem 0.9rem;
+      border-bottom: 1px solid #e2e8f0;
+      color: #1e293b;
+      vertical-align: middle;
+    }
+    .gs-facility-table tr:hover td {
+      background: #f0fdf4;
+      cursor: pointer;
+    }
+    .gs-tag-req {
+      background: #fee2e2;
+      color: #991b1b;
+      font-weight: 700;
+      padding: 0.2rem 0.5rem;
+      border-radius: 3px;
+      font-size: 0.72rem;
+      display: inline-block;
+      white-space: nowrap;
+    }
+    .gs-tag-ets {
+      background: #e0f2fe;
+      color: #0369a1;
+      font-weight: 700;
+      padding: 0.2rem 0.5rem;
+      border-radius: 3px;
+      font-size: 0.72rem;
+      display: inline-block;
+      margin-left: 0.3rem;
+      white-space: nowrap;
+    }
+    .gs-btn-view-req {
+      background: var(--gs-primary);
+      color: #ffffff;
+      padding: 0.35rem 0.75rem;
+      border-radius: 3px;
+      font-size: 0.75rem;
+      font-weight: 600;
+      border: none;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.3rem;
+      transition: background 0.2s;
+    }
+    .gs-btn-view-req:hover {
+      background: var(--gs-primary-dark);
+    }
+
+    /* Calculator */
+    .gs-calc-grid {
+      display: grid;
+      grid-template-columns: 1.2fr 1fr;
+      gap: 2rem;
+    }
+    @media (max-width: 860px) {
+      .gs-calc-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+    .calc-input-group {
+      margin-bottom: 1.1rem;
+    }
+    .calc-input-group label {
+      display: block;
+      font-size: 0.84rem;
+      font-weight: 700;
+      color: #334155;
+      margin-bottom: 0.35rem;
+    }
+    .calc-input-group input, .calc-input-group select {
+      width: 100%;
+      padding: 0.65rem 0.85rem;
+      border: 1px solid #cbd5e1;
+      border-radius: 4px;
+      font-size: 0.88rem;
+      outline: none;
+      background: #ffffff;
+    }
+    .calc-input-group input:focus, .calc-input-group select:focus {
+      border-color: var(--gs-primary);
+    }
+    .calc-hint {
+      font-size: 0.75rem;
+      color: #64748b;
+      margin-top: 0.25rem;
+    }
+    .calc-result-box {
+      background: #f8fafc;
+      border: 1px solid #e2e8f0;
+      border-radius: 6px;
+      padding: 1.5rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+    .calc-res-status {
+      padding: 1rem;
+      border-radius: 4px;
+      margin-bottom: 1.2rem;
+    }
+    .calc-res-status.req {
+      background: #fef2f2;
+      border: 1px solid #fecaca;
+      border-left: 4px solid #dc2626;
+      color: #991b1b;
+    }
+    .calc-res-status.voluntary {
+      background: #f0fdf4;
+      border: 1px solid #bbf7d0;
+      border-left: 4px solid #16a34a;
+      color: #166534;
+    }
+    .calc-metric-row {
+      display: flex;
+      justify-content: space-between;
+      padding: 0.55rem 0;
+      border-bottom: 1px dashed #cbd5e1;
+      font-size: 0.84rem;
+    }
+
+    /* ==========================================================================
+       SECONDARY GRID SECTION (6 Cards)
+       ========================================================================== */
+    .gs-sub-section {
+      margin: 3.5rem 0;
+    }
+    .gs-sub-title {
+      font-family: var(--gs-font-serif);
+      font-size: 1.4rem;
+      font-weight: 900;
+      color: #0f172a;
+      margin-bottom: 1.5rem;
+      border-bottom: 2px solid var(--gs-primary);
+      padding-bottom: 0.5rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+    }
+    .gs-grid-3 {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.75rem;
+    }
+    .gs-card-standard {
+      background: #ffffff;
+      border: 1px solid var(--gs-border);
+      border-radius: 6px;
+      overflow: hidden;
+      cursor: pointer;
+      display: flex;
+      flex-direction: column;
+      transition: all 0.2s;
+    }
+    .gs-card-standard:hover {
+      box-shadow: 0 8px 20px rgba(0,0,0,0.06);
+      transform: translateY(-2px);
+      border-color: var(--gs-primary);
+    }
+    .gs-card-img {
+      width: 100%;
+      height: 180px;
+      overflow: hidden;
+      background: #f1f5f9;
+    }
+    .gs-card-img img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.4s ease;
+    }
+    .gs-card-standard:hover .gs-card-img img {
+      transform: scale(1.04);
+    }
+    .gs-card-content {
+      padding: 1.25rem;
+      display: flex;
+      flex-direction: column;
+      flex-grow: 1;
+    }
+    .gs-card-headline {
+      font-family: var(--gs-font-serif);
+      font-size: 1.05rem;
+      font-weight: 700;
+      color: #0f172a;
+      line-height: 1.4;
+      margin: 0.4rem 0 0.6rem 0;
+      transition: color 0.2s;
+    }
+    .gs-card-standard:hover .gs-card-headline {
+      color: var(--gs-primary);
+    }
+    .gs-card-desc {
+      font-size: 0.85rem;
+      color: var(--gs-text-muted);
+      line-height: 1.5;
+      margin: 0 0 1rem 0;
+      flex-grow: 1;
+    }
+
+    /* ==========================================================================
+       EDITORIAL ARTICLE MODAL READER
+       ========================================================================== */
+    .gs-modal-backdrop {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-color: rgba(10, 31, 20, 0.7);
+      backdrop-filter: blur(4px);
+      z-index: 9999;
+      display: none;
+      align-items: center;
+      justify-content: center;
+      padding: 1.5rem;
+    }
+    .gs-modal-backdrop.active {
+      display: flex;
+    }
+    .gs-modal-card {
+      background: #ffffff;
+      width: 100%;
+      max-width: 880px;
+      max-height: 90vh;
+      border-radius: 8px;
+      display: flex;
+      flex-direction: column;
+      box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.35);
+      border: 1px solid var(--gs-border);
+      overflow: hidden;
+      animation: modalSlideUp 0.25s ease-out;
+    }
+    @keyframes modalSlideUp {
+      from { opacity: 0; transform: translateY(15px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    .gs-modal-bar {
+      background: var(--gs-primary);
+      color: #ffffff;
+      padding: 0.85rem 1.5rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      border-bottom: 1px solid rgba(255,255,255,0.1);
+    }
+    .gs-modal-masthead-label {
+      font-size: 0.82rem;
+      font-weight: 700;
+      letter-spacing: 0.5px;
+      text-transform: uppercase;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+    .gs-modal-actions {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+    .gs-action-pill {
+      background: rgba(255, 255, 255, 0.15);
+      border: 1px solid rgba(255, 255, 255, 0.3);
+      color: #ffffff;
+      font-size: 0.78rem;
+      font-weight: 600;
+      padding: 0.3rem 0.65rem;
+      border-radius: 3px;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.3rem;
+      transition: all 0.2s;
+    }
+    .gs-action-pill:hover {
+      background: #ffffff;
+      color: var(--gs-primary-dark);
+    }
+    .gs-close-btn {
+      background: transparent;
+      border: none;
+      color: #ffffff;
+      font-size: 1.4rem;
+      cursor: pointer;
+      line-height: 1;
+      padding: 0.2rem 0.4rem;
+      border-radius: 3px;
+      transition: background 0.2s;
+    }
+    .gs-close-btn:hover {
+      background: rgba(255, 255, 255, 0.2);
+    }
+    .gs-article-scroll {
+      padding: 2.5rem 3rem;
+      overflow-y: auto;
+    }
+    .gs-article-category {
+      font-size: 0.8rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.75px;
+      color: var(--gs-primary);
+      margin-bottom: 0.6rem;
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+    }
+    .gs-article-category .badge-prem {
+      background: #ecfdf5;
+      color: #065f46;
+      border: 1px solid #a7f3d0;
+      padding: 0.15rem 0.45rem;
+      border-radius: 2px;
+      font-size: 0.68rem;
+    }
+    .gs-article-headline {
+      font-family: var(--gs-font-serif);
+      font-size: 1.85rem;
+      font-weight: 900;
+      color: #0f172a;
+      line-height: 1.3;
+      margin: 0 0 1.25rem 0;
+    }
+    .gs-article-sapo {
+      font-family: var(--gs-font-serif);
+      font-size: 1.05rem;
+      font-style: italic;
+      color: #334155;
+      line-height: 1.6;
+      padding-bottom: 1.25rem;
+      border-bottom: 1px solid var(--gs-border);
+      margin-bottom: 1.25rem;
+    }
+    .gs-article-meta-line {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 0.82rem;
+      color: var(--gs-text-muted);
+      margin-bottom: 2rem;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+    }
+    .gs-article-body {
+      font-size: 0.96rem;
+      line-height: 1.75;
+      color: #1e293b;
+    }
+    .gs-article-body h3 {
+      font-family: var(--gs-font-serif);
+      font-size: 1.25rem;
+      font-weight: 800;
+      color: #0f172a;
+      margin: 2rem 0 0.75rem 0;
+    }
+    .gs-article-body h4 {
+      font-size: 1.05rem;
+      font-weight: 700;
+      color: #1e293b;
+      margin: 1.5rem 0 0.5rem 0;
+    }
+    .gs-article-body p {
+      margin: 0 0 1.15rem 0;
+    }
+    .gs-article-body ul, .gs-article-body ol {
+      margin: 0 0 1.25rem 0;
+      padding-left: 1.5rem;
+    }
+    .gs-article-body li {
+      margin-bottom: 0.5rem;
+    }
+    .gs-callout {
+      background: #f0fdf4;
+      border-left: 4px solid var(--gs-primary);
+      padding: 1.25rem 1.5rem;
+      margin: 1.5rem 0;
+      border-radius: 0 4px 4px 0;
+      font-size: 0.94rem;
+    }
+    .gs-callout .callout-header {
+      display: block;
+      font-weight: 800;
+      text-transform: uppercase;
+      font-size: 0.8rem;
+      letter-spacing: 0.5px;
+      color: var(--gs-primary-dark);
+      margin-bottom: 0.5rem;
+    }
+    .gs-formula-box {
+      background: #0f172a;
+      color: #a7f3d0;
+      padding: 1rem 1.5rem;
+      border-radius: 4px;
+      font-family: 'JetBrains Mono', Consolas, monospace;
+      font-size: 0.9rem;
+      margin: 1.25rem 0;
+    }
+    .gs-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 1.5rem 0;
+      font-size: 0.86rem;
+    }
+    .gs-table th {
+      background: #f1f5f9;
+      color: #0f172a;
+      padding: 0.75rem 1rem;
+      text-align: left;
+      font-weight: 800;
+      border: 1px solid #cbd5e1;
+    }
+    .gs-table td {
+      border: 1px solid #e2e8f0;
+      padding: 0.75rem 1rem;
+      color: #1e293b;
+    }
+    .gs-table tr:nth-child(even) td {
+      background: #f8fafc;
+    }
+
+    @media (max-width: 1024px) {
+      .gs-hero-grid {
+        grid-template-columns: 1fr;
+        gap: 2.5rem;
+      }
+      .gs-hero-mid {
+        border-left: none;
+        border-right: none;
+        border-top: 1px solid var(--gs-border);
+        border-bottom: 1px solid var(--gs-border);
+        padding: 2rem 0;
+      }
+      .gs-grid-3 {
+        grid-template-columns: 1fr;
+      }
+      .gs-article-scroll {
+        padding: 2rem 1.5rem;
+      }
+    }
+  
+    /* ==========================================================================
+       DANTRI ESG NEWS GRID (Matching official editorial layout)
+       ========================================================================== */
+    .dt-news-section {
+      margin-bottom: 3.5rem;
+    }
+    .dt-news-grid-top {
+      display: grid;
+      grid-template-columns: 1.15fr 1fr;
+      gap: 2rem;
+      margin-bottom: 2.5rem;
+    }
+    @media (max-width: 900px) {
+      .dt-news-grid-top {
+        grid-template-columns: 1fr;
+      }
+    }
+    .dt-card-lead {
+      cursor: pointer;
+      display: flex;
+      flex-direction: column;
+    }
+    .dt-card-lead-img {
+      width: 100%;
+      height: 320px;
+      border-radius: 6px;
+      overflow: hidden;
+      margin-bottom: 1.25rem;
+      background: #f1f5f9;
+      border: 1px solid var(--gs-border);
+    }
+    .dt-card-lead-img img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.4s ease;
+    }
+    .dt-card-lead:hover .dt-card-lead-img img {
+      transform: scale(1.03);
+    }
+    .dt-card-lead-title {
+      font-family: var(--gs-font-serif);
+      font-size: 1.55rem;
+      font-weight: 900;
+      color: #0f172a;
+      line-height: 1.35;
+      margin: 0 0 0.75rem 0;
+      transition: color 0.2s;
+    }
+    .dt-card-lead:hover .dt-card-lead-title {
+      color: var(--gs-primary);
+    }
+    .dt-card-lead-sapo {
+      font-size: 0.92rem;
+      color: #475569;
+      line-height: 1.6;
+      margin: 0 0 0.85rem 0;
+    }
+    .dt-subgrid-4 {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1.5rem;
+    }
+    @media (max-width: 600px) {
+      .dt-subgrid-4 {
+        grid-template-columns: 1fr;
+      }
+    }
+    .dt-mini-card {
+      cursor: pointer;
+      display: flex;
+      flex-direction: column;
+    }
+    .dt-mini-card-img {
+      width: 100%;
+      height: 150px;
+      border-radius: 6px;
+      overflow: hidden;
+      margin-bottom: 0.75rem;
+      background: #f1f5f9;
+      border: 1px solid var(--gs-border);
+    }
+    .dt-mini-card-img img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.4s ease;
+    }
+    .dt-mini-card:hover .dt-mini-card-img img {
+      transform: scale(1.04);
+    }
+    .dt-mini-card-title {
+      font-family: var(--gs-font-serif);
+      font-size: 0.98rem;
+      font-weight: 700;
+      color: #1e293b;
+      line-height: 1.4;
+      margin: 0;
+      transition: color 0.2s;
+    }
+    .dt-mini-card:hover .dt-mini-card-title {
+      color: var(--gs-primary);
+    }
+
+    /* List items below */
+    .dt-horizontal-list {
+      display: flex;
+      flex-direction: column;
+      gap: 1.75rem;
+      padding-top: 2rem;
+      border-top: 1px solid var(--gs-border);
+    }
+    .dt-horizontal-card {
+      display: grid;
+      grid-template-columns: 240px 1fr;
+      gap: 1.5rem;
+      cursor: pointer;
+      align-items: start;
+    }
+    @media (max-width: 700px) {
+      .dt-horizontal-card {
+        grid-template-columns: 1fr;
+      }
+    }
+    .dt-horizontal-thumb {
+      width: 100%;
+      height: 150px;
+      border-radius: 6px;
+      overflow: hidden;
+      background: #f1f5f9;
+      border: 1px solid var(--gs-border);
+    }
+    .dt-horizontal-thumb img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.4s ease;
+    }
+    .dt-horizontal-card:hover .dt-horizontal-thumb img {
+      transform: scale(1.04);
+    }
+    .dt-horizontal-title {
+      font-family: var(--gs-font-serif);
+      font-size: 1.18rem;
+      font-weight: 800;
+      color: #0f172a;
+      line-height: 1.35;
+      margin: 0 0 0.5rem 0;
+      transition: color 0.2s;
+    }
+    .dt-horizontal-card:hover .dt-horizontal-title {
+      color: var(--gs-primary);
+    }
+    .dt-horizontal-sapo {
+      font-size: 0.88rem;
+      color: #475569;
+      line-height: 1.6;
+      margin: 0 0 0.6rem 0;
+    }
+    .dt-meta-tag {
+      font-size: 0.78rem;
+      color: var(--gs-text-muted);
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+  </style>
+</head>
+<body>
+
+  <!-- ==========================================================================
+       TOP GREEN NAVBAR BANNER
+       ========================================================================== -->
+  <header class="gs-header-banner">
+    <div class="gs-navbar-container">
+      
+      <!-- Left side: Back Button -->
+      <div class="gs-nav-left">
+        <a href="index.html" class="gs-btn-back" title="Quay về trang chủ GreenShift">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="19" y1="12" x2="5" y2="12"></line><polyline points="12 19 5 12 12 5"></polyline></svg>
+          <span>Quay lại Trang chủ</span>
+        </a>
+      </div>
+
+      <!-- Right side: Navigation Links & Dropdowns -->
+      <div class="gs-nav-right">
+        <a href="index.html" class="gs-nav-item">Trang chủ</a>
+
+        <div class="dropdown">
+          <a href="index.html#ve-chung-toi" class="dropbtn gs-nav-item">
+            Về chúng tôi <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+          </a>
+          <div class="dropdown-content">
+            <a href="index.html#ve-chung-toi">Giới thiệu GreenShift</a>
+            <a href="index.html#doi-ngu">Đội ngũ &amp; Tổ chức</a>
+            <a href="index.html#tam-nhin">Tầm nhìn &amp; Sứ mệnh</a>
+            <a href="index.html#doi-tac">Đối tác chiến lược</a>
+          </div>
+        </div>
+
+        <div class="dropdown">
+          <a href="index.html#giai-phap" class="dropbtn gs-nav-item">
+            Sản phẩm &amp; Dịch vụ <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+          </a>
+          <div class="dropdown-content" style="min-width: 260px;">
+            <div class="dropdown-category">Chuyển đổi Bền vững</div>
+            <a href="login.html" style="padding-left: 24px;">Phần mềm Kiểm kê KNK</a>
+            <a href="login.html" style="padding-left: 24px;">Báo cáo Thuế EU CBAM</a>
+            <a href="#" style="padding-left: 24px;">Nền tảng Quản trị ESG</a>
+            <div class="dropdown-category" style="margin-top: 10px;">Đào tạo &amp; Chuyển giao</div>
+            <a href="nhan-su-xanh.html" style="padding-left: 24px;">Chương trình "Nhân sự Xanh"</a>
+            <a href="co-van-net-zero.html" style="padding-left: 24px;">Cố vấn chiến lược Net Zero</a>
+          </div>
+        </div>
+
+        <div class="dropdown">
+          <a href="tai-nguyen.html" class="dropbtn gs-nav-item active-page">
+            Tài nguyên <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+          </a>
+          <div class="dropdown-content" style="min-width: 250px;">
+            <a href="javascript:void(0)" onclick="filterCategory('tracuu')" style="color:var(--gs-primary); font-weight:700;">🔍 Tra cứu QĐ 42/2026/QĐ-TTg</a>
+            <a href="javascript:void(0)" onclick="filterCategory('cbam')">Cơ chế EU CBAM</a>
+            <a href="javascript:void(0)" onclick="filterCategory('iso')">Tiêu chuẩn ISO 14064</a>
+            <a href="javascript:void(0)" onclick="filterCategory('nghidinh')">Nghị định 06/2022/NĐ-CP</a>
+            <a href="javascript:void(0)" onclick="filterCategory('whitepaper')">Báo cáo &amp; Sách trắng</a>
+            <a href="javascript:void(0)" onclick="filterCategory('casestudy')">Case Study Thực tế</a>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </header>
+
+  <!-- Category Filter Sub-bar -->
+  <nav class="gs-subnav-bar">
+    <div class="gs-subnav-container">
+      <span class="gs-nav-pill active" onclick="filterCategory('all', this)">Tất cả bài viết</span>
+      <span class="gs-nav-pill" onclick="filterCategory('cbam', this)">Cơ chế EU CBAM</span>
+      <span class="gs-nav-pill" onclick="filterCategory('iso', this)">Chuẩn ISO 14064</span>
+      <span class="gs-nav-pill" onclick="filterCategory('nghidinh', this)">Nghị định 06 &amp; Pháp chế</span>
+      <span class="gs-nav-pill" onclick="filterCategory('whitepaper', this)">Sách trắng &amp; Dữ liệu</span>
+      <span class="gs-nav-pill" onclick="filterCategory('casestudy', this)">Case Study Thực tế</span>
+      <span id="navTabTracuu" class="gs-nav-pill highlight" onclick="filterCategory('tracuu', this)" style="cursor:pointer;">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+        Tra cứu QĐ 42/2026 🔍
+      </span>
+      <a href="login.html" class="gs-nav-pill" style="margin-left: auto; color: var(--gs-primary); text-decoration:none;">
+        Công cụ Kiểm kê &rarr;
+      </a>
+    </div>
+  </nav>
+
+  <!-- ==========================================================================
+       MAIN CONTENT: EDITORIAL 3-COLUMN FRONT PAGE
+       ========================================================================== -->
+  <main class="gs-main-layout">
+
+<div id="frontpageSection">
+    <div class="gs-masthead-title">
+      <span>Tin Tức ESG &bull; Toàn Cảnh Chuyển Đổi Xanh &amp; CBAM</span>
+      <span class="subhead-date">Nguồn tin Báo Dân trí &bull; Cập nhật ngày 02/09/2026</span>
+    </div>
+
+    <!-- Section 1: Top 5 Highlights (1 Big Lead + 4 Grid) matching Dan Tri Screenshot! -->
+    <div class="dt-news-section">
+      <div class="dt-news-grid-top">
+        
+        <!-- Big Lead Story (EU CBAM 10 Hướng Dẫn) -->
+        <div class="dt-card-lead" onclick="openModal('dantri-10-huong-dan-cbam')">
+          <div class="dt-card-lead-img">
+            <img src="Images/dantri/dantri-10-huong-dan-cbam.jpg" alt="EU công bố 10 hướng dẫn CBAM">
+          </div>
+          <h2 class="dt-card-lead-title">
+            EU công bố 10 hướng dẫn CBAM, doanh nghiệp xuất khẩu cần lưu ý
+          </h2>
+          <p class="dt-card-lead-sapo">
+            (Dân trí) — Ủy ban châu Âu vừa công bố 10 hướng dẫn kỹ thuật CBAM, chấm dứt thời kỳ dùng số liệu ước tính và buộc các nhà sản xuất xuất khẩu phải kiểm toán lượng phát thải thực tế.
+          </p>
+          <div class="dt-meta-tag">
+            <span style="color:var(--gs-primary); font-weight:700;">Báo Dân trí &bull; Niên Vũ</span>
+            <span>&bull;</span>
+            <span>29/08/2026</span>
+            <span>&bull;</span>
+            <span style="color:var(--gs-primary); font-weight:700;">Đọc bài viết &rarr;</span>
+          </div>
+        </div>
+
+        <!-- 4 Grid Cards on the right (2x2) -->
+        <div class="dt-subgrid-4">
+          
+          <!-- Card 1: Thiếu dữ liệu phát thải CBAM -->
+          <div class="dt-mini-card" onclick="openModal('dantri-thieu-du-lieu-cbam')">
+            <div class="dt-mini-card-img">
+              <img src="Images/dantri/dantri-thieu-du-lieu-cbam.jpg" alt="Thiếu dữ liệu phát thải CBAM">
+            </div>
+            <h3 class="dt-mini-card-title">
+              Thiếu dữ liệu phát thải, doanh nghiệp xuất khẩu có nguy cơ đội chi phí CBAM
+            </h3>
+          </div>
+
+          <!-- Card 2: Nghịch lý thị trường carbon -->
+          <div class="dt-mini-card" onclick="openModal('dantri-nghich-ly-carbon')">
+            <div class="dt-mini-card-img">
+              <img src="Images/dantri/dantri-nghich-ly-carbon.jpg" alt="Nghịch lý thị trường carbon">
+            </div>
+            <h3 class="dt-mini-card-title">
+              Nghịch lý thị trường carbon: Vì sao giao dịch giảm nhưng giá lập đỉnh mới?
+            </h3>
+          </div>
+
+          <!-- Card 3: Giá tín chỉ carbon -->
+          <div class="dt-mini-card" onclick="openModal('dantri-gia-tin-chi-carbon')">
+            <div class="dt-mini-card-img">
+              <img src="Images/dantri/dantri-gia-tin-chi-carbon.jpg" alt="Giá tín chỉ carbon">
+            </div>
+            <h3 class="dt-mini-card-title">
+              Giá tín chỉ carbon: Vì sao có loại dưới 1 USD, loại hơn 1.000 USD?
+            </h3>
+          </div>
+
+          <!-- Card 4: TPHCM phân loại rác -->
+          <div class="dt-mini-card" onclick="openModal('dantri-tphcm-phan-loai-rac')">
+            <div class="dt-mini-card-img">
+              <img src="Images/dantri/dantri-tphcm-phan-loai-rac.jpg" alt="TPHCM phân loại rác 2027">
+            </div>
+            <h3 class="dt-mini-card-title">
+              TPHCM dự kiến bắt buộc phân loại rác tại nguồn từ năm 2027
+            </h3>
+          </div>
+
+        </div>
+
+      </div>
+
+      <!-- Section 2: Horizontal Feed Items (Matching Screenshot 2!) -->
+      <div class="dt-horizontal-list">
+
+        <!-- Item 1: ESG không còn bóng bẩy -->
+        <div class="dt-horizontal-card" onclick="openModal('dantri-esg-that-don-hang')">
+          <div class="dt-horizontal-thumb">
+            <img src="Images/dantri/dantri-esg-that-don-hang.jpg" alt="ESG không còn là báo cáo bóng bẩy">
+          </div>
+          <div>
+            <h3 class="dt-horizontal-title">
+              ESG không còn là báo cáo bóng bẩy, không làm ESG thật thì khó có đơn hàng
+            </h3>
+            <p class="dt-horizontal-sapo">
+              (Dân trí) — ESG không còn là câu chuyện thương hiệu mà đã thành "giấy thông hành" sống còn khi đối tác quốc tế siết chặt truy xuất nguồn gốc và phát thải.
+            </p>
+            <div class="dt-meta-tag">
+              <span>Báo Dân trí &bull; 27/08/2026</span>
+              <span>&bull;</span>
+              <span style="color:var(--gs-primary); font-weight:700;">Đọc toàn văn &rarr;</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Item 2: 5 việc SME cần làm -->
+        <div class="dt-horizontal-card" onclick="openModal('dantri-5-viec-sme-xanh')">
+          <div class="dt-horizontal-thumb">
+            <img src="Images/dantri/dantri-5-viec-sme-xanh.jpg" alt="5 việc SME cần làm chuyển đổi xanh">
+          </div>
+          <div>
+            <h3 class="dt-horizontal-title">
+              5 việc SME cần làm nếu muốn chuyển đổi xanh
+            </h3>
+            <p class="dt-horizontal-sapo">
+              (Dân trí) — Theo GS. TS Mạc Quốc Anh, SME không cần nguồn vốn lớn để chuyển đổi xanh. Doanh nghiệp có thể bắt đầu từ dự án nhỏ, lấy khoản tiết kiệm để tái đầu tư và đo lường bằng số liệu cụ thể.
+            </p>
+            <div class="dt-meta-tag">
+              <span>Báo Dân trí &bull; GS. TS Mạc Quốc Anh &bull; 26/08/2026</span>
+              <span>&bull;</span>
+              <span style="color:var(--gs-primary); font-weight:700;">Đọc toàn văn &rarr;</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Item 3: Case Study VinaFastener -->
+        <div class="dt-horizontal-card" onclick="openModal('must-3')">
+          <div class="dt-horizontal-thumb">
+            <img src="Images/blog_vinafastener.jpg" alt="Case Study VinaFastener">
+          </div>
+          <div>
+            <h3 class="dt-horizontal-title">
+              Case Study VinaFastener: Tối ưu tiền chất và tiết kiệm 28% thuế Carbon xuất khẩu Đức
+            </h3>
+            <p class="dt-horizontal-sapo">
+              Kinh nghiệm thực tiễn từ doanh nghiệp sản xuất phụ kiện kim loại Việt Nam trong việc số hóa dữ liệu Scope 1, Scope 2 và đáp ứng 100% yêu cầu thẩm định CBAM của đối tác châu Âu.
+            </p>
+            <div class="dt-meta-tag">
+              <span>Case Study Thực tế &bull; GreenShift Advisory</span>
+              <span>&bull;</span>
+              <span style="color:var(--gs-primary); font-weight:700;">Đọc toàn văn &rarr;</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Item 4: Shein IPO -->
+        <div class="dt-horizontal-card" onclick="openModal('dantri-shein-ipo')">
+          <div class="dt-horizontal-thumb">
+            <img src="Images/blog_green_hr.jpg" alt="Shein IPO mắc kẹt bài toán ESG">
+          </div>
+          <div>
+            <h3 class="dt-horizontal-title">
+              Định giá giảm từ 100 tỷ USD còn 26 tỷ khi IPO: Shein mắc kẹt ở bài toán ESG
+            </h3>
+            <p class="dt-horizontal-sapo">
+              (Dân trí) — Shein huy động 1,7 tỷ USD với định giá 26 tỷ USD, chỉ bằng 1/4 mức đỉnh, trong bối cảnh chịu sức ép từ lượng phát thải carbon khổng lồ, rủi ro chuỗi cung ứng và yêu cầu tuân thủ ESG khắt khe từ thị trường London.
+            </p>
+            <div class="dt-meta-tag">
+              <span>Báo Dân trí &bull; Niên Vũ &bull; 31/08/2026</span>
+              <span>&bull;</span>
+              <span style="color:var(--gs-primary); font-weight:700;">Đọc toàn văn &rarr;</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Dynamic Category Focus View (Shown when filtering specific categories) -->
+  <section id="categoryFocusSection" style="display:none; margin-bottom:3.5rem;"></section>
+
+    <!-- ==========================================================================
+         INTERACTIVE SECTION: TRA CỨU DOANH NGHIỆP PHẢI KIỂM KÊ KNK (QĐ 42/2026/QĐ-TTg)
+         ========================================================================== -->
+    <section id="tra-cuu-qd42" class="gs-lookup-wrapper">
+      <div class="gs-lookup-topbar">
+        <div class="gs-lookup-title-box">
+          <h2>
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
+            Tra Cứu Danh Mục Cơ Sở Bắt Buộc Kiểm Kê Khí Nhà Kính
+          </h2>
+          <p>
+            Căn cứ <strong>Quyết định số 42/2026/QĐ-TTg</strong> ngày 10/08/2026 của Thủ tướng Chính phủ &bull; Nghị định số 06/2022/NĐ-CP
+          </p>
+        </div>
+        <div>
+          <a href="docs/42-2026-qd-ttg-danh-muc-kiem-ke-knk.pdf" target="_blank" class="gs-btn-download-doc" title="Xem &amp; Tải file PDF chính thức">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
+            Tải Văn Bản QĐ 42/2026/QĐ-TTg (PDF 155 trang)
+          </a>
+        </div>
+      </div>
+
+      <!-- Mode Tabs -->
+      <div class="gs-lookup-tabs">
+        <button type="button" id="tabBtnSearch" class="gs-tab-pill active" onclick="switchLookupTab('search')">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+          Tra Cứu Danh Mục Cơ Sở (Directory Search)
+        </button>
+        <button type="button" id="tabBtnCalc" class="gs-tab-pill" onclick="switchLookupTab('calc')">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="4" y="2" width="16" height="20" rx="2"></rect><line x1="8" y1="6" x2="16" y2="6"></line><line x1="16" y1="14" x2="16" y2="18"></line><path d="M16 10h.01"></path><path d="M12 10h.01"></path><path d="M8 10h.01"></path><path d="M12 14h.01"></path><path d="M8 14h.01"></path><path d="M12 18h.01"></path><path d="M8 18h.01"></path></svg>
+          Công Cụ Tự Chẩn Đoán Ngưỡng Bắt Buộc (Self-Assessment)
+        </button>
+      </div>
+
+      <!-- Tab 1 Body: Directory Search -->
+      <div id="tabBodySearch" class="gs-lookup-body">
+        <div class="gs-search-grid">
+          <div class="gs-input-wrap">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+            <input type="text" id="facilitySearchInput" placeholder="Nhập tên doanh nghiệp, mã số thuế, nhà máy, KCN..." oninput="filterFacilities()">
+          </div>
+          <div class="gs-input-wrap">
+            <select id="ministryFilter" onchange="filterFacilities()">
+              <option value="">Tất cả Bộ Quản lý</option>
+              <option value="Bộ Công Thương">Bộ Công Thương</option>
+              <option value="Bộ Giao thông Vận tải">Bộ Giao thông Vận tải</option>
+              <option value="Bộ Xây dựng">Bộ Xây dựng</option>
+              <option value="Bộ Tài nguyên và Môi trường">Bộ Tài nguyên và Môi trường</option>
+              <option value="Bộ Nông nghiệp & PTNT">Bộ Nông nghiệp &amp; PTNT</option>
+            </select>
+          </div>
+          <div class="gs-input-wrap">
+            <select id="provinceFilter" onchange="filterFacilities()">
+              <option value="">Tất cả Tỉnh / Thành phố</option>
+              <option value="Hà Nội">TP. Hà Nội</option>
+              <option value="TP. Hồ Chí Minh">TP. Hồ Chí Minh</option>
+              <option value="Hải Phòng">TP. Hải Phòng</option>
+              <option value="Đà Nẵng">TP. Đà Nẵng</option>
+              <option value="Bình Dương">Bình Dương</option>
+              <option value="Đồng Nai">Đồng Nai</option>
+              <option value="Bà Rịa - Vũng Tàu">Bà Rịa - Vũng Tàu</option>
+              <option value="Quảng Ninh">Quảng Ninh</option>
+              <option value="Hải Dương">Hải Dương</option>
+              <option value="Thanh Hóa">Thanh Hóa</option>
+              <option value="Hà Tĩnh">Hà Tĩnh</option>
+              <option value="Quảng Ngãi">Quảng Ngãi</option>
+              <option value="Bắc Ninh">Bắc Ninh</option>
+              <option value="Hà Nam">Hà Nam</option>
+              <option value="Phú Thọ">Phú Thọ</option>
+              <option value="Cà Mau">Cà Mau</option>
+            </select>
+          </div>
+          <div class="gs-input-wrap">
+            <select id="sectorFilter" onchange="filterFacilities()">
+              <option value="">Tất cả Ngành nghề</option>
+              <option value="Nhiệt điện">Nhiệt điện &amp; Năng lượng</option>
+              <option value="Luyện kim & Sắt thép">Luyện kim &amp; Sắt thép</option>
+              <option value="Xi măng & VLXD">Xi măng &amp; Vật liệu XD</option>
+              <option value="Hóa chất & Phân bón">Hóa chất &amp; Phân bón</option>
+              <option value="Vận tải Hàng không">Vận tải Hàng không</option>
+              <option value="Vận tải Đường sắt">Vận tải Đường sắt</option>
+              <option value="Vận tải Biển">Vận tải Biển &amp; Cảng biển</option>
+              <option value="Tòa nhà Thương mại">Tòa nhà Thương mại</option>
+              <option value="Khách sạn & Nghỉ dưỡng">Khách sạn &amp; Nghỉ dưỡng</option>
+              <option value="Xử lý Chất thải rắn">Xử lý Chất thải rắn</option>
+              <option value="Dệt may & May mặc">Dệt may &amp; May mặc</option>
+              <option value="Chế biến Thực phẩm & Đồ uống">Thực phẩm &amp; Đồ uống</option>
+              <option value="Giấy & Bột giấy">Giấy &amp; Bột giấy</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="gs-stats-bar">
+          <span id="facilityCountLabel">Đang hiển thị <strong>0</strong> cơ sở phù hợp trong danh mục QĐ 42/2026/QĐ-TTg</span>
+          <span style="font-size:0.78rem; color:#94a3b8;">Nhấp vào từng dòng để xem chi tiết nghĩa vụ và hạn chót nộp báo cáo</span>
+        </div>
+
+        <div class="gs-facility-table-wrap">
+          <table class="gs-facility-table">
+            <thead>
+              <tr>
+                <th style="width:60px;">Mã</th>
+                <th>Tên Cơ sở / Doanh nghiệp</th>
+                <th>Mã số thuế</th>
+                <th>Địa phương</th>
+                <th>Bộ Quản lý &amp; Ngành</th>
+                <th>Ngưỡng Tiêu chuẩn</th>
+                <th>Trạng thái Pháp lý</th>
+                <th style="text-align:right;">Thao tác</th>
+              </tr>
+            </thead>
+            <tbody id="facilitiesTableBody">
+              <!-- Rendered dynamically by renderFacilitiesTable() -->
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <!-- Tab 2 Body: Diagnostic Self-Assessment -->
+      <div id="tabBodyCalc" class="gs-lookup-body" style="display:none;">
+        <div class="gs-calc-grid">
+          <div>
+            <h3 style="font-size:1.1rem; font-weight:800; color:#1e293b; margin:0 0 0.5rem 0;">
+              Kiểm Tra Nhanh Ngưỡng Bắt Buộc Của Cơ Sở
+            </h3>
+            <p style="font-size:0.84rem; color:#64748b; margin:0 0 1.5rem 0;">
+              Dành cho các doanh nghiệp chưa rõ mình có thuộc diện bắt buộc kiểm kê KNK hay không theo tiêu chí định lượng tại <strong>Điều 5 Nghị định 06/2022/NĐ-CP</strong>.
+            </p>
+
+            <div class="calc-input-group">
+              <label>1. Lĩnh vực hoạt động chính:</label>
+              <select id="calcSector">
+                <option value="industry">Sản xuất Công nghiệp / Năng lượng / Khai thác</option>
+                <option value="transport">Doanh nghiệp Vận tải (Hàng không, Biển, Đường bộ, Sắt)</option>
+                <option value="building">Tòa nhà thương mại / Trung tâm thương mại / Khách sạn</option>
+                <option value="waste">Cơ sở xử lý chất thải rắn (Chôn lấp, thiêu đốt rác)</option>
+              </select>
+            </div>
+
+            <div class="calc-input-group">
+              <label>2. Tổng điện năng tiêu thụ hàng năm (kWh/năm):</label>
+              <input type="number" id="calcElectricity" placeholder="Ví dụ: 8000000 (8 triệu kWh)" value="8500000">
+              <div class="calc-hint">Nếu có hóa đơn theo tháng, nhân trung bình tháng cho 12 tháng.</div>
+            </div>
+
+            <div class="calc-input-group">
+              <label>3. Nhiên liệu đốt Than đá hàng năm (Tấn than/năm):</label>
+              <input type="number" id="calcCoal" placeholder="Ví dụ: 500 (nếu có dùng lò hơi than)" value="0">
+            </div>
+
+            <div class="calc-input-group">
+              <label>4. Nhiên liệu Dầu Diesel (DO) / Dầu FO hàng năm (Lít/năm):</label>
+              <input type="number" id="calcOil" placeholder="Ví dụ: 120000 (120.000 lít)" value="60000">
+            </div>
+
+            <div class="calc-input-group">
+              <label>5. Khí đốt Gas LPG / Khí tự nhiên CNG hàng năm (Kg/năm):</label>
+              <input type="number" id="calcGas" placeholder="Ví dụ: 25000 (25.000 kg gas)" value="15000">
+            </div>
+
+            <button type="button" onclick="runSelfAssessment()" style="background:var(--gs-primary); color:#ffffff; padding:0.75rem 1.5rem; font-weight:700; font-size:0.9rem; border-radius:4px; border:none; cursor:pointer; width:100%; transition:all 0.2s;">
+              Chẩn Đoán Kết Quả Pháp Lý Ngay &rarr;
+            </button>
+          </div>
+
+          <!-- Result Column -->
+          <div class="calc-result-box" id="calcResultContainer">
+            <div>
+              <div style="font-size:0.78rem; font-weight:800; color:#64748b; text-transform:uppercase; margin-bottom:0.75rem;">
+                Kết quả đối chiếu Nghị định 06 &amp; QĐ 42
+              </div>
+              
+              <div id="calcStatusBadge" class="calc-res-status req">
+                <div style="font-weight:800; font-size:1.05rem; margin-bottom:0.35rem;" id="calcStatusTitle">
+                  BẮT BUỘC KIỂM KÊ KNK CẤP CƠ SỞ
+                </div>
+                <div style="font-size:0.82rem; line-height:1.5;" id="calcStatusDesc">
+                  Cơ sở của bạn có mức tiêu thụ năng lượng và lượng phát thải KNK vượt ngưỡng định lượng quy định của Chính phủ.
+                </div>
+              </div>
+
+              <div class="calc-metric-row">
+                <span style="color:#64748b;">Tổng tiêu thụ năng lượng quy đổi:</span>
+                <strong id="calcResToe" style="color:#0f172a;">1.085,4 TOE/năm</strong>
+              </div>
+              <div class="calc-metric-row">
+                <span style="color:#64748b;">Ngưỡng năng lượng bắt buộc:</span>
+                <strong style="color:#b91c1c;">&ge; 1.000 TOE/năm</strong>
+              </div>
+              <div class="calc-metric-row">
+                <span style="color:#64748b;">Tổng phát thải KNK ước tính:</span>
+                <strong id="calcResCo2" style="color:#0f172a;">6.342 tCO₂e/năm</strong>
+              </div>
+              <div class="calc-metric-row" style="border-bottom:none;">
+                <span style="color:#64748b;">Ngưỡng phát thải KNK bắt buộc:</span>
+                <strong style="color:#b91c1c;">&ge; 3.000 tCO₂e/năm</strong>
+              </div>
+            </div>
+
+            <div style="margin-top:1.5rem; padding-top:1rem; border-top:1px solid #e2e8f0;">
+              <a href="login.html" style="display:block; text-align:center; background:var(--gs-primary); color:#ffffff; font-weight:700; font-size:0.88rem; padding:0.65rem; border-radius:4px; text-decoration:none;">
+                Bắt đầu lập Báo cáo Kiểm kê trên GreenShift &rarr;
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         SECONDARY SECTION: BÁO CÁO PHÂN TÍCH & TIÊU CHUẨN KỸ THUẬT
+         ========================================================================== -->
+    <section class="gs-sub-section">
+      <div class="gs-sub-title">
+        <span>Báo Cáo Phân Tích &amp; Chuyên Đề Kỹ Thuật</span>
+        <span style="font-size:0.85rem; font-weight:600; color:var(--gs-primary);">Chuyên mục ISO &bull; CBAM &bull; ESG &bull; Dân trí</span>
+      </div>
+
+      <div class="gs-grid-3">
+
+        <!-- Card 1: ISO 14064 -->
+        <div class="gs-card-standard article-item" data-cat="iso" onclick="openModal('grid-1')">
+          <div class="gs-card-img">
+            <img src="Images/blog_iso_14064.jpg" alt="Tiêu chuẩn ISO 14064">
+          </div>
+          <div class="gs-card-content">
+            <div style="font-size:0.75rem; color:var(--gs-text-muted); font-weight:700;">15/08/2026 &bull; ISO 14064-1</div>
+            <h3 class="gs-card-headline">
+              Kiểm kê Khí nhà kính là gì? Hướng dẫn Phân loại Scope 1, Scope 2 và Scope 3
+            </h3>
+            <p class="gs-card-desc">
+              Bóc tách toàn diện ranh giới phát thải trực tiếp từ lò đốt, điện năng mua ngoài và chuỗi cung ứng theo tiêu chuẩn quốc tế.
+            </p>
+            <span style="font-size:0.82rem; font-weight:700; color:var(--gs-primary);">Đọc toàn văn &rarr;</span>
+          </div>
+        </div>
+
+        <!-- Card 2: CBAM SEE Formula -->
+        <div class="gs-card-standard article-item" data-cat="cbam" onclick="openModal('grid-2')">
+          <div class="gs-card-img">
+            <img src="Images/module_activity_data.jpg" alt="Cơ chế EU CBAM">
+          </div>
+          <div class="gs-card-content">
+            <div style="font-size:0.75rem; color:var(--gs-text-muted); font-weight:700;">08/08/2026 &bull; EU CBAM 2023/956</div>
+            <h3 class="gs-card-headline">
+              Hướng dẫn Tính toán Suất Phát thải Riêng (SEE) theo Quy định EU CBAM
+            </h3>
+            <p class="gs-card-desc">
+              Quy tắc xác định phát thải trực tiếp, gián tiếp và cộng dồn tiền chất (precursors) tránh bị áp đặt mức phạt từ Hải quan EU.
+            </p>
+            <span style="font-size:0.82rem; font-weight:700; color:var(--gs-primary);">Đọc toàn văn &rarr;</span>
+          </div>
+        </div>
+
+        <!-- Card 3: Sàn Carbon HNX Dân trí -->
+        <div class="gs-card-standard article-item" data-cat="nghidinh" onclick="openModal('dantri-carbon-hnx')">
+          <div class="gs-card-img">
+            <img src="Images/blog_feat_carbon_market.jpg" alt="Sàn Carbon HNX">
+          </div>
+          <div class="gs-card-content">
+            <div style="font-size:0.75rem; color:var(--gs-text-muted); font-weight:700;">10/08/2026 &bull; BÁO DÂN TRÍ</div>
+            <h3 class="gs-card-headline">
+              Sàn carbon sau gần 2 tháng vận hành trên HNX đang diễn biến ra sao?
+            </h3>
+            <p class="gs-card-desc">
+              Đánh giá thanh khoản, quy mô chuyển nhượng 1.210 tấn CO₂ tương đương và nhu cầu bù trừ của các doanh nghiệp nhiệt điện.
+            </p>
+            <span style="font-size:0.82rem; font-weight:700; color:var(--gs-primary);">Đọc toàn văn &rarr;</span>
+          </div>
+        </div>
+
+        <!-- Card 4: Ngưỡng Nghị định 06 -->
+        <div class="gs-card-standard article-item" data-cat="nghidinh" onclick="openModal('must-1')">
+          <div class="gs-card-img">
+            <img src="Images/blog_nghidinh06.jpg" alt="Nghị định 06">
+          </div>
+          <div class="gs-card-content">
+            <div style="font-size:0.75rem; color:var(--gs-text-muted); font-weight:700;">20/06/2026 &bull; PHÁP LÝ NGHỊ ĐỊNH 06</div>
+            <h3 class="gs-card-headline">
+              Tra cứu Ngưỡng Phát thải Bắt buộc Kiểm kê KNK (&ge; 3.000 tCO₂e / 1.000 TOE)
+            </h3>
+            <p class="gs-card-desc">
+              Danh mục cơ sở phát thải trọng điểm và chu kỳ kiểm kê định kỳ 02 năm/lần theo Quyết định Thủ tướng Chính phủ.
+            </p>
+            <span style="font-size:0.82rem; font-weight:700; color:var(--gs-primary);">Đọc toàn văn &rarr;</span>
+          </div>
+        </div>
+
+        <!-- Card 5: Nhân sự Xanh -->
+        <div class="gs-card-standard article-item" data-cat="whitepaper" onclick="openModal('grid-3')">
+          <div class="gs-card-img">
+            <img src="Images/blog_green_hr.jpg" alt="Nhân sự Xanh">
+          </div>
+          <div class="gs-card-content">
+            <div style="font-size:0.75rem; color:var(--gs-text-muted); font-weight:700;">28/07/2026 &bull; QUẢN TRỊ ESG</div>
+            <h3 class="gs-card-headline">
+              Chiến lược Đào tạo 'Nhân sự Xanh' Nội bộ: Tối ưu 70% Chi phí Tư vấn
+            </h3>
+            <p class="gs-card-desc">
+              Chuyển giao năng lực đo lường và làm chủ phần mềm tính toán KNK tại chỗ cho đội ngũ kỹ sư nhà máy.
+            </p>
+            <span style="font-size:0.82rem; font-weight:700; color:var(--gs-primary);">Đọc toàn văn &rarr;</span>
+          </div>
+        </div>
+
+        <!-- Card 6: 5 việc SME -->
+        <div class="gs-card-standard article-item" data-cat="whitepaper" onclick="openModal('dantri-sme-green')">
+          <div class="gs-card-img">
+            <img src="Images/module_greenshift_software.jpg" alt="Chuyển đổi xanh SME">
+          </div>
+          <div class="gs-card-content">
+            <div style="font-size:0.75rem; color:var(--gs-text-muted); font-weight:700;">19/08/2026 &bull; BÁO DÂN TRÍ</div>
+            <h3 class="gs-card-headline">
+              5 việc SME cần làm nếu muốn chuyển đổi xanh hiệu quả và tiết kiệm chi phí
+            </h3>
+            <p class="gs-card-desc">
+              GS.TS Mạc Quốc Anh: SME không cần nguồn vốn khổng lồ để bắt đầu; lộ trình từ tiết kiệm năng lượng đến số hóa.
+            </p>
+            <span style="font-size:0.82rem; font-weight:700; color:var(--gs-primary);">Đọc toàn văn &rarr;</span>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+      <!-- ==========================================================================
+         SPECIAL INVESTIGATIVE REPORTS (CHUYÊN ĐỀ PHÂN TÍCH BÁO DÂN TRÍ)
+         ========================================================================== -->
+    <section class="gs-sub-section">
+      <div class="gs-sub-title">
+        <span>Tiêu Điểm Báo Chí Chính Thống &bull; Chuyên Đề ESG Việt Nam (Báo Dân trí)</span>
+        <span style="font-size:0.85rem; font-weight:600; color:var(--gs-primary);">Trích nguồn trực tiếp từ Chuyên mục Kinh Doanh - Báo Dân trí</span>
+      </div>
+
+      <div class="gs-grid-3">
+
+        <!-- Card 1: Shein IPO -->
+        <div class="gs-card-standard article-item" data-cat="whitepaper" onclick="openModal('dantri-shein-ipo')">
+          <div class="gs-card-img">
+            <img src="Images/blog_green_hr.jpg" alt="Shein IPO ESG">
+          </div>
+          <div class="gs-card-content">
+            <div style="font-size:0.75rem; color:var(--gs-text-muted); font-weight:700;">31/08/2026 &bull; BÁO DÂN TRÍ &bull; NIÊN VŨ</div>
+            <h3 class="gs-card-headline">
+              Định giá giảm từ 100 tỷ USD còn 26 tỷ khi IPO: Shein mắc kẹt ở bài toán ESG
+            </h3>
+            <p class="gs-card-desc">
+              Thách thức từ lượng phát thải carbon khổng lồ, rủi ro chuỗi cung ứng và cơ cấu quản trị khiến định giá công ty sụt giảm 74% trước thềm niêm yết London.
+            </p>
+            <span style="font-size:0.82rem; font-weight:700; color:var(--gs-primary);">Đọc bài viết &rarr;</span>
+          </div>
+        </div>
+
+        <!-- Card 2: Chữ S trong ESG -->
+        <div class="gs-card-standard article-item" data-cat="whitepaper" onclick="openModal('dantri-chu-s-esg')">
+          <div class="gs-card-img">
+            <img src="Images/module_greenshift_software.jpg" alt="Chữ S trong ESG">
+          </div>
+          <div class="gs-card-content">
+            <div style="font-size:0.75rem; color:var(--gs-text-muted); font-weight:700;">29/08/2026 &bull; BÁO DÂN TRÍ &bull; ESG VIỆT NAM</div>
+            <h3 class="gs-card-headline">
+              Bị phạt hàng triệu USD, doanh nghiệp giật mình với chữ S trong ESG
+            </h3>
+            <p class="gs-card-desc">
+              Nhiều doanh nghiệp quá chú trọng yếu tố Môi trường (E) mà xem nhẹ Trụ cột Xã hội (S), dẫn đến các án phạt nặng nề và bị đối tác quốc tế hủy đơn hàng.
+            </p>
+            <span style="font-size:0.82rem; font-weight:700; color:var(--gs-primary);">Đọc bài viết &rarr;</span>
+          </div>
+        </div>
+
+        <!-- Card 3: Lời nguyền tài nguyên -->
+        <div class="gs-card-standard article-item" data-cat="whitepaper" onclick="openModal('dantri-loi-nguyen-tai-nguyen')">
+          <div class="gs-card-img">
+            <img src="Images/blog_nghidinh06.jpg" alt="Lời nguyền tài nguyên">
+          </div>
+          <div class="gs-card-content">
+            <div style="font-size:0.75rem; color:var(--gs-text-muted); font-weight:700;">26/08/2026 &bull; BÁO DÂN TRÍ &bull; KINH TẾ TUẦN HOÀN</div>
+            <h3 class="gs-card-headline">
+              Nếu cứ khai thác mà không bù đắp, các nước sẽ rơi vào 'lời nguyền tài nguyên'
+            </h3>
+            <p class="gs-card-desc">
+              Phân tích chuyên sâu về cơ chế tính toán vốn tự nhiên và tầm quan trọng của việc tái đầu tư sinh thái để bảo đảm tăng trưởng bền vững dài hạn.
+            </p>
+            <span style="font-size:0.82rem; font-weight:700; color:var(--gs-primary);">Đọc bài viết &rarr;</span>
+          </div>
+        </div>
+
+        <!-- Card 4: 1.000 đồng Grab/Be/GSM -->
+        <div class="gs-card-standard article-item" data-cat="whitepaper" onclick="openModal('dantri-1000d-moi-truong')">
+          <div class="gs-card-img">
+            <img src="Images/blog_feat_carbon_market.jpg" alt="Phí môi trường Grab Be GSM">
+          </div>
+          <div class="gs-card-content">
+            <div style="font-size:0.75rem; color:var(--gs-text-muted); font-weight:700;">27/08/2026 &bull; BÁO DÂN TRÍ &bull; MINH BẠCH ESG</div>
+            <h3 class="gs-card-headline">
+              1.000 đồng các bên Grab, Be, GSM thu 'bảo vệ môi trường' được dùng ra sao?
+            </h3>
+            <p class="gs-card-desc">
+              Tìm hiểu dòng tiền và các dự án bù đắp carbon, trồng rừng và hỗ trợ tài xế chuyển đổi xe điện từ khoản thu phí môi trường của các ứng dụng gọi xe.
+            </p>
+            <span style="font-size:0.82rem; font-weight:700; color:var(--gs-primary);">Đọc bài viết &rarr;</span>
+          </div>
+        </div>
+
+        <!-- Card 5: Vũ khí bí mật hút tiền -->
+        <div class="gs-card-standard article-item" data-cat="whitepaper" onclick="openModal('dantri-vu-khi-bi-mat')">
+          <div class="gs-card-img">
+            <img src="Images/blog_whitepaper.jpg" alt="Vũ khí bí mật FDI">
+          </div>
+          <div class="gs-card-content">
+            <div style="font-size:0.75rem; color:var(--gs-text-muted); font-weight:700;">27/08/2026 &bull; BÁO DÂN TRÍ &bull; TÀI CHÍNH XANH</div>
+            <h3 class="gs-card-headline">
+              Vũ khí bí mật để doanh nghiệp Việt hút được nhiều tiền đầu tư FDI
+            </h3>
+            <p class="gs-card-desc">
+              Minh bạch số liệu phát thải và có lộ trình khử carbon rõ ràng đang trở thành điều kiện tiên quyết để tiếp cận các quỹ tài chính xanh toàn cầu.
+            </p>
+            <span style="font-size:0.82rem; font-weight:700; color:var(--gs-primary);">Đọc bài viết &rarr;</span>
+          </div>
+        </div>
+
+        <!-- Card 6: Sự thật túi nhựa tự hủy -->
+        <div class="gs-card-standard article-item" data-cat="whitepaper" onclick="openModal('dantri-tui-nhua-tu-huy')">
+          <div class="gs-card-img">
+            <img src="Images/eco1.jpg" alt="Sự thật túi nhựa tự hủy">
+          </div>
+          <div class="gs-card-content">
+            <div style="font-size:0.75rem; color:var(--gs-text-muted); font-weight:700;">24/08/2026 &bull; BÁO DÂN TRÍ &bull; MÔI TRƯỜNG</div>
+            <h3 class="gs-card-headline">
+              Sự thật gây bất ngờ về túi nhựa tự hủy và nguy cơ Greenwashing
+            </h3>
+            <p class="gs-card-desc">
+              Nhiều sản phẩm gắn mác "tự hủy sinh học" thực chất chỉ phân rã thành vi nhựa nguy hại nếu thiếu điều kiện ủ công nghiệp đạt chuẩn ISO 17088.
+            </p>
+            <span style="font-size:0.82rem; font-weight:700; color:var(--gs-primary);">Đọc bài viết &rarr;</span>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ==========================================================================
+       EDITORIAL ARTICLE MODAL READER
+       ========================================================================== -->
+  <div id="articleModal" class="gs-modal-backdrop" onclick="closeModal(event)">
+    <div class="gs-modal-card" onclick="event.stopPropagation()">
+      
+      <!-- Top Control Bar -->
+      <div class="gs-modal-bar">
+        <div class="gs-modal-masthead-label">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
+          <span>GreenShift &bull; Trung Tâm Tri Thức ESG</span>
+        </div>
+        
+        <div class="gs-modal-actions">
+          <button type="button" class="gs-close-btn" onclick="closeModal(event)" title="Đóng (Esc)">&times;</button>
+        </div>
+      </div>
+
+      <!-- Scrollable Article Reader Body -->
+      <div class="gs-article-scroll" id="modalContent">
+        <!-- Injected dynamically by openModal() -->
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ==========================================================================
+       FACILITY DETAIL MODAL: HỒ SƠ NGHĨA VỤ PHÁP LÝ DOANH NGHIỆP
+       ========================================================================== -->
+  <div id="facilityModal" class="gs-modal-backdrop" onclick="closeFacilityModal(event)">
+    <div class="gs-modal-card" onclick="event.stopPropagation()" style="max-width:700px;">
+      <div class="gs-modal-bar">
+        <div class="gs-modal-masthead-label">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline></svg>
+          <span>Hồ Sơ Nghĩa Vụ Kiểm Kê KNK Cấp Cơ Sở</span>
+        </div>
+        <div class="gs-modal-actions">
+          <button type="button" class="gs-close-btn" onclick="closeFacilityModal(event)">&times;</button>
+        </div>
+      </div>
+      <div class="gs-article-scroll" id="facilityModalBody" style="padding:2rem;">
+        <!-- Injected dynamically by openFacilityModal() -->
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer id="footer" style="background-color: #0a1f14; color: #9ca3af; padding: 4rem 5% 2rem; border-top: 2px solid #1a7f4b;">
+    <div style="display: flex; flex-wrap: wrap; justify-content: space-between; gap: 3rem; margin-bottom: 3rem; max-width: 1280px; margin-left: auto; margin-right: auto;">
+      <div style="flex: 2; min-width: 320px;">
+        <div style="display: flex; align-items: center; gap: 1.5rem; margin-bottom: 1.5rem;">
+          <a href="index.html" style="display: inline-block;">
+            <img src="Images/logo_white.png" alt="GreenShift Logo" style="height: 100px; width: auto; object-fit: contain; margin-left: -15px;">
+          </a>
+        </div>
+        <p style="margin: 0.5rem 0; font-size: 0.9rem; line-height: 1.6; color: #d1d5db;">
+          Địa chỉ: Trường Đại học Kinh tế - Luật, ĐHQG TP.HCM,<br>P. Linh Xuân, TP. Thủ Đức, TP. Hồ Chí Minh
+        </p>
+        <p style="margin: 0.5rem 0; font-size: 0.9rem; color: #d1d5db;">Điện thoại: (+84) 079 676 5356</p>
+        <p style="margin: 0.5rem 0; font-size: 0.9rem; color: #d1d5db;">Email: vinhpck24408e1@st.uel.edu.vn</p>
+      </div>
+
+      <div style="flex: 1; min-width: 160px; margin-top: 1rem;">
+        <h4 style="color: white; font-size: 1.05rem; margin-bottom: 1.5rem; font-weight: 700;">Về chúng tôi</h4>
+        <ul style="list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 0.85rem;">
+          <li><a href="index.html#ve-chung-toi" class="footer-link">Giới thiệu GreenShift</a></li>
+          <li><a href="index.html#doi-ngu" class="footer-link">Đội ngũ &amp; Tổ chức</a></li>
+          <li><a href="index.html#tam-nhin" class="footer-link">Tầm nhìn &amp; Sứ mệnh</a></li>
+        </ul>
+      </div>
+
+      <div style="flex: 1; min-width: 160px; margin-top: 1rem;">
+        <h4 style="color: white; font-size: 1.05rem; margin-bottom: 1.5rem; font-weight: 700;">Sản phẩm &amp; Dịch vụ</h4>
+        <ul style="list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 0.85rem;">
+          <li><a href="login.html" class="footer-link">Phần mềm Kiểm kê KNK</a></li>
+          <li><a href="login.html" class="footer-link">Báo cáo Thuế EU CBAM</a></li>
+          <li><a href="#" class="footer-link">Nền tảng Quản trị ESG</a></li>
+          <li><a href="nhan-su-xanh.html" class="footer-link">Đào tạo "Nhân sự Xanh"</a></li>
+        </ul>
+      </div>
+
+      <div style="flex: 1; min-width: 160px; margin-top: 1rem;">
+        <h4 style="color: white; font-size: 1.05rem; margin-bottom: 1.5rem; font-weight: 700;">Trung Tâm Tài Nguyên</h4>
+        <ul style="list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 0.85rem;">
+          <li><a href="#tra-cuu-qd42" class="footer-link" style="color:#a7f3d0; font-weight:600;">Tra cứu QĐ 42/2026</a></li>
+          <li><a href="tai-nguyen.html" class="footer-link">Tất cả bài viết</a></li>
+          <li><a href="tai-nguyen.html" class="footer-link">Cơ chế EU CBAM</a></li>
+          <li><a href="tai-nguyen.html" class="footer-link">Tiêu chuẩn ISO 14064</a></li>
+          <li><a href="tai-nguyen.html" class="footer-link">Sách trắng &amp; Báo cáo</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div style="max-width: 1280px; margin: 0 auto; padding-top: 1.5rem; border-top: 1px solid rgba(255,255,255,0.1); display: flex; justify-content: space-between; align-items: center; position: relative;">
+      <p style="margin: 0; font-size: 0.85rem; color: #9ca3af;">
+        Copyright &copy; 2026 GreenShift. Trung tâm Tri thức ESG &amp; Quản trị Carbon.
+      </p>
+    </div>
+  </footer>
+
+  <!-- ==========================================================================
+       JAVASCRIPT FOR FILTERING, DIRECTORY LOOKUP & EDITORIAL MODAL READER
+       ========================================================================== -->
+  <script>
+    const articlesData = {
+  "dantri-cbam-10": {
+    "title": "EU công bố 10 hướng dẫn CBAM: Chấm dứt thời kỳ dùng số liệu ước tính, buộc kiểm toán phát thải thực tế",
+    "sapo": "(Dân trí) — Ủy ban châu Âu (EC) vừa chính thức công bố bộ 10 tài liệu hướng dẫn kỹ thuật chi tiết về Cơ chế CBAM, yêu cầu nhà xuất khẩu sắt thép, nhôm, xi măng phải đo đạc phát thải thực tế tại nhà máy và qua thẩm tra độc lập để tránh bị áp mức phạt nặng.",
+    "category": "Cơ chế EU CBAM & Xuất khẩu",
+    "cats": [
+      "cbam",
+      "whitepaper"
+    ],
+    "date": "01/09/2026",
+    "readingTime": "5 phút đọc",
+    "author": "Niên Vũ (Báo Dân trí)",
+    "tags": [
+      "Báo Dân trí",
+      "EU CBAM",
+      "Sắt thép & Nhôm",
+      "10 Hướng dẫn EC",
+      "Kiểm toán phát thải"
+    ],
+    "sourceName": "Báo Dân trí",
+    "sourceUrl": "https://dantri.com.vn/kinh-doanh/eu-cong-bo-10-huong-dan-cbam-doanh-nghiep-xuat-khau-can-luu-y-20260829181702121.htm",
+    "image": "Images/blog_cbam_steel.jpg",
+    "content": "\n      <p>(Dân trí) — Ủy ban châu Âu (EC) vừa chính thức công bố bộ 10 tài liệu hướng dẫn kỹ thuật chi tiết về Cơ chế Điều chỉnh Biên giới Carbon (CBAM). Động thái này đánh dấu bước chuyển mang tính bản lề: <strong>chấm dứt hoàn toàn giai đoạn được phép sử dụng số liệu phát thải mặc định (default values)</strong> từ các bảng ước tính toàn cầu.</p>\n      \n      <div class=\"gs-callout\">\n        <span class=\"callout-header\">Thông Điệp Trọng Tâm Từ EC</span>\n        Kể từ kỳ báo cáo quý 3/2024 trở đi và đặc biệt hướng tới giai đoạn thanh toán tài chính năm 2026, mọi lô hàng sắt thép, xi măng, nhôm và phân bón nhập khẩu vào thị trường EU bắt buộc phải kèm theo <strong>báo cáo phát thải thực tế (Actual Embedded Emissions)</strong> được tính toán trực tiếp từ dây chuyền sản xuất của nhà máy xuất xứ.\n      </div>\n\n      <h3>1. 10 Hướng Dẫn Kỹ Thuật Tập Trung Vào Những Trọng Điểm Nào?</h3>\n      <p>Bộ tài liệu hướng dẫn của EC tập trung vào việc chuẩn hóa phương pháp luận đo lường và bóc tách dữ liệu phát thải:</p>\n      <ul>\n        <li><strong>Xác định ranh giới hệ thống sản xuất (System Boundaries):</strong> Bóc tách rành mạch phát thải trực tiếp tại lò luyện (Scope 1) và phát thải gián tiếp từ điện năng tiêu thụ (Scope 2).</li>\n        <li><strong>Quy tắc tính toán tiền chất (Precursors Rule):</strong> Đối với các sản phẩm phức hợp như bu lông, ốc vít, thép hình, doanh nghiệp phải cộng dồn lượng khí thải đã phát sinh trong quá trình sản xuất phôi thép đầu vào.</li>\n        <li><strong>Thẩm tra độc lập bên thứ ba (Third-party Verification):</strong> Dữ liệu báo cáo phải được các tổ chức chứng nhận độc lập đạt chuẩn ISO 14065 / EU ETS phê duyệt trước khi nộp lên Cổng thông tin CBAM Registry của EC.</li>\n      </ul>\n\n      <h3>2. Rủi Ro Lớn Nếu Doanh Nghiệp Không Có Số Liệu Đo Đạc Thực Tế</h3>\n      <p>Theo đại diện Vụ Chính sách Thương mại Đa biên (Bộ Công Thương), nếu doanh nghiệp Việt Nam tiếp tục chậm trễ trong việc kiểm kê KNK tại nhà máy, các đối tác nhập khẩu tại EU sẽ buộc phải áp dụng mức phát thải mặc định cao nhất (thường lấy theo 10% cơ sở phát thải cao nhất của EU hoặc mức bình quân phạt nặng).</p>\n      <p>Điều này sẽ làm đội chi phí chứng chỉ CBAM lên mức khổng lồ, khiến sản phẩm thép và nhôm Việt Nam mất hoàn toàn lợi thế cạnh tranh về giá so với các đối thủ trong khu vực.</p>\n    "
+  },
+  "grid-1": {
+    "title": "Kiểm kê Khí nhà kính là gì? Hướng dẫn Phân loại Scope 1, Scope 2 và Scope 3 theo Chuẩn ISO 14064-1",
+    "sapo": "Bóc tách toàn diện ranh giới phát thải trực tiếp từ lò đốt, điện năng mua ngoài và chuỗi cung ứng theo tiêu chuẩn quốc tế ISO 14064-1 và Giao thức Khí nhà kính (GHG Protocol).",
+    "category": "Tiêu chuẩn ISO 14064",
+    "cats": [
+      "iso",
+      "whitepaper"
+    ],
+    "date": "15/08/2026",
+    "readingTime": "6 phút đọc",
+    "author": "Ban Chuyên Môn GreenShift",
+    "tags": [
+      "ISO 14064-1",
+      "GHG Protocol",
+      "Scope 1 2 3",
+      "Kiểm kê KNK",
+      "Hệ số phát thải"
+    ],
+    "image": "Images/blog_iso_14064.jpg",
+    "content": "\n      <p>Kiểm kê khí nhà kính (GHG Inventory) là hoạt động đo lường, tính toán và báo cáo tổng lượng phát thải khí nhà kính do các hoạt động của một tổ chức hoặc doanh nghiệp phát sinh trong một khoảng thời gian xác định (thường là 01 năm tài chính).</p>\n\n      <h3>1. Ba Phạm Vi Phát Thải Cốt Lõi (Scopes 1, 2, 3)</h3>\n      <ul>\n        <li><strong>Phạm vi 1 (Scope 1 - Phát thải Trực tiếp):</strong> Phát thải từ các nguồn thuộc quyền sở hữu hoặc kiểm soát trực tiếp của doanh nghiệp, bao gồm: lò hơi đốt than/dầu/gas, máy phát điện dự phòng, phương tiện vận tải nội bộ, rò rỉ môi chất lạnh từ hệ thống điều hòa.</li>\n        <li><strong>Phạm vi 2 (Scope 2 - Phát thải Gián tiếp do Năng lượng):</strong> Phát thải sinh ra từ quá trình sản xuất điện năng, hơi nước hoặc nhiệt lượng mà doanh nghiệp mua về sử dụng. Tại Việt Nam, Scope 2 được tính bằng lượng điện lưới tiêu thụ (kWh) nhân với Hệ số phát thải lưới điện quốc gia (EF_grid = 0,7221 tCO₂/MWh).</li>\n        <li><strong>Phạm vi 3 (Scope 3 - Chuỗi Giá trị Toàn diện):</strong> Toàn bộ các phát thải gián tiếp khác trong chuỗi cung ứng thượng nguồn (mua nguyên vật liệu, vận chuyển đầu vào) và hạ nguồn (sử dụng sản phẩm, xử lý rác thải cuối vòng đời).</li>\n      </ul>\n\n      <div class=\"gs-formula-box\">\n        Tổng Phát Thải (tCO₂e) = Scope 1 + Scope 2 + Scope 3<br>\n        Phát thải = Dữ liệu Hoạt động (Activity Data) &times; Hệ số Phát thải (EF) &times; Chỉ số GWP\n      </div>\n\n      <h3>2. Quy Trình 5 Bước Lập Báo Cáo Theo ISO 14064-1</h3>\n      <ol>\n        <li>Xác định ranh giới tổ chức (Ranh giới kiểm soát vận hành hoặc kiểm soát tài chính).</li>\n        <li>Nhận diện các nguồn phát thải và bể hấp thụ trong khuôn viên nhà máy.</li>\n        <li>Thu thập dữ liệu hoạt động (hóa đơn tiền điện, phiếu xuất nhập than/dầu/gas).</li>\n        <li>Áp dụng hệ số phát thải chuẩn (IPCC 2006 Guidelines / Quyết định Cục BĐKH).</li>\n        <li>Lập Báo cáo kiểm kê KNK cấp cơ sở và tiến hành thẩm tra độc lập.</li>\n      </ol>\n    "
+  },
+  "must-1": {
+    "title": "Tra cứu Ngưỡng Phát thải Bắt buộc Kiểm kê KNK (≥ 3.000 tCO₂e / 1.000 TOE) theo Nghị định 06/2022/NĐ-CP",
+    "sapo": "Tiêu chí định lượng xác định danh mục cơ sở phát thải khí nhà kính trọng điểm phải lập báo cáo định kỳ 02 năm/lần nộp trước ngày 31/03 theo quy định của Chính phủ.",
+    "category": "Nghị định 06 & Pháp chế",
+    "cats": [
+      "nghidinh",
+      "iso"
+    ],
+    "date": "20/08/2026",
+    "readingTime": "5 phút đọc",
+    "author": "Vụ Pháp Chế & Môi Trường",
+    "tags": [
+      "Nghị định 06/2022",
+      "QĐ 42/2026",
+      "Ngưỡng 1000 TOE",
+      "Ngưỡng 3000 tCO2e",
+      "Chế tài xử phạt"
+    ],
+    "image": "Images/blog_nghidinh06.jpg",
+    "content": "\n      <p>Căn cứ theo <strong>Điều 5 Nghị định số 06/2022/NĐ-CP</strong> và danh mục cập nhật tại <strong>Quyết định số 42/2026/QĐ-TTg</strong> của Thủ tướng Chính phủ, các cơ sở thuộc một trong các tiêu chí sau bắt buộc phải thực hiện kiểm kê KNK cấp cơ sở:</p>\n\n      <h3>1. Tiêu Chí Định Lượng Bắt Buộc</h3>\n      <ul>\n        <li><strong>Cơ sở sản xuất công nghiệp, năng lượng:</strong> Có tổng lượng phát thải KNK hàng năm từ <strong>3.000 tấn CO₂ tương đương (tCO₂e) trở lên</strong> HOẶC có tổng tiêu thụ năng lượng hàng năm từ <strong>1.000 tấn dầu tương đương (TOE) trở lên</strong>.</li>\n        <li><strong>Doanh nghiệp vận tải:</strong> Có tổng tiêu thụ năng lượng hàng năm từ <strong>1.000 TOE trở lên</strong>.</li>\n        <li><strong>Tòa nhà thương mại, chung cư cao tầng:</strong> Có tổng tiêu thụ năng lượng hàng năm từ <strong>1.000 TOE trở lên</strong> (tương đương khoảng 8,5 triệu kWh điện/năm).</li>\n        <li><strong>Cơ sở xử lý chất thải rắn:</strong> Có lượng chất thải rắn xử lý hàng năm từ <strong>65.000 tấn trở lên</strong>.</li>\n      </ul>\n\n      <h3>2. Mốc Thời Gian & Nghĩa Vụ Báo Cáo Định Kỳ</h3>\n      <table class=\"gs-table\">\n        <thead>\n          <tr>\n            <th>Nội dung nghĩa vụ</th>\n            <th>Chu kỳ thực hiện</th>\n            <th>Hạn chót nộp</th>\n            <th>Cơ quan tiếp nhận</th>\n          </tr>\n        </thead>\n        <tbody>\n          <tr>\n            <td>Lập &amp; nộp Báo cáo Kiểm kê KNK</td>\n            <td>02 năm / lần</td>\n            <td>Trước 31/03 năm liền kề</td>\n            <td>Sở TN&amp;MT + Bộ quản lý ngành</td>\n          </tr>\n          <tr>\n            <td>Kế hoạch Giảm nhẹ Phát thải KNK</td>\n            <td>Giai đoạn 2026 - 2030</td>\n            <td>Trước 31/12 hàng năm</td>\n            <td>Bộ Tài nguyên và Môi trường</td>\n          </tr>\n        </tbody>\n      </table>\n    "
+  },
+  "grid-2": {
+    "title": "Hướng dẫn Tính toán Suất Phát thải Riêng (SEE) theo Quy định EU CBAM (Regulation 2023/956)",
+    "sapo": "Quy tắc xác định phát thải trực tiếp, gián tiếp và cộng dồn tiền chất (precursors) tránh bị áp đặt mức phạt từ Hải quan EU đối với sản phẩm kim loại, xi măng.",
+    "category": "Cơ chế EU CBAM",
+    "cats": [
+      "cbam",
+      "iso"
+    ],
+    "date": "08/08/2026",
+    "readingTime": "7 phút đọc",
+    "author": "Nhóm Chuyên gia Carbon CBAM",
+    "tags": [
+      "EU CBAM",
+      "Suất phát thải SEE",
+      "Công thức CBAM",
+      "Tiền chất Precursors",
+      "Chứng chỉ ETS"
+    ],
+    "image": "Images/module_activity_data.jpg",
+    "content": "\n      <p>Cơ chế Điều chỉnh Biên giới Carbon (CBAM) của EU yêu cầu nhà nhập khẩu phải nộp chứng chỉ CBAM tương ứng với <strong>Suất Phát thải Riêng Tích hợp (Specific Embedded Emissions - SEE)</strong> của sản phẩm nhập khẩu.</p>\n\n      <h3>1. Công Thức Xác Định SEE Cho Sản Phẩm Phức Hợp (Complex Goods)</h3>\n      <div class=\"gs-formula-box\">\n        SEE_g = (AttrEm_g + EE_precursors) / AL_g<br><br>\n        Trong đó:<br>\n        &bull; SEE_g: Suất phát thải riêng của sản phẩm hàng hóa g (tCO₂e/tấn sản phẩm).<br>\n        &bull; AttrEm_g: Lượng phát thải được phân bổ trực tiếp cho quá trình sản xuất hàng hóa g.<br>\n        &bull; EE_precursors: Lượng phát thải tích hợp trong các nguyên liệu tiền chất đầu vào.<br>\n        &bull; AL_g: Tổng sản lượng hàng hóa g được sản xuất trong kỳ tính toán.\n      </div>\n\n      <h3>2. Các Bước Bóc Tách Dữ Liệu Thực Tế</h3>\n      <p>Doanh nghiệp xuất khẩu cần triển khai hệ thống quản trị dữ liệu năng lượng tại từng phân xưởng: gắn đồng hồ đo điện riêng cho từng dây chuyền, lưu trữ hóa đơn nguyên liệu tiền chất có xác nhận của nhà cung cấp.</p>\n    "
+  },
+  "feat-1": {
+    "title": "Lộ trình Vận hành Sàn Giao dịch Tín chỉ Carbon tại Việt Nam theo Nghị định 06/2022/NĐ-CP",
+    "sapo": "Phân tích khung thể chế thành lập Sàn giao dịch hạn ngạch phát thải và tín chỉ carbon (V-ETS), chuẩn bị thí điểm trên Sở Giao dịch Chứng khoán Hà Nội (HNX).",
+    "category": "Nghị định 06 & Pháp chế",
+    "cats": [
+      "nghidinh",
+      "whitepaper"
+    ],
+    "date": "25/08/2026",
+    "readingTime": "5 phút đọc",
+    "author": "Ban Nghiên Cứu Chính Sách Carbon",
+    "tags": [
+      "Sàn Carbon",
+      "V-ETS",
+      "Hạn ngạch phát thải",
+      "Nghị định 06",
+      "Tín chỉ Carbon"
+    ],
+    "image": "Images/blog_feat_carbon_market.jpg",
+    "content": "\n      <p>Thị trường carbon nội địa Việt Nam đang bước vào giai đoạn tăng tốc then chốt theo Đề án phát triển thị trường carbon được Thủ tướng Chính phủ phê duyệt.</p>\n\n      <h3>1. Lộ Trình 2 Giai Đoạn Vận Hành Sàn Carbon</h3>\n      <ul>\n        <li><strong>Giai đoạn 1 (2025 - 2027):</strong> Vận hành thí điểm sàn giao dịch tín chỉ carbon và hạn ngạch phát thải KNK. Trong giai đoạn này, các cơ sở phát thải lớn thuộc danh mục bắt buộc sẽ được cấp hạn ngạch thí điểm và làm quen với quy trình giao dịch, bù trừ.</li>\n        <li><strong>Giai đoạn 2 (Từ 2028 trở đi):</strong> Vận hành chính thức sàn giao dịch carbon trên toàn quốc; kết nối thị trường carbon trong nước với thị trường carbon khu vực và quốc tế.</li>\n      </ul>\n\n      <h3>2. Cơ Hội Tài Chính Cho Doanh Nghiệp Chủ Động Giảm Phát Thải</h3>\n      <p>Doanh nghiệp đầu tư đổi mới công nghệ, tiết kiệm năng lượng hoặc sử dụng điện mặt trời mái nhà sẽ dư thừa hạn ngạch phát thải. Lượng hạn ngạch dôi dư này có thể bán trực tiếp trên sàn HNX cho các doanh nghiệp phát thải vượt hạn mức, tạo ra nguồn doanh thu tài chính xanh bền vững.</p>\n    "
+  },
+  "dantri-carbon-hnx": {
+    "title": "Sàn carbon sau gần 2 tháng vận hành trên HNX đang diễn biến ra sao?",
+    "sapo": "(Dân trí) — Đánh giá thanh khoản, quy mô chuyển nhượng 1.210 tấn CO₂ tương đương và nhu cầu bù trừ của các doanh nghiệp nhiệt điện, xi măng trong giai đoạn đầu vận hành thị trường giao dịch carbon.",
+    "category": "Nghị định 06 & Thị trường",
+    "cats": [
+      "nghidinh",
+      "whitepaper"
+    ],
+    "date": "10/08/2026",
+    "readingTime": "4 phút đọc",
+    "author": "Báo Dân trí &bull; Chuyên mục Kinh Doanh",
+    "tags": [
+      "Báo Dân trí",
+      "Sàn Carbon HNX",
+      "Tín chỉ Carbon",
+      "Nhiệt điện & Xi măng",
+      "Thanh khoản thị trường"
+    ],
+    "sourceName": "Báo Dân trí",
+    "sourceUrl": "https://dantri.com.vn/kinh-doanh/esg-viet-nam/tin-tuc-esg.htm",
+    "image": "Images/blog_feat_carbon_market.jpg",
+    "content": "\n      <p>(Dân trí) — Sau gần 2 tháng chính thức đưa hệ thống giao dịch tín chỉ carbon vào vận hành thử nghiệm trên nền tảng Sở Giao dịch Chứng khoán Hà Nội (HNX), thị trường đã ghi nhận những tín hiệu giao dịch sôi động đầu tiên.</p>\n      \n      <p>Tổng khối lượng giao dịch tích lũy đạt hơn 1.210 tấn CO₂ tương đương với sự tham gia của các doanh nghiệp thuộc ngành nhiệt điện, xi măng và các chủ rừng sở hữu tín chỉ carbon lâm nghiệp đạt chuẩn quốc tế.</p>\n      \n      <p>Các chuyên gia nhận định, tính thanh khoản đang từng bước được cải thiện khi các doanh nghiệp hoàn tất quá trình kiểm kê phát thải và xác định chính xác nhu cầu mua bù trừ hạn ngạch cho năm tài chính 2026.</p>\n    "
+  },
+  "must-3": {
+    "title": "Case Study VinaFastener: Tối ưu tiền chất và tiết kiệm 28% thuế Carbon xuất khẩu sang Đức",
+    "sapo": "Kinh nghiệm thực tiễn từ doanh nghiệp sản xuất phụ kiện kim loại Việt Nam trong việc số hóa dữ liệu Scope 1, Scope 2 và đáp ứng 100% yêu cầu thẩm định CBAM của đối tác châu Âu.",
+    "category": "Case Study Thực tế",
+    "cats": [
+      "casestudy",
+      "cbam"
+    ],
+    "date": "18/07/2026",
+    "readingTime": "6 phút đọc",
+    "author": "Ban Cố Vấn GreenShift",
+    "tags": [
+      "Case Study",
+      "VinaFastener",
+      "Xuất khẩu Đức",
+      "Tối ưu hóa CBAM",
+      "Tiết kiệm 28% thuế"
+    ],
+    "image": "Images/blog_vinafastener.jpg",
+    "content": "\n      <p><strong>VinaFastener</strong> là doanh nghiệp chuyên sản xuất ốc vít, bu lông xuất khẩu sang thị trường Đức và Bắc Âu với sản lượng 15.000 tấn sản phẩm/năm. Khi EC ban hành quy chế CBAM, doanh nghiệp từng đứng trước nguy cơ bị đối tác áp mức phát thải mặc định dẫn đến mức phạt thuế lên tới hơn 120.000 EUR/năm.</p>\n\n      <h3>1. Giải Pháp Thực Thi Toàn Diện</h3>\n      <ul>\n        <li>Ứng dụng phần mềm GreenShift để số hóa toàn bộ hóa đơn tiền điện và dữ liệu nhiên liệu đốt lò nhiệt luyện.</li>\n        <li>Làm việc với nhà cung cấp phôi thép trong nước để thu thập chứng nhận phát thải của thép cuộn cán nóng (Precursor data).</li>\n        <li>Lắp đặt hệ thống điện mặt trời mái nhà 1,2 MWp giúp giảm ngay 18% phát thải Scope 2.</li>\n      </ul>\n\n      <h3>2. Kết Quả Đạt Được</h3>\n      <p>Suất phát thải thực tế của sản phẩm giảm từ 2,4 tCO₂e/tấn xuống còn 1,65 tCO₂e/tấn. Báo cáo CBAM được kiểm toán độc lập thông qua chỉ trong 2 tuần, giúp doanh nghiệp tiết kiệm 28% nghĩa vụ nộp thuế carbon và giữ vững hợp đồng cung ứng 3 năm với khách hàng Đức.</p>\n    "
+  },
+  "cs-pomina": {
+    "title": "Case Study Thép Pomina: Kiểm kê KNK và Tối ưu hóa Năng lượng Lò Hồ quang Điện (EAF)",
+    "sapo": "Chiến lược chuyển đổi từ lò cao BF sang lò điện EAF kết hợp sử dụng điện tái tạo, giúp hạ suất phát thải thép xây dựng xuống dưới 0,55 tCO₂/tấn.",
+    "category": "Case Study Thực tế",
+    "cats": [
+      "casestudy",
+      "iso"
+    ],
+    "date": "12/08/2026",
+    "readingTime": "5 phút đọc",
+    "author": "Ban Cố Vấn GreenShift",
+    "tags": [
+      "Case Study",
+      "Thép Pomina",
+      "Lò EAF",
+      "Tối ưu Năng lượng",
+      "Thép Xanh"
+    ],
+    "image": "Images/dantri/dantri-thieu-du-lieu-cbam.jpg",
+    "content": "\n      <p>Ngành luyện kim sắt thép là đối tượng chịu tác động kép từ cả Quyết định 42/2026/QĐ-TTg trong nước và Cơ chế EU CBAM khi xuất khẩu. Case study phân tích mô hình quản trị năng lượng tại Pomina:</p>\n      <ul>\n        <li><strong>Kiểm kê Scope 1:</strong> Bóc tách phát thải từ phản ứng khử hóa học và tiêu hao điện cực than chì trong lò hồ quang.</li>\n        <li><strong>Kiểm kê Scope 2:</strong> Ứng dụng hệ thống giám sát năng lượng theo thời gian thực (EMS), tối ưu hóa ca sản xuất vào khung giờ điện thấp điểm.</li>\n        <li><strong>Kết quả:</strong> Suất phát thải đạt 0,54 tCO₂e/tấn thép cuộn, vượt trội so với mức trung bình 2,1 tCO₂e/tấn của công nghệ lò cao truyền thống.</li>\n      </ul>\n    "
+  },
+  "cs-nghison": {
+    "title": "Case Study Xi măng Nghi Sơn: Lộ trình Giảm Suất Phát thải Clinker & Tuân thủ CBAM",
+    "sapo": "Ứng dụng phụ gia khoáng hoạt tính thay thế clinker và đồng xử lý chất thải công nghiệp trong lò nung clinker để giảm 22% phát thải trực tiếp.",
+    "category": "Case Study Thực tế",
+    "cats": [
+      "casestudy",
+      "cbam"
+    ],
+    "date": "05/08/2026",
+    "readingTime": "5 phút đọc",
+    "author": "Ban Cố Vấn GreenShift",
+    "tags": [
+      "Case Study",
+      "Xi măng Nghi Sơn",
+      "Giảm phát thải Clinker",
+      "Đồng xử lý rác",
+      "CBAM"
+    ],
+    "image": "Images/dantri/dantri-nghich-ly-carbon.jpg",
+    "content": "\n      <p>Xi măng là ngành có lượng phát thải trực tiếp (Scope 1) rất cao do phản ứng phân hủy canxi cacbonat (CaCO₃ → CaO + CO₂). Nghi Sơn đã thực hiện:</p>\n      <ul>\n        <li>Tăng tỷ lệ tro bay và xỉ hạt lò cao nghiền mịn để giảm hệ số clinker/xi măng từ 0,82 xuống 0,68.</li>\n        <li>Sử dụng rác thải công nghiệp đã phân loại làm nhiên liệu thay thế than cám trong lò nung, giảm tiêu thụ than hóa thạch 15%.</li>\n        <li>Xây dựng hồ sơ phát thải riêng SEE theo đúng biểu mẫu XML của Ủy ban Châu Âu.</li>\n      </ul>\n    "
+  },
+  "cs-viettien": {
+    "title": "Case Study May Việt Tiến: Chuyển đổi Lò hơi Sinh khối Biomass & Báo cáo Scope 1, 2",
+    "sapo": "Thay thế 100% lò hơi đốt than bằng lò hơi mùn cưa biomass đạt chuẩn trung hòa carbon, đáp ứng tiêu chuẩn nhãn hàng may mặc toàn cầu.",
+    "category": "Case Study Thực tế",
+    "cats": [
+      "casestudy",
+      "iso"
+    ],
+    "date": "29/07/2026",
+    "readingTime": "5 phút đọc",
+    "author": "Ban Cố Vấn GreenShift",
+    "tags": [
+      "Case Study",
+      "May Việt Tiến",
+      "Lò hơi Biomass",
+      "Scope 1 & 2",
+      "HygG FEM"
+    ],
+    "image": "Images/dantri/dantri-esg-that-don-hang.jpg",
+    "content": "\n      <p>Trước yêu cầu nghiêm ngặt từ các nhãn hàng thời trang quốc tế về việc loại bỏ than đá khỏi chuỗi cung ứng trước năm 2030, May Việt Tiến đã tiên phong thực hiện:</p>\n      <ul>\n        <li>Chuyển đổi toàn bộ hệ thống lò hơi là hơi đốt than sang sử dụng viên nén mùn cưa và trấu ép (Biomass).</li>\n        <li>Phát thải CO₂ sinh học từ nhiên liệu sinh khối được hạch toán tách biệt theo chuẩn ISO 14064-1, giúp giảm 92% phát thải Scope 1 ròng.</li>\n        <li>Đạt điểm A đánh giá môi trường Higg FEM, giữ vững vị thế nhà cung cấp chiến lược cho các thị trường khó tính.</li>\n      </ul>\n    "
+  },
+  "must-2": {
+    "title": "Sách trắng: Cẩm nang Kiểm kê Khí nhà kính Toàn diện 2026 cho Doanh nghiệp",
+    "sapo": "Ấn phẩm cẩm nang kỹ thuật hướng dẫn chi tiết từ A-Z cách xây dựng hệ thống quản trị dữ liệu carbon, tính toán phát thải và chuẩn bị hồ sơ kiểm toán.",
+    "category": "Sách trắng & Dữ liệu",
+    "cats": [
+      "whitepaper",
+      "iso"
+    ],
+    "date": "01/08/2026",
+    "readingTime": "10 phút đọc",
+    "author": "Hội đồng Chuyên môn GreenShift",
+    "tags": [
+      "Sách trắng",
+      "Cẩm nang KNK",
+      "Hướng dẫn Toàn diện",
+      "ISO 14064",
+      "ESG"
+    ],
+    "image": "Images/blog_whitepaper.jpg",
+    "content": "\n      <p>Sách trắng 'Quản Trị Dữ Liệu Phát Thải & Kiểm Kê Khí Nhà Kính Toàn Diện 2026' do đội ngũ chuyên gia GreenShift biên soạn là tài liệu hướng dẫn chuẩn mực dành riêng cho các doanh nghiệp sản xuất tại Việt Nam.</p>\n      <p>Tài liệu cung cấp hệ thống biểu mẫu thu thập số liệu, bảng tra cứu hệ số phát thải cập nhật nhất và lộ trình từng bước để doanh nghiệp đạt chứng nhận kiểm toán độc lập với chi phí tối ưu nhất.</p>\n    "
+  },
+  "dantri-shein-ipo": {
+    "title": "Định giá giảm từ 100 tỷ USD còn 26 tỷ khi IPO: Shein mắc kẹt ở bài toán ESG",
+    "sapo": "(Dân trí) — Shein huy động 1,7 tỷ USD với định giá 26 tỷ USD, chỉ bằng 1/4 mức đỉnh, trong bối cảnh chịu sức ép từ lượng phát thải carbon khổng lồ, rủi ro chuỗi cung ứng và yêu cầu tuân thủ ESG khắt khe từ thị trường London.",
+    "category": "ESG Quốc tế & Thời trang nhanh",
+    "cats": [
+      "whitepaper",
+      "casestudy",
+      "iso"
+    ],
+    "date": "31/08/2026",
+    "readingTime": "5 phút đọc",
+    "author": "Niên Vũ (Báo Dân trí)",
+    "tags": [
+      "Báo Dân trí",
+      "Shein IPO",
+      "Bài toán ESG",
+      "Phát thải Carbon",
+      "Chuỗi cung ứng"
+    ],
+    "sourceName": "Báo Dân trí",
+    "sourceUrl": "https://dantri.com.vn/kinh-doanh/dinh-gia-giam-tu-100-ty-usd-con-26-ty-khi-ipo-shein-mac-ket-o-bai-toan-esg-20260831161754480.htm",
+    "image": "Images/blog_green_hr.jpg",
+    "content": "\n      <p>(Dân trí) — Shein đang chuẩn bị cho đợt phát hành cổ phiếu lần đầu ra công chúng (IPO) tại London với mức định giá chỉ còn khoảng 26 tỷ USD, sụt giảm nghiêm trọng so với mức định giá 100 tỷ USD từng đạt được vào năm 2022.</p>\n      \n      <p>Nguyên nhân chủ yếu xuất phát từ những quan ngại sâu sắc của các quỹ đầu tư quốc tế về lượng phát thải carbon khổng lồ (Scope 3) từ mô hình thời trang nhanh giá rẻ, nguy cơ rác thải dệt may và các tiêu chuẩn lao động trong chuỗi cung ứng.</p>\n\n      <p>Bài học từ Shein cho thấy: Trong kỷ nguyên kinh tế mới, việc thiếu minh bạch và yếu kém trong quản trị ESG sẽ tác động trực tiếp, tức thì và nặng nề lên định giá tài chính của doanh nghiệp.</p>\n    "
+  },
+  "dantri-chu-s-esg": {
+    "title": "Bị phạt hàng triệu USD, doanh nghiệp giật mình với chữ S trong ESG",
+    "sapo": "(Dân trí) — Nhiều doanh nghiệp quá chú trọng vào yếu tố Môi trường (E) mà xem nhẹ Trụ cột Xã hội (S), dẫn đến các án phạt nặng nề và bị đối tác quốc tế hủy đơn hàng do vi phạm quy định an toàn lao động và quyền lợi người lao động.",
+    "category": "Trụ cột Xã hội (S in ESG)",
+    "cats": [
+      "nghidinh",
+      "whitepaper"
+    ],
+    "date": "29/08/2026",
+    "readingTime": "5 phút đọc",
+    "author": "ESG Việt Nam (Báo Dân trí)",
+    "tags": [
+      "Báo Dân trí",
+      "Chữ S trong ESG",
+      "Quyền lao động",
+      "Phạt hàng triệu USD",
+      "Tuân thủ chuỗi cung ứng"
+    ],
+    "sourceName": "Báo Dân trí",
+    "sourceUrl": "https://dantri.com.vn/kinh-doanh/bi-phat-hang-trieu-usd-doanh-nghiep-giat-minh-voi-chu-s-trong-esg-20260829193830782.htm",
+    "image": "Images/module_greenshift_software.jpg",
+    "content": "\n      <p>(Dân trí) — Khi triển khai chiến lược ESG, không ít lãnh đạo doanh nghiệp chỉ tập trung vào việc giảm phát thải, xử lý nước thải (chữ E) mà lơ là trụ cột Xã hội (chữ S) gồm an toàn lao động, phúc lợi và bình đẳng tại nơi làm việc.</p>\n      \n      <p>Gần đây, hàng loạt vụ xử phạt lên tới hàng triệu USD đối với các nhà cung cấp linh kiện và may mặc tại châu Á đã gióng lên hồi chuông cảnh báo: Các thị trường EU và Mỹ đang kiểm tra gắt gao Luật Thẩm định Chuỗi Cung ứng (CSDDD), coi vi phạm lao động là lý do chính đáng để cấm cửa hàng hóa nhập khẩu.</p>\n    "
+  },
+  "dantri-loi-nguyen-tai-nguyen": {
+    "title": "Nếu cứ khai thác mà không bù đắp, các nước sẽ rơi vào 'lời nguyền tài nguyên'",
+    "sapo": "(Dân trí) — Phân tích chuyên sâu về cơ chế tính toán giá trị vốn tự nhiên, kế toán tài sản sinh thái và tầm quan trọng của việc tái đầu tư sinh thái để bảo đảm tăng trưởng bền vững dài hạn.",
+    "category": "Kinh tế Tài nguyên & Net Zero",
+    "cats": [
+      "nghidinh",
+      "whitepaper"
+    ],
+    "date": "26/08/2026",
+    "readingTime": "6 phút đọc",
+    "author": "Báo Dân trí &bull; Chuyên mục Kinh Doanh",
+    "tags": [
+      "Báo Dân trí",
+      "Lời nguyền tài nguyên",
+      "Kinh tế tuần hoàn",
+      "Bù đắp sinh thái",
+      "Chính sách ESG"
+    ],
+    "sourceName": "Báo Dân trí",
+    "sourceUrl": "https://dantri.com.vn/kinh-doanh/neu-cu-khai-thac-ma-khong-bu-dap-cac-nuoc-se-roi-vao-loi-nguyen-tai-nguyen-20260826204249038.htm",
+    "image": "Images/blog_nghidinh06.jpg",
+    "content": "\n      <p>(Dân trí) — Khái niệm 'lời nguyền tài nguyên' (Resource Curse) chỉ nghịch lý các quốc gia giàu tài nguyên thiên nhiên nhưng nếu khai thác cạn kiệt mà không có cơ chế bù đắp và chuyển đổi năng lượng thì nền kinh tế sẽ bị phụ thuộc và dễ suy thoái khi tài nguyên cạn kiệt.</p>\n      \n      <p>Bài toán phát triển bền vững hiện nay đòi hỏi Việt Nam phải chuyển đổi mô hình từ khai thác tuyến tính (Khai thác - Sản xuất - Thải bỏ) sang Kinh tế tuần hoàn và áp dụng các công cụ định giá carbon để bắt buộc doanh nghiệp chia sẻ trách nhiệm phục hồi môi trường.</p>\n    "
+  },
+  "dantri-1000d-moi-truong": {
+    "title": "1.000 đồng các bên Grab, Be, GSM thu 'bảo vệ môi trường' được dùng ra sao?",
+    "sapo": "(Dân trí) — Tìm hiểu dòng tiền và các dự án bù đắp carbon, trồng rừng và hỗ trợ tài xế chuyển đổi xe điện từ khoản thu phí môi trường của các ứng dụng gọi xe công nghệ tại Việt Nam.",
+    "category": "Minh bạch & Trách nhiệm Xã hội",
+    "cats": [
+      "nghidinh",
+      "whitepaper"
+    ],
+    "date": "27/08/2026",
+    "readingTime": "4 phút đọc",
+    "author": "Báo Dân trí &bull; Tiêu dùng & ESG",
+    "tags": [
+      "Báo Dân trí",
+      "Phí bảo vệ môi trường",
+      "Grab & Be & GSM",
+      "Kinh tế chia sẻ",
+      "Minh bạch dòng tiền"
+    ],
+    "sourceName": "Báo Dân trí",
+    "sourceUrl": "https://dantri.com.vn/kinh-doanh/1000-dong-cac-ben-grab-be-gsm-thu-bao-ve-moi-truong-duoc-dung-ra-sao-20260827123910701.htm",
+    "image": "Images/dantri/dantri-gia-tin-chi-carbon.jpg",
+    "content": "\n      <p>(Dân trí) — Khoản phí 1.000 đồng đóng góp tự nguyện hoặc phụ thu bảo vệ môi trường trên mỗi chuyến xe công nghệ đang được các hãng giải ngân vào những mục đích nào?</p>\n      \n      <p>Khảo sát thực tế cho thấy các nền tảng gọi xe đang dùng nguồn quỹ này để đầu tư vào các dự án trồng rừng trung hòa carbon, hợp tác với các quỹ tín chỉ carbon đạt chứng chỉ quốc tế và tài trợ lãi suất ưu đãi cho tài xế chuyển đổi sang xe máy điện, tạo hiệu ứng lan tỏa tích cực cho giao thông xanh.</p>\n    "
+  },
+  "dantri-vu-khi-bi-mat": {
+    "title": "Vũ khí bí mật để doanh nghiệp Việt hút được nhiều tiền vốn đầu tư FDI",
+    "sapo": "(Dân trí) — Minh bạch số liệu phát thải và có lộ trình khử carbon rõ ràng đang trở thành điều kiện tiên quyết để tiếp cận các quỹ tài chính xanh và dòng vốn đầu tư quốc tế lãi suất ưu đãi.",
+    "category": "Tài chính Xanh & Đầu tư",
+    "cats": [
+      "whitepaper",
+      "nghidinh"
+    ],
+    "date": "27/08/2026",
+    "readingTime": "5 phút đọc",
+    "author": "Báo Dân trí &bull; Tài chính",
+    "tags": [
+      "Báo Dân trí",
+      "Tài chính xanh",
+      "Thu hút vốn FDI",
+      "Báo cáo ESG",
+      "Vũ khí cạnh tranh"
+    ],
+    "sourceName": "Báo Dân trí",
+    "sourceUrl": "https://dantri.com.vn/kinh-doanh/vu-khi-bi-mat-de-doanh-nghiep-viet-hut-duoc-nhieu-tien-20260827143738802.htm",
+    "image": "Images/blog_whitepaper.jpg",
+    "content": "\n      <p>(Dân trí) — Trong bối cảnh các định chế tài chính quốc tế như IFC, ADB và các ngân hàng thương mại lớn siết chặt tiêu chuẩn cấp tín dụng xanh, doanh nghiệp sở hữu Báo cáo kiểm kê KNK minh bạch và kế hoạch giảm phát thải khả thi có cơ hội tiếp cận nguồn vốn với mức lãi suất thấp hơn từ 1,5% đến 2,5%/năm so với thông thường.</p>\n    "
+  },
+  "dantri-tui-nhua-tu-huy": {
+    "title": "Sự thật gây bất ngờ về túi nhựa tự hủy và nguy cơ Greenwashing",
+    "sapo": "(Dân trí) — Nhiều sản phẩm gắn mác 'tự hủy sinh học' thực chất chỉ phân rã thành vi nhựa nguy hại nếu thiếu điều kiện ủ công nghiệp đạt chuẩn ISO 17088.",
+    "category": "Thẩm tra Môi trường & Greenwashing",
+    "cats": [
+      "iso",
+      "whitepaper"
+    ],
+    "date": "24/08/2026",
+    "readingTime": "5 phút đọc",
+    "author": "Báo Dân trí &bull; Môi trường",
+    "tags": [
+      "Báo Dân trí",
+      "Túi nhựa tự hủy",
+      "Rác thải nhựa",
+      "Greenwashing",
+      "Tiêu chuẩn ISO 17088"
+    ],
+    "sourceName": "Báo Dân trí",
+    "sourceUrl": "https://dantri.com.vn/kinh-doanh/su-that-gay-bat-ngo-ve-tui-nhua-tu-huy-20260824220901845.htm",
+    "image": "Images/dantri/dantri-tphcm-phan-loai-rac.jpg",
+    "content": "\n      <p>(Dân trí) — Nhiều loại túi nilon được quảng cáo là 'tự hủy' trên thị trường thực chất là túi oxo-biodegradable (nhựa thông thường pha thêm phụ gia phân rã). Dưới tác động của ánh sáng mặt trời, loại túi này chỉ vỡ vụn thành hàng tỷ mảnh vi nhựa độc hại, gây ô nhiễm đất và nguồn nước nghiêm trọng hơn.</p>\n      \n      <p>Để đạt chuẩn tự hủy sinh học thực sự, sản phẩm phải được chứng nhận theo các tiêu chuẩn quốc tế nghiêm ngặt như ISO 17088, EN 13432 hoặc ASTM D6400, đảm bảo phân hủy hoàn toàn thành nước, khí CO₂ và sinh khối trong điều kiện ủ công nghiệp.</p>\n    "
+  },
+  "dantri-netzero": {
+    "title": "Đâu là rào cản lớn nhất để Net Zero? Chi phí, chuỗi cung ứng và 'bẫy thí điểm'",
+    "sapo": "(Dân trí) — Khảo sát hàng trăm doanh nghiệp sản xuất cho thấy rào cản lớn nhất không chỉ nằm ở vốn đầu tư công nghệ mà là sự thiếu hụt nhân sự am hiểu kỹ thuật đo lường carbon và dữ liệu chuỗi cung ứng bị phân mảnh.",
+    "category": "Chiến lược Net Zero",
+    "cats": [
+      "whitepaper",
+      "iso"
+    ],
+    "date": "16/08/2026",
+    "readingTime": "5 phút đọc",
+    "author": "Cẩm Hà (Báo Dân trí)",
+    "tags": [
+      "Báo Dân trí",
+      "Net Zero 2050",
+      "Rào cản Doanh nghiệp",
+      "Dữ liệu Carbon",
+      "Bẫy thí điểm"
+    ],
+    "sourceName": "Báo Dân trí",
+    "sourceUrl": "https://dantri.com.vn/kinh-doanh/dau-la-rao-can-lon-nhat-de-net-zero-20260816080328605.htm",
+    "image": "Images/dantri/dantri-nghich-ly-carbon.jpg",
+    "content": "\n      <p>(Dân trí) — Báo cáo khảo sát thực tế chỉ ra rằng phần lớn doanh nghiệp vừa và nhỏ (SME) Việt Nam đang rơi vào 'bẫy thí điểm' (pilot trap): thực hiện một vài dự án xanh nhỏ lẻ nhưng không thể nhân rộng do thiếu một hệ thống phần mềm quản trị và tính toán phát thải đồng bộ.</p>\n    "
+  },
+  "dantri-esg-now": {
+    "title": "Chuyên gia: Giờ không còn là lúc hỏi nhau làm báo cáo ESG theo mẫu nào nữa",
+    "sapo": "(Dân trí) — Các chuyên gia khẳng định giai đoạn đối phó hình thức với báo cáo ESG đã qua; doanh nghiệp phải chứng minh bằng số liệu kiểm kê KNK có thể kiểm toán được nếu không muốn bị loại khỏi chuỗi cung ứng toàn cầu.",
+    "category": "Quản trị Doanh nghiệp",
+    "cats": [
+      "whitepaper"
+    ],
+    "date": "28/08/2026",
+    "readingTime": "5 phút đọc",
+    "author": "Chuyên trang ESG Việt Nam (Báo Dân trí)",
+    "tags": [
+      "Báo Dân trí",
+      "ESG Thực chất",
+      "Báo cáo Bền vững",
+      "Chuỗi cung ứng",
+      "Kiểm toán Carbon"
+    ],
+    "sourceName": "Báo Dân trí",
+    "sourceUrl": "https://dantri.com.vn/kinh-doanh/esg-viet-nam/tin-tuc-esg.htm",
+    "image": "Images/dantri/dantri-esg-that-don-hang.jpg",
+    "content": "\n      <p>(Dân trí) — Tại diễn đàn Phát triển Bền vững vừa qua, các chuyên gia đầu ngành nhấn mạnh: ESG không còn là bài tập làm văn để nộp cho đẹp hồ sơ. Khách hàng quốc tế và ngân hàng đòi hỏi các con số định lượng cụ thể: Nhà máy phát thải bao nhiêu tCO₂e/năm? Tỷ lệ năng lượng tái tạo là bao nhiêu phần trăm? Lộ trình cắt giảm theo từng năm thế nào?</p>\n    "
+  },
+  "dantri-cbam-data": {
+    "title": "Thiếu dữ liệu phát thải, doanh nghiệp xuất khẩu có nguy cơ đội chi phí CBAM",
+    "sapo": "(Dân trí) — Cảnh báo nghiêm khắc: Nếu tiếp tục chậm trễ số hóa dữ liệu lò hơi và dây chuyền sản xuất, doanh nghiệp xuất khẩu sắt thép, nhôm sẽ bị áp mức phát thải mặc định cao nhất, làm mất toàn bộ lợi nhuận xuất khẩu.",
+    "category": "Cơ chế EU CBAM & Cảnh báo",
+    "cats": [
+      "cbam",
+      "iso"
+    ],
+    "date": "22/08/2026",
+    "readingTime": "4 phút đọc",
+    "author": "Ban Kinh Doanh Quốc Tế (Báo Dân trí)",
+    "tags": [
+      "Báo Dân trí",
+      "Dữ liệu CBAM",
+      "Thuế Carbon",
+      "Sắt thép Việt Nam",
+      "Cảnh báo xuất khẩu"
+    ],
+    "sourceName": "Báo Dân trí",
+    "sourceUrl": "https://dantri.com.vn/kinh-doanh/eu-cong-bo-10-huong-dan-cbam-doanh-nghiep-xuat-khau-can-luu-y-20260829181702121.htm",
+    "image": "Images/blog_cbam_steel.jpg",
+    "content": "\n      <p>(Dân trí) — Việc thu thập dữ liệu phát thải không thể làm trong một vài ngày trước kỳ nộp báo cáo. Doanh nghiệp cần ít nhất 6 tháng vận hành hệ thống đo lường tại xưởng để có chuỗi dữ liệu tin cậy phục vụ kiểm toán CBAM.</p>\n    "
+  },
+  "dantri-sme-green": {
+    "title": "5 việc SME cần làm nếu muốn chuyển đổi xanh hiệu quả và tiết kiệm chi phí",
+    "sapo": "(Dân trí) — GS.TS Mạc Quốc Anh: Doanh nghiệp vừa và nhỏ không cần nguồn vốn khổng lồ để bắt đầu; lộ trình từ tiết kiệm năng lượng, tái đào tạo nhân sự đến số hóa dữ liệu kiểm kê KNK là chìa khóa thành công.",
+    "category": "Cẩm nang Chuyển đổi Xanh",
+    "cats": [
+      "whitepaper",
+      "nghidinh"
+    ],
+    "date": "19/08/2026",
+    "readingTime": "6 phút đọc",
+    "author": "GS.TS Mạc Quốc Anh (Báo Dân trí)",
+    "tags": [
+      "Báo Dân trí",
+      "SME Việt Nam",
+      "5 Việc Chuyển Đổi Xanh",
+      "GS.TS Mạc Quốc Anh",
+      "Tiết kiệm chi phí"
+    ],
+    "sourceName": "Báo Dân trí",
+    "sourceUrl": "https://dantri.com.vn/kinh-doanh/esg-viet-nam/tin-tuc-esg.htm",
+    "image": "Images/module_greenshift_software.jpg",
+    "content": "\n      <p>(Dân trí) — Chuyển đổi xanh không phải là đặc quyền của các tập đoàn nghìn tỷ. Với SME, 5 bước đi thực tế nhất gồm: (1) Kiểm toán rò rỉ năng lượng tại xưởng; (2) Tối ưu hóa nguyên vật liệu; (3) Tái đào tạo đội ngũ kỹ thuật nội bộ; (4) Sử dụng phần mềm kiểm kê số hóa thay vì thuê tư vấn đắt đỏ; (5) Tận dụng các nguồn vốn tín dụng xanh ưu đãi.</p>\n    "
+  },
+  "dantri-eudr-coffee": {
+    "title": "EU đưa cà phê hòa tan vào phạm vi EUDR: Doanh nghiệp Việt cần biết gì?",
+    "sapo": "(Dân trí) — Quy định chống phá rừng của EU (EUDR) mở rộng sang các sản phẩm cà phê chế biến sâu, đòi hỏi nhà xuất khẩu phải cung cấp tọa độ định vị GPS vùng trồng và chứng minh đất không bị mất rừng sau năm 2020.",
+    "category": "Pháp chế EU & Nông sản",
+    "cats": [
+      "cbam",
+      "whitepaper"
+    ],
+    "date": "25/08/2026",
+    "readingTime": "5 phút đọc",
+    "author": "Ban Nông Nghiệp & Thương Mại (Báo Dân trí)",
+    "tags": [
+      "Báo Dân trí",
+      "EUDR Cà phê",
+      "Quy định EU",
+      "Truy xuất nguồn gốc",
+      "Nông nghiệp bền vững"
+    ],
+    "sourceName": "Báo Dân trí",
+    "sourceUrl": "https://dantri.com.vn/kinh-doanh/esg-viet-nam/tin-tuc-esg.htm",
+    "image": "Images/eco1.jpg",
+    "content": "\n      <p>(Dân trí) — Việc EC bổ sung cà phê chế biến sâu vào phạm vi áp dụng của Quy định EUDR đặt ra thách thức lớn về truy xuất nguồn gốc chuỗi cung ứng từ nông hộ đến nhà máy chế biến.</p>\n    "
+  },
+  "grid-3": {
+    "title": "Chiến lược Đào tạo 'Nhân sự Xanh' Nội bộ: Tối ưu 70% Chi phí Tư vấn Kiểm kê KNK",
+    "sapo": "Chuyển giao năng lực đo lường và làm chủ phần mềm tính toán KNK tại chỗ cho đội ngũ kỹ sư nhà máy, hình thành văn hóa ESG tự thân cho doanh nghiệp.",
+    "category": "Quản trị ESG & Đào tạo",
+    "cats": [
+      "whitepaper",
+      "iso"
+    ],
+    "date": "28/07/2026",
+    "readingTime": "5 phút đọc",
+    "author": "Viện Đào Tạo GreenShift",
+    "tags": [
+      "Nhân sự Xanh",
+      "Đào tạo Nội bộ",
+      "Tự chủ KNK",
+      "Tiết kiệm chi phí",
+      "Chuyển giao công nghệ"
+    ],
+    "image": "Images/blog_green_hr.jpg",
+    "content": "\n      <p>Thay vì mỗi kỳ báo cáo phải chi hàng trăm triệu đồng thuê đơn vị tư vấn bên ngoài, doanh nghiệp có thể đào tạo đội ngũ kỹ sư, quản lý chất lượng và kế toán nội bộ để tự chủ 100% công tác thu thập số liệu và lập báo cáo định kỳ.</p>\n    "
+  },
+  "dantri-esg-thao-nhan": {
+    "title": "ESG bị tháo nhãn, doanh nghiệp Mỹ vẫn chi mạnh cho phát triển bền vững",
+    "sapo": "(Dân trí) — Dù đối mặt với các tranh cãi chính trị xung quanh thuật ngữ 'ESG', các tập đoàn hàng đầu thế giới vẫn gia tăng đầu tư thực chất vào tiết kiệm năng lượng và chuỗi cung ứng bền vững vì lợi ích kinh tế trực tiếp.",
+    "category": "Xu hướng Toàn cầu",
+    "cats": [
+      "whitepaper"
+    ],
+    "date": "27/08/2026",
+    "readingTime": "5 phút đọc",
+    "author": "Báo Dân trí &bull; Tài chính Quốc tế",
+    "tags": [
+      "Báo Dân trí",
+      "Doanh nghiệp Mỹ",
+      "Phát triển bền vững",
+      "Chi tiêu ESG",
+      "Thực chất"
+    ],
+    "sourceName": "Báo Dân trí",
+    "sourceUrl": "https://dantri.com.vn/kinh-doanh/esg-bi-thao-nhan-doanh-nghiep-my-van-chi-manh-cho-phat-trien-ben-vung-20260827203943233.htm",
+    "image": "Images/eco2.jpeg",
+    "content": "\n      <p>(Dân trí) — Bỏ qua các tranh luận về mặt từ ngữ, các doanh nghiệp Mỹ nhận thấy việc cắt giảm tiêu hao nhiên liệu, tối ưu vật liệu và chuyển sang điện mặt trời giúp tiết kiệm hàng chục triệu USD chi phí vận hành mỗi năm.</p>\n    "
+  },
+  "dantri-thieu-du-lieu-cbam": {
+    "title": "Thiếu dữ liệu phát thải, doanh nghiệp xuất khẩu có nguy cơ đội chi phí CBAM",
+    "sapo": "(Dân trí) - Thiếu dữ liệu phát thải đạt chuẩn CBAM, hàng xuất khẩu có thể phải tính theo giá trị mặc định, với mức cộng thêm tới 30% đối với sắt thép, nhôm và xi măng từ năm 2028.",
+    "category": "Cơ chế EU CBAM & Xuất khẩu",
+    "cats": [
+      "cbam",
+      "iso"
+    ],
+    "date": "Tháng 8/2026",
+    "readingTime": "5 phút đọc",
+    "author": "Báo Dân trí",
+    "tags": [
+      "Báo Dân trí",
+      "Kinh Doanh",
+      "ESG Việt Nam",
+      "Phát triển bền vững"
+    ],
+    "sourceName": "Báo Dân trí",
+    "sourceUrl": "https://dantri.com.vn/kinh-doanh/thieu-du-lieu-phat-thai-doanh-nghiep-xuat-khau-co-nguy-co-doi-chi-phi-cbam-20260829174318292.htm",
+    "image": "Images/dantri/dantri-thieu-du-lieu-cbam.jpg",
+    "content": "<p>(Dân trí) - Thiếu dữ liệu phát thải đạt chuẩn CBAM, hàng xuất khẩu có thể phải tính theo giá trị mặc định, với mức cộng thêm tới 30% đối với sắt thép, nhôm và xi măng từ năm 2028.</p>"
+  },
+  "dantri-10-huong-dan-cbam": {
+    "title": "EU công bố 10 hướng dẫn CBAM, doanh nghiệp xuất khẩu cần lưu ý",
+    "sapo": "(Dân trí) - Ủy ban châu Âu vừa công bố 10 hướng dẫn kỹ thuật CBAM, chấm dứt thời kỳ dùng số liệu ước tính và buộc các nhà sản xuất xuất khẩu phải kiểm toán lượng phát thải thực tế.",
+    "category": "Cơ chế EU CBAM & Xuất khẩu",
+    "cats": [
+      "cbam",
+      "whitepaper"
+    ],
+    "date": "Tháng 8/2026",
+    "readingTime": "5 phút đọc",
+    "author": "Báo Dân trí",
+    "tags": [
+      "Báo Dân trí",
+      "Kinh Doanh",
+      "ESG Việt Nam",
+      "Phát triển bền vững"
+    ],
+    "sourceName": "Báo Dân trí",
+    "sourceUrl": "https://dantri.com.vn/kinh-doanh/eu-cong-bo-10-huong-dan-cbam-doanh-nghiep-xuat-khau-can-luu-y-20260829181702121.htm",
+    "image": "Images/dantri/dantri-10-huong-dan-cbam.jpg",
+    "content": "<p>(Dân trí) - Ủy ban châu Âu vừa công bố 10 hướng dẫn kỹ thuật CBAM, chấm dứt thời kỳ dùng số liệu ước tính và buộc các nhà sản xuất xuất khẩu phải kiểm toán lượng phát thải thực tế.</p>"
+  },
+  "dantri-nghich-ly-carbon": {
+    "title": "Nghịch lý thị trường carbon: Vì sao giao dịch giảm nhưng giá lập đỉnh mới?",
+    "sapo": "(Dân trí) - Dù thanh khoản và khối lượng phát hành sụt giảm, giá tín chỉ carbon chất lượng cao vẫn liên tục leo thang. Doanh nghiệp cần định hình chiến lược mua sắm ra sao trước bước ngoặt này?",
+    "category": "Thị trường Carbon & Tín chỉ",
+    "cats": [
+      "nghidinh",
+      "whitepaper"
+    ],
+    "date": "Tháng 8/2026",
+    "readingTime": "5 phút đọc",
+    "author": "Báo Dân trí",
+    "tags": [
+      "Báo Dân trí",
+      "Kinh Doanh",
+      "ESG Việt Nam",
+      "Phát triển bền vững"
+    ],
+    "sourceName": "Báo Dân trí",
+    "sourceUrl": "https://dantri.com.vn/kinh-doanh/nghich-ly-thi-truong-carbon-vi-sao-giao-dich-giam-nhung-gia-lap-dinh-moi-20260828110736464.htm",
+    "image": "Images/dantri/dantri-nghich-ly-carbon.jpg",
+    "content": "<p>(Dân trí) - Dù thanh khoản và khối lượng phát hành sụt giảm, giá tín chỉ carbon chất lượng cao vẫn liên tục leo thang. Doanh nghiệp cần định hình chiến lược mua sắm ra sao trước bước ngoặt này?</p>"
+  },
+  "dantri-gia-tin-chi-carbon": {
+    "title": "Giá tín chỉ carbon: Vì sao có loại dưới 1 USD, loại hơn 1.000 USD?",
+    "sapo": "(Dân trí) - Thị trường tín chỉ carbon ghi nhận biên độ giá từ dưới 1 USD đến hơn 1.000 USD/tấn CO₂e. Đâu là những thước đo định hình giá trị thực của loại tài sản xanh này?",
+    "category": "Thị trường Carbon & Định giá",
+    "cats": [
+      "nghidinh",
+      "whitepaper"
+    ],
+    "date": "Tháng 8/2026",
+    "readingTime": "5 phút đọc",
+    "author": "Báo Dân trí",
+    "tags": [
+      "Báo Dân trí",
+      "Kinh Doanh",
+      "ESG Việt Nam",
+      "Phát triển bền vững"
+    ],
+    "sourceName": "Báo Dân trí",
+    "sourceUrl": "https://dantri.com.vn/kinh-doanh/gia-tin-chi-carbon-vi-sao-co-loai-duoi-1-usd-loai-hon-1000-usd-20260828090723959.htm",
+    "image": "Images/dantri/dantri-gia-tin-chi-carbon.jpg",
+    "content": "<p>(Dân trí) - Thị trường tín chỉ carbon ghi nhận biên độ giá từ dưới 1 USD đến hơn 1.000 USD/tấn CO₂e. Đâu là những thước đo định hình giá trị thực của loại tài sản xanh này?</p>"
+  },
+  "dantri-tphcm-phan-loai-rac": {
+    "title": "TPHCM dự kiến bắt buộc phân loại rác tại nguồn từ năm 2027",
+    "sapo": "(Dân trí) - Chủ trương này của TPHCM được phó giám đốc Sở Nông nghiệp và môi trường TPHCM nêu tại sự kiện mới đây. Lãnh đạo Sở cũng chỉ ra 3 điều cần thiết để thực thi thành công.",
+    "category": "Môi trường & Kinh tế Tuần hoàn",
+    "cats": [
+      "nghidinh",
+      "whitepaper"
+    ],
+    "date": "Tháng 8/2026",
+    "readingTime": "5 phút đọc",
+    "author": "Báo Dân trí",
+    "tags": [
+      "Báo Dân trí",
+      "Kinh Doanh",
+      "ESG Việt Nam",
+      "Phát triển bền vững"
+    ],
+    "sourceName": "Báo Dân trí",
+    "sourceUrl": "https://dantri.com.vn/kinh-doanh/tphcm-du-kien-bat-buoc-phan-loai-rac-tai-nguon-tu-nam-2027-20260826192220764.htm",
+    "image": "Images/dantri/dantri-tphcm-phan-loai-rac.jpg",
+    "content": "<p>(Dân trí) - Chủ trương này của TPHCM được phó giám đốc Sở Nông nghiệp và môi trường TPHCM nêu tại sự kiện mới đây. Lãnh đạo Sở cũng chỉ ra 3 điều cần thiết để thực thi thành công.</p>"
+  },
+  "dantri-5-viec-sme-xanh": {
+    "title": "5 việc SME cần làm nếu muốn chuyển đổi xanh",
+    "sapo": "(Dân trí) - Theo GS. TS Mạc Quốc Anh, SME không cần nguồn vốn lớn để chuyển đổi xanh. Doanh nghiệp có thể bắt đầu từ dự án nhỏ, lấy khoản tiết kiệm để tái đầu tư và đo lường bằng số liệu cụ thể.",
+    "category": "Cẩm nang Chuyển đổi Xanh",
+    "cats": [
+      "whitepaper",
+      "iso",
+      "casestudy"
+    ],
+    "date": "Tháng 8/2026",
+    "readingTime": "5 phút đọc",
+    "author": "Báo Dân trí",
+    "tags": [
+      "Báo Dân trí",
+      "Kinh Doanh",
+      "ESG Việt Nam",
+      "Phát triển bền vững"
+    ],
+    "sourceName": "Báo Dân trí",
+    "sourceUrl": "https://dantri.com.vn/kinh-doanh/5-viec-sme-can-lam-neu-muon-chuyen-doi-xanh-20260826045409572.htm",
+    "image": "Images/dantri/dantri-5-viec-sme-xanh.jpg",
+    "content": "<p>(Dân trí) - Theo GS. TS Mạc Quốc Anh, SME không cần nguồn vốn lớn để chuyển đổi xanh. Doanh nghiệp có thể bắt đầu từ dự án nhỏ, lấy khoản tiết kiệm để tái đầu tư và đo lường bằng số liệu cụ thể.</p>"
+  },
+  "dantri-esg-that-don-hang": {
+    "title": "ESG không còn là báo cáo bóng bẩy, không làm ESG thật thì khó có đơn hàng",
+    "sapo": "(Dân trí) - ESG không còn là câu chuyện thương hiệu mà đã thành “giấy thông hành” sống còn khi đối tác quốc tế siết chặt truy xuất nguồn gốc và phát thải.",
+    "category": "Quản trị ESG & Chuỗi Cung ứng",
+    "cats": [
+      "whitepaper",
+      "nghidinh",
+      "casestudy"
+    ],
+    "date": "Tháng 8/2026",
+    "readingTime": "5 phút đọc",
+    "author": "Báo Dân trí",
+    "tags": [
+      "Báo Dân trí",
+      "Kinh Doanh",
+      "ESG Việt Nam",
+      "Phát triển bền vững"
+    ],
+    "sourceName": "Báo Dân trí",
+    "sourceUrl": "https://dantri.com.vn/kinh-doanh/esg-khong-con-la-bao-cao-bong-bay-khong-lam-esg-that-thi-kho-co-don-hang-20260827053650263.htm",
+    "image": "Images/dantri/dantri-esg-that-don-hang.jpg",
+    "content": "<p>(Dân trí) - ESG không còn là câu chuyện thương hiệu mà đã thành “giấy thông hành” sống còn khi đối tác quốc tế siết chặt truy xuất nguồn gốc và phát thải.</p>"
+  }
+};
+
+    const categoryMeta = {
+      'all': {
+        title: 'Ấn Phẩm Toàn Cảnh & Báo Cáo Chuyên Đề',
+        desc: 'Tổng hợp toàn diện các bài viết phân tích, báo cáo kỹ thuật và tin tức chính thống mới nhất.'
+      },
+      'cbam': {
+        title: 'Chuyên Đề: Cơ Chế Điều Chỉnh Biên Giới Carbon (EU CBAM)',
+        desc: 'Quy định kỹ thuật, 10 hướng dẫn mới nhất từ Ủy ban châu Âu (EC), công thức tính suất phát thải riêng (SEE) và kinh nghiệm xuất khẩu thị trường EU.'
+      },
+      'iso': {
+        title: 'Chuyên Đề: Tiêu Chuẩn ISO 14064 & Đo Lường Khí Nhà Kính',
+        desc: 'Phương pháp luận phân định ranh giới tổ chức, bóc tách Scope 1, Scope 2, Scope 3, tiêu chuẩn ISO 17088 và quy trình thẩm tra độc lập theo GHG Protocol.'
+      },
+      'nghidinh': {
+        title: 'Chuyên Đề: Nghị Định 06/2022/NĐ-CP & Khung Pháp Lý Giảm Phát Thải',
+        desc: 'Quy định pháp lý bắt buộc kiểm kê KNK cấp cơ sở, ngưỡng định lượng, lộ trình Sàn giao dịch tín chỉ Carbon (V-ETS) và chế tài xử phạt theo Nghị định 45/2022.'
+      },
+      'whitepaper': {
+        title: 'Chuyên Đề: Sách Trắng, Báo Cáo & Tin Tức ESG Toàn Cảnh',
+        desc: 'Ấn phẩm cẩm nang kỹ thuật, phân tích chuyên sâu về rào cản Net Zero, tài chính xanh FDI và góc nhìn từ các chuyên gia kinh tế đầu ngành.'
+      },
+      'casestudy': {
+        title: 'Chuyên Đề: Case Study Doanh Nghiệp Thực Tế',
+        desc: 'Bài học thực tiễn từ các doanh nghiệp thép, phụ kiện kim loại, xi măng, dệt may trong việc số hóa dữ liệu, tối ưu hóa lò hơi và tiết kiệm thuế Carbon.'
+      }
+    };
+
+    function filterCategory(cat, btn) {
+      document.querySelectorAll('.gs-nav-pill').forEach(b => b.classList.remove('active'));
+      
+      const tabTracuu = document.getElementById('navTabTracuu');
+      if (btn) {
+        btn.classList.add('active');
+      } else if (cat === 'tracuu' && tabTracuu) {
+        tabTracuu.classList.add('active');
+      }
+
+      const frontSection = document.getElementById('frontpageSection');
+      const focusSection = document.getElementById('categoryFocusSection');
+      const lookupSection = document.getElementById('tra-cuu-qd42');
+      const secondarySections = document.querySelectorAll('.gs-sub-section');
+
+      if (cat === 'all') {
+        if (frontSection) frontSection.style.display = 'block';
+        if (focusSection) focusSection.style.display = 'none';
+        if (lookupSection) lookupSection.style.display = 'block';
+        secondarySections.forEach(s => s.style.display = 'block');
+        return;
+      }
+
+      if (cat === 'tracuu') {
+        if (frontSection) frontSection.style.display = 'none';
+        if (focusSection) focusSection.style.display = 'none';
+        if (lookupSection) lookupSection.style.display = 'block';
+        secondarySections.forEach(s => s.style.display = 'none');
+        
+        // Scroll to lookup section smoothly
+        setTimeout(() => {
+          lookupSection?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }, 50);
+        return;
+      }
+
+      // Specific Category Selected (cbam, iso, nghidinh, whitepaper, casestudy)
+      if (frontSection) frontSection.style.display = 'none';
+      secondarySections.forEach(s => s.style.display = 'none');
+
+      // If category is 'nghidinh', show the lookup directory right with it!
+      if (lookupSection) {
+        if (cat === 'nghidinh') {
+          lookupSection.style.display = 'block';
+        } else {
+          lookupSection.style.display = 'none';
+        }
+      }
+
+      // Filter articles matching 'cat'
+      const matchedKeys = Object.keys(articlesData).filter(k => {
+        const item = articlesData[k];
+        return item.cats && item.cats.includes(cat);
+      });
+
+      const meta = categoryMeta[cat] || { title: 'Chuyên Mục ' + cat.toUpperCase(), desc: '' };
+
+      if (focusSection) {
+        focusSection.style.display = 'block';
+        focusSection.innerHTML = `
+          <div class="gs-masthead-title" style="margin-bottom:1rem;">
+            <span>${meta.title}</span>
+            <span class="subhead-date">Tìm thấy <strong>${matchedKeys.length}</strong> bài viết &amp; tài liệu chuyên sâu</span>
+          </div>
+          <p style="font-size:0.95rem; color:#475569; margin:0 0 2rem 0; line-height:1.6; max-width:900px;">
+            ${meta.desc}
+          </p>
+
+          <div class="gs-grid-3">
+            ${matchedKeys.map(k => {
+              const a = articlesData[k];
+              const tagPills = a.tags ? a.tags.slice(0, 2).map(t => `<span style="background:#ecfdf5; color:#065f46; font-size:0.7rem; font-weight:700; padding:0.15rem 0.45rem; border-radius:2px; margin-right:0.3rem;">${t}</span>`).join('') : '';
+              return `
+                <div class="gs-card-standard" onclick="openModal('${k}')">
+                  <div class="gs-card-img">
+                    <img src="${a.image || 'Images/blog_iso_14064.jpg'}" alt="${a.title}">
+                  </div>
+                  <div class="gs-card-content">
+                    <div style="font-size:0.75rem; color:var(--gs-text-muted); font-weight:700; margin-bottom:0.3rem;">
+                      ${a.date} &bull; ${a.author || 'GreenShift'}
+                    </div>
+                    <div style="margin-bottom:0.5rem;">${tagPills}</div>
+                    <h3 class="gs-card-headline" style="font-size:1.05rem; line-height:1.4;">
+                      ${a.title}
+                    </h3>
+                    <p class="gs-card-desc" style="font-size:0.86rem; line-height:1.5;">
+                      ${a.sapo}
+                    </p>
+                    <div style="margin-top:auto; display:flex; justify-content:space-between; align-items:center;">
+                      <span style="font-size:0.82rem; font-weight:700; color:var(--gs-primary);">Đọc toàn văn &rarr;</span>
+                      <span style="font-size:0.75rem; color:#94a3b8;">${a.readingTime || '5 phút'}</span>
+                    </div>
+                  </div>
+                </div>
+              `;
+            }).join('')}
+          </div>
+        `;
+      }
+
+      window.scrollTo({ top: 110, behavior: 'smooth' });
+    }
+
+    function openModal(id) {
+      const data = articlesData[id];
+      if (!data) return;
+
+      const tagsHtml = data.tags.map(t => `<span style="background:#ecfdf5; color:#065f46; border:1px solid #a7f3d0; padding:0.2rem 0.55rem; border-radius:3px; font-weight:600; font-size:0.75rem;">${t}</span>`).join(' ');
+
+      const sourceCreditHtml = data.sourceUrl ? `
+        <div style="background:#f0fdf4; border:1px solid #bbf7d0; border-left:4px solid #16a34a; padding:0.65rem 1rem; border-radius:3px; margin-bottom:1.5rem; font-size:0.85rem; color:#166534; display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:0.5rem;">
+          <span>Nguồn trích dẫn: <strong>${data.sourceName || 'Báo Dân trí'}</strong></span>
+          <a href="${data.sourceUrl}" target="_blank" rel="noopener noreferrer" style="color:#15803d; font-weight:700; text-decoration:underline;">Xem bài viết gốc trên dantri.com.vn &rarr;</a>
+        </div>
+      ` : '';
+
+      document.getElementById('modalContent').innerHTML = `
+        <div class="gs-article-category">
+          <span>${data.category}</span>
+          <span class="badge-prem">Chính thống</span>
+        </div>
+        <h1 class="gs-article-headline">${data.title}</h1>
+        ${sourceCreditHtml}
+        <div class="gs-article-sapo">
+          ${data.sapo}
+        </div>
+        <div class="gs-article-meta-line">
+          <div>
+            <span>Ngày phát hành: <strong>${data.date}</strong></span>
+            <span style="margin: 0 0.4rem;">&bull;</span>
+            <span>${data.readingTime}</span>
+            <span style="margin: 0 0.4rem;">&bull;</span>
+            <span>Tác giả: <strong>${data.author}</strong></span>
+          </div>
+          <div style="display:flex; gap:0.4rem; flex-wrap:wrap;">
+            ${tagsHtml}
+          </div>
+        </div>
+        <div class="gs-article-body">
+          ${data.content}
+        </div>
+      `;
+      document.getElementById('articleModal').classList.add('active');
+    }
+
+    function closeModal(e) {
+      document.getElementById('articleModal').classList.remove('active');
+    }
+
+    document.addEventListener('keydown', function(e) {
+      if (e.key === 'Escape') {
+        closeModal();
+        closeFacilityModal();
+      }
+    });
+
+    const facilitiesData = [
+  {
+    "id": "FAC-CT-001",
+    "name": "Công ty Cổ phần Nhiệt điện Phả Lại",
+    "tax": "0800001234",
+    "province": "Hải Dương",
+    "ministry": "Bộ Công Thương",
+    "sector": "Nhiệt điện",
+    "threshold": "≥ 3.000 tCO₂e (2.450.000 tCO₂e/năm)",
+    "status": "Bắt buộc kiểm kê 2026",
+    "isEts": true,
+    "address": "Phường Phả Lại, TP. Chí Linh, Tỉnh Hải Dương",
+    "obligations": [
+      "Lập Báo cáo kiểm kê KNK cấp cơ sở định kỳ 02 năm/lần nộp trước 31/03 cho Sở TN&MT Hải Dương và Bộ Công Thương.",
+      "Xây dựng Kế hoạch giảm nhẹ phát thải KNK giai đoạn 2026-2030.",
+      "Thuộc diện thí điểm phân bổ hạn ngạch sàn giao dịch V-ETS giai đoạn 2025-2027."
+    ]
+  },
+  {
+    "id": "FAC-CT-002",
+    "name": "Tổng công ty Phát điện 1 - Công ty Nhiệt điện Duyên Hải",
+    "tax": "0100100079-052",
+    "province": "Trà Vinh",
+    "ministry": "Bộ Công Thương",
+    "sector": "Nhiệt điện",
+    "threshold": "≥ 3.000 tCO₂e (8.200.000 tCO₂e/năm)",
+    "status": "Bắt buộc kiểm kê 2026",
+    "isEts": true,
+    "address": "Xã Dân Thành, TX. Duyên Hải, Tỉnh Trà Vinh",
+    "obligations": [
+      "Thực hiện kiểm kê KNK cấp cơ sở chuẩn ISO 14064-1 và nộp báo cáo định kỳ.",
+      "Thuộc danh mục cơ sở trọng điểm phân bổ hạn ngạch sàn carbon quốc gia."
+    ]
+  },
+  {
+    "id": "FAC-CT-003",
+    "name": "Công ty Cổ phần Nhiệt điện Hải Phòng",
+    "tax": "0200507204",
+    "province": "Hải Phòng",
+    "ministry": "Bộ Công Thương",
+    "sector": "Nhiệt điện",
+    "threshold": "≥ 3.000 tCO₂e (5.600.000 tCO₂e/năm)",
+    "status": "Bắt buộc kiểm kê 2026",
+    "isEts": true,
+    "address": "Xã Tam Hưng, Huyện Thủy Nguyên, TP. Hải Phòng",
+    "obligations": [
+      "Nộp Báo cáo kiểm kê KNK trước ngày 31/03 của kỳ kiểm kê.",
+      "Hoàn thiện hệ thống quan trắc phát thải tự động liên tục CEMS."
+    ]
+  },
+  {
+    "id": "FAC-CT-004",
+    "name": "Công ty Nhiệt điện Vĩnh Tân (Nhà máy Vĩnh Tân 2 & 4)",
+    "tax": "0100100079-058",
+    "province": "Bình Thuận",
+    "ministry": "Bộ Công Thương",
+    "sector": "Nhiệt điện",
+    "threshold": "≥ 3.000 tCO₂e (7.100.000 tCO₂e/năm)",
+    "status": "Bắt buộc kiểm kê 2026",
+    "isEts": true,
+    "address": "Xã Vĩnh Tân, Huyện Tuy Phong, Tỉnh Bình Thuận",
+    "obligations": [
+      "Kiểm kê KNK Scope 1 và Scope 2 định kỳ 2 năm/lần.",
+      "Lập phương án chuyển đổi giảm tỷ trọng tiêu hao than cám."
+    ]
+  },
+  {
+    "id": "FAC-CT-005",
+    "name": "Công ty Cổ phần Nhiệt điện Quảng Ninh",
+    "tax": "5700445678",
+    "province": "Quảng Ninh",
+    "ministry": "Bộ Công Thương",
+    "sector": "Nhiệt điện",
+    "threshold": "≥ 3.000 tCO₂e (4.800.000 tCO₂e/năm)",
+    "status": "Bắt buộc kiểm kê 2026",
+    "isEts": true,
+    "address": "Phường Hà Khánh, TP. Hạ Long, Tỉnh Quảng Ninh",
+    "obligations": [
+      "Báo cáo kiểm kê KNK cấp cơ sở nộp Sở TN&MT Quảng Ninh và Bộ Công Thương."
+    ]
+  },
+  {
+    "id": "FAC-CT-006",
+    "name": "Công ty Nhiệt điện Mông Dương (Mông Dương 1 & 2)",
+    "tax": "5701478901",
+    "province": "Quảng Ninh",
+    "ministry": "Bộ Công Thương",
+    "sector": "Nhiệt điện",
+    "threshold": "≥ 3.000 tCO₂e (5.100.000 tCO₂e/năm)",
+    "status": "Bắt buộc kiểm kê 2026",
+    "isEts": true,
+    "address": "Phường Mông Dương, TP. Cẩm Phả, Tỉnh Quảng Ninh",
+    "obligations": [
+      "Kiểm kê KNK định kỳ 2 năm/lần theo Nghị định 06/2022/NĐ-CP."
+    ]
+  },
+  {
+    "id": "FAC-CT-007",
+    "name": "Công ty Cổ phần Nhiệt điện Ninh Bình",
+    "tax": "2700100234",
+    "province": "Ninh Bình",
+    "ministry": "Bộ Công Thương",
+    "sector": "Nhiệt điện",
+    "threshold": "≥ 3.000 tCO₂e (620.000 tCO₂e/năm)",
+    "status": "Bắt buộc kiểm kê 2026",
+    "isEts": true,
+    "address": "Phường Thanh Bình, TP. Ninh Bình, Tỉnh Ninh Bình",
+    "obligations": [
+      "Nộp báo cáo kiểm kê KNK trước ngày 31/03 kỳ kiểm kê."
+    ]
+  },
+  {
+    "id": "FAC-CT-008",
+    "name": "Công ty Cổ phần Thép Hòa Phát Dung Quất",
+    "tax": "4300793568",
+    "province": "Quảng Ngãi",
+    "ministry": "Bộ Công Thương",
+    "sector": "Luyện kim & Sắt thép",
+    "threshold": "≥ 3.000 tCO₂e (9.500.000 tCO₂e/năm)",
+    "status": "Bắt buộc kiểm kê 2026",
+    "isEts": true,
+    "address": "KKT Dung Quất, Huyện Bình Sơn, Tỉnh Quảng Ngãi",
+    "obligations": [
+      "Lập Báo cáo kiểm kê KNK định kỳ 2 năm/lần cho toàn bộ các lò cao luyện gang thép.",
+      "Tham gia thí điểm giao dịch hạn ngạch phát thải sàn V-ETS.",
+      "Lập hồ sơ tính suất phát thải riêng SEE theo chuẩn EU CBAM cho các dòng thép cuộn xuất khẩu."
+    ]
+  },
+  {
+    "id": "FAC-CT-009",
+    "name": "Công ty Cổ phần Thép Hòa Phát Hải Dương",
+    "tax": "0800378044",
+    "province": "Hải Dương",
+    "ministry": "Bộ Công Thương",
+    "sector": "Luyện kim & Sắt thép",
+    "threshold": "≥ 3.000 tCO₂e (4.200.000 tCO₂e/năm)",
+    "status": "Bắt buộc kiểm kê 2026",
+    "isEts": true,
+    "address": "Hiệp Sơn, TX. Kinh Môn, Tỉnh Hải Dương",
+    "obligations": [
+      "Kiểm kê KNK Scope 1 và Scope 2 nộp Sở TN&MT Hải Dương trước 31/03.",
+      "Xác minh dữ liệu KNK độc lập phục vụ thị trường carbon."
+    ]
+  },
+  {
+    "id": "FAC-CT-010",
+    "name": "Công ty TNHH Gang Thép Hưng Nghiệp Formosa Hà Tĩnh",
+    "tax": "3000798765",
+    "province": "Hà Tĩnh",
+    "ministry": "Bộ Công Thương",
+    "sector": "Luyện kim & Sắt thép",
+    "threshold": "≥ 3.000 tCO₂e (12.400.000 tCO₂e/năm)",
+    "status": "Bắt buộc kiểm kê 2026",
+    "isEts": true,
+    "address": "KKT Vũng Áng, TX. Kỳ Anh, Tỉnh Hà Tĩnh",
+    "obligations": [
+      "Kiểm kê KNK bắt buộc định kỳ 02 năm/lần theo Nghị định 06/2022/NĐ-CP.",
+      "Thuộc nhóm cơ sở phát thải trọng điểm quốc gia."
+    ]
+  },
+  {
+    "id": "FAC-CT-011",
+    "name": "Công ty Cổ phần Gang Thép Thái Nguyên (TISCO)",
+    "tax": "4600100155",
+    "province": "Thái Nguyên",
+    "ministry": "Bộ Công Thương",
+    "sector": "Luyện kim & Sắt thép",
+    "threshold": "≥ 3.000 tCO₂e (1.850.000 tCO₂e/năm)",
+    "status": "Bắt buộc kiểm kê 2026",
+    "isEts": true,
+    "address": "Phường Cam Giá, TP. Thái Nguyên, Tỉnh Thái Nguyên",
+    "obligations": [
+      "Báo cáo kiểm kê KNK định kỳ 2 năm/lần nộp trước 31/03."
+    ]
+  },
+  {
+    "id": "FAC-CT-012",
+    "name": "Công ty TNHH MTV Thép Miền Nam - VNSTEEL",
+    "tax": "3500100234",
+    "province": "Bà Rịa - Vũng Tàu",
+    "ministry": "Bộ Công Thương",
+    "sector": "Luyện kim & Sắt thép",
+    "threshold": "≥ 1.000 TOE / 3.000 tCO₂e",
+    "status": "Bắt buộc kiểm kê 2026",
+    "isEts": true,
+    "address": "KCN Phú Mỹ 1, TX. Phú Mỹ, Tỉnh Bà Rịa - Vũng Tàu",
+    "obligations": [
+      "Kiểm kê KNK định kỳ 2 năm/lần và xây dựng kế hoạch tiết kiệm năng lượng."
+    ]
+  },
+  {
+    "id": "FAC-CT-013",
+    "name": "Tập đoàn Hoa Sen - Nhà máy Tôn Hoa Sen Phú Mỹ",
+    "tax": "3700381324",
+    "province": "Bà Rịa - Vũng Tàu",
+    "ministry": "Bộ Công Thương",
+    "sector": "Luyện kim & Sắt thép",
+    "threshold": "≥ 1.000 TOE / 3.000 tCO₂e",
+    "status": "Bắt buộc kiểm kê 2026",
+    "isEts": false,
+    "address": "KCN Phú Mỹ 1, TX. Phú Mỹ, Tỉnh Bà Rịa - Vũng Tàu",
+    "obligations": [
+      "Nộp báo cáo kiểm kê KNK cấp cơ sở định kỳ 2 năm/lần.",
+      "Lập báo cáo phát thải CBAM phục vụ thị trường xuất khẩu EU và Mỹ."
+    ]
+  },
+  {
+    "id": "FAC-CT-014",
+    "name": "Công ty Cổ phần Thép Nam Kim",
+    "tax": "3700472478",
+    "province": "Bình Dương",
+    "ministry": "Bộ Công Thương",
+    "sector": "Luyện kim & Sắt thép",
+    "threshold": "≥ 1.000 TOE / 3.000 tCO₂e",
+    "status": "Bắt buộc kiểm kê 2026",
+    "isEts": false,
+    "address": "KCN Đồng An 2, TP. Thủ Dầu Một, Tỉnh Bình Dương",
+    "obligations": [
+      "Kiểm kê KNK cấp cơ sở định kỳ 02 năm/lần nộp trước 31/03."
+    ]
+  },
+  {
+    "id": "FAC-CT-015",
+    "name": "Công ty Cổ phần Thép Pomina",
+    "tax": "3500367890",
+    "province": "Bà Rịa - Vũng Tàu",
+    "ministry": "Bộ Công Thương",
+    "sector": "Luyện kim & Sắt thép",
+    "threshold": "≥ 1.000 TOE / 3.000 tCO₂e",
+    "status": "Bắt buộc kiểm kê 2026",
+    "isEts": true,
+    "address": "KCN Phú Mỹ 1, TX. Phú Mỹ, Tỉnh Bà Rịa - Vũng Tàu",
+    "obligations": [
+      "Kiểm kê KNK cấp cơ sở và đo lường phát thải lò hồ quang điện EAF."
+    ]
+  },
+  {
+    "id": "FAC-CT-016",
+    "name": "Công ty TNHH Thép Vina Kyoei",
+    "tax": "3500100456",
+    "province": "Bà Rịa - Vũng Tàu",
+    "ministry": "Bộ Công Thương",
+    "sector": "Luyện kim & Sắt thép",
+    "threshold": "≥ 1.000 TOE / 3.000 tCO₂e",
+    "status": "Bắt buộc kiểm kê 2026",
+    "isEts": true,
+    "address": "KCN Phú Mỹ 1, TX. Phú Mỹ, Tỉnh Bà Rịa - Vũng Tàu",
+    "obligations": [
+      "Kiểm kê KNK cấp cơ sở định kỳ 2 năm/lần."
+    ]
+  },
+  {
+    "id": "FAC-CT-017",
+    "name": "Công ty Cổ phần Xi măng Vicem Hà Tiên 1",
+    "tax": "0300448688",
+    "province": "TP. Hồ Chí Minh",
+    "ministry": "Bộ Công Thương",
+    "sector": "Xi măng & VLXD",
+    "threshold": "≥ 3.000 tCO₂e (3.800.000 tCO₂e/năm)",
+    "status": "Bắt buộc kiểm kê 2026",
+    "isEts": true,
+    "address": "Số 606 Nguyễn Chí Thanh, Q.5, TP. Hồ Chí Minh & Nhà máy Kiên Lương, Kiên Giang",
+    "obligations": [
+      "Lập Báo cáo kiểm kê KNK định kỳ 02 năm/lần bao gồm phát thải phản ứng nung clinker (Scope 1 process emissions).",
+      "Tham gia thí điểm thị trường carbon V-ETS giai đoạn 2025-2027."
+    ]
+  },
+  {
+    "id": "FAC-CT-018",
+    "name": "Công ty Cổ phần Xi măng Vicem Hoàng Thạch",
+    "tax": "0800010234",
+    "province": "Hải Dương",
+    "ministry": "Bộ Công Thương",
+    "sector": "Xi măng & VLXD",
+    "threshold": "≥ 3.000 tCO₂e (2.950.000 tCO₂e/năm)",
+    "status": "Bắt buộc kiểm kê 2026",
+    "isEts": true,
+    "address": "Minh Tân, TX. Kinh Môn, Tỉnh Hải Dương",
+    "obligations": [
+      "Kiểm kê KNK định kỳ 2 năm/lần nộp trước ngày 31/03."
+    ]
+  },
+  {
+    "id": "FAC-CT-019",
+    "name": "Công ty Cổ phần Xi măng Bỉm Sơn",
+    "tax": "2800234567",
+    "province": "Thanh Hóa",
+    "ministry": "Bộ Công Thương",
+    "sector": "Xi măng & VLXD",
+    "threshold": "≥ 3.000 tCO₂e (2.400.000 tCO₂e/năm)",
+    "status": "Bắt buộc kiểm kê 2026",
+    "isEts": true,
+    "address": "Phường Ba Đình, TX. Bỉm Sơn, Tỉnh Thanh Hóa",
+    "obligations": [
+      "Lập kế hoạch giảm nhẹ phát thải KNK cấp cơ sở."
+    ]
+  },
+  {
+    "id": "FAC-CT-020",
+    "name": "Công ty Cổ phần Xi măng Vicem Bút Sơn",
+    "tax": "0700100456",
+    "province": "Hà Nam",
+    "ministry": "Bộ Công Thương",
+    "sector": "Xi măng & VLXD",
+    "threshold": "≥ 3.000 tCO₂e (2.100.000 tCO₂e/năm)",
+    "status": "Bắt buộc kiểm kê 2026",
+    "isEts": true,
+    "address": "Xã Thanh Sơn, Huyện Kim Bảng, Tỉnh Hà Nam",
+    "obligations": [
+      "Kiểm kê KNK định kỳ 2 năm/lần theo quy định Nghị định 06/2022/NĐ-CP."
+    ]
+  },
+  {
+    "id": "FAC-CT-021",
+    "name": "Công ty Cổ phần Xi măng Xuân Thành Hà Nam",
+    "tax": "0700512345",
+    "province": "Hà Nam",
+    "ministry": "Bộ Công Thương",
+    "sector": "Xi măng & VLXD",
+    "threshold": "≥ 3.000 tCO₂e (4.500.000 tCO₂e/năm)",
+    "status": "Bắt buộc kiểm kê 2026",
+    "isEts": true,
+    "address": "Xã Thanh Nghị, Huyện Thanh Liêm, Tỉnh Hà Nam",
+    "obligations": [
+      "Báo cáo kiểm kê KNK cấp cơ sở nộp trước 31/03."
+    ]
+  },
+  {
+    "id": "FAC-CT-022",
+    "name": "Công ty Xi măng Nghi Sơn",
+    "tax": "2800100789",
+    "province": "Thanh Hóa",
+    "ministry": "Bộ Công Thương",
+    "sector": "Xi măng & VLXD",
+    "threshold": "≥ 3.000 tCO₂e (3.600.000 tCO₂e/năm)",
+    "status": "Bắt buộc kiểm kê 2026",
+    "isEts": true,
+    "address": "Xã Hải Thượng, TX. Nghi Sơn, Tỉnh Thanh Hóa",
+    "obligations": [
+      "Kiểm kê KNK định kỳ 2 năm/lần chuẩn ISO 14064-1."
+    ]
+  },
+  {
+    "id": "FAC-CT-023",
+    "name": "Công ty Cổ phần Xi măng Cẩm Phả",
+    "tax": "5700512345",
+    "province": "Quảng Ninh",
+    "ministry": "Bộ Công Thương",
+    "sector": "Xi măng & VLXD",
+    "threshold": "≥ 3.000 tCO₂e (2.200.000 tCO₂e/năm)",
+    "status": "Bắt buộc kiểm kê 2026",
+    "isEts": true,
+    "address": "Xã Cẩm Hải, TP. Cẩm Phả, Tỉnh Quảng Ninh",
+    "obligations": [
+      "Kiểm kê KNK cấp cơ sở định kỳ 2 năm/lần."
+    ]
+  },
+  {
+    "id": "FAC-CT-024",
+    "name": "Công ty Cổ phần Phân bón Dầu khí Cà Mau (Đạm Cà Mau)",
+    "tax": "2001012345",
+    "province": "Cà Mau",
+    "ministry": "Bộ Công Thương",
+    "sector": "Hóa chất & Phân bón",
+    "threshold": "≥ 3.000 tCO₂e (1.200.000 tCO₂e/năm)",
+    "status": "Bắt buộc kiểm kê 2026",
+    "isEts": false,
+    "address": "Khu công nghiệp Khí - Điện - Đạm Cà Mau, Tỉnh Cà Mau",
+    "obligations": [
+      "Lập Báo cáo kiểm kê KNK cấp cơ sở định kỳ 02 năm/lần.",
+      "Lập phương án thu hồi CO₂ phục vụ sản xuất phụ trợ."
+    ]
+  },
+  {
+    "id": "FAC-CT-025",
+    "name": "Tổng công ty Phân bón và Hóa chất Dầu khí (Đạm Phú Mỹ)",
+    "tax": "0101478051",
+    "province": "Bà Rịa - Vũng Tàu",
+    "ministry": "Bộ Công Thương",
+    "sector": "Hóa chất & Phân bón",
+    "threshold": "≥ 3.000 tCO₂e (1.150.000 tCO₂e/năm)",
+    "status": "Bắt buộc kiểm kê 2026",
+    "isEts": false,
+    "address": "KCN Phú Mỹ 1, TX. Phú Mỹ, Tỉnh Bà Rịa - Vũng Tàu",
+    "obligations": [
+      "Kiểm kê KNK định kỳ 2 năm/lần nộp Sở TN&MT Bà Rịa - Vũng Tàu trước 31/03."
+    ]
+  },
+  {
+    "id": "FAC-CT-026",
+    "name": "Tập đoàn Hóa chất Đức Giang - Chi nhánh Lào Cai",
+    "tax": "0101452588",
+    "province": "Lào Cai",
+    "ministry": "Bộ Công Thương",
+    "sector": "Hóa chất & Phân bón",
+    "threshold": "≥ 3.000 tCO₂e (680.000 tCO₂e/năm)",
+    "status": "Bắt buộc kiểm kê 2026",
+    "isEts": false,
+    "address": "KCN Tằng Loỏng, Huyện Bảo Thắng, Tỉnh Lào Cai",
+    "obligations": [
+      "Kiểm kê KNK định kỳ và rà soát các nguồn phát thải phốt pho vàng."
+    ]
+  },
+  {
+    "id": "FAC-CT-027",
+    "name": "Công ty Cổ phần Supe Phốt phát và Hóa chất Lâm Thao",
+    "tax": "2600100456",
+    "province": "Phú Thọ",
+    "ministry": "Bộ Công Thương",
+    "sector": "Hóa chất & Phân bón",
+    "threshold": "≥ 1.000 TOE / 3.000 tCO₂e",
+    "status": "Bắt buộc kiểm kê 2026",
+    "isEts": false,
+    "address": "Thị trấn Hùng Sơn, Huyện Lâm Thao, Tỉnh Phú Thọ",
+    "obligations": [
+      "Nộp báo cáo kiểm kê KNK định kỳ 2 năm/lần trước 31/03."
+    ]
+  },
+  {
+    "id": "FAC-CT-028",
+    "name": "Công ty Cổ phần Lọc hóa dầu Bình Sơn (Nhà máy Dung Quất)",
+    "tax": "4300378567",
+    "province": "Quảng Ngãi",
+    "ministry": "Bộ Công Thương",
+    "sector": "Hóa chất & Lọc dầu",
+    "threshold": "≥ 3.000 tCO₂e (2.800.000 tCO₂e/năm)",
+    "status": "Bắt buộc kiểm kê 2026",
+    "isEts": true,
+    "address": "Xã Bình Trị, Huyện Bình Sơn, Tỉnh Quảng Ngãi",
+    "obligations": [
+      "Kiểm kê KNK định kỳ và báo cáo số liệu phát thải đuốc đốt (flaring)."
+    ]
+  },
+  {
+    "id": "FAC-CT-029",
+    "name": "Công ty TNHH Lọc hóa dầu Nghi Sơn (NSRP)",
+    "tax": "2801234567",
+    "province": "Thanh Hóa",
+    "ministry": "Bộ Công Thương",
+    "sector": "Hóa chất & Lọc dầu",
+    "threshold": "≥ 3.000 tCO₂e (3.400.000 tCO₂e/năm)",
+    "status": "Bắt buộc kiểm kê 2026",
+    "isEts": true,
+    "address": "KKT Nghi Sơn, TX. Nghi Sơn, Tỉnh Thanh Hóa",
+    "obligations": [
+      "Báo cáo kiểm kê KNK định kỳ 2 năm/lần theo Nghị định 06/2022/NĐ-CP."
+    ]
+  },
+  {
+    "id": "FAC-GT-030",
+    "name": "Tổng công ty Hàng không Việt Nam (Vietnam Airlines)",
+    "tax": "0100107518",
+    "province": "Hà Nội",
+    "ministry": "Bộ Giao thông Vận tải",
+    "sector": "Vận tải Hàng không",
+    "threshold": "≥ 1.000 TOE (Nhiên liệu bay Jet A-1)",
+    "status": "Bắt buộc kiểm kê 2026",
+    "isEts": false,
+    "address": "Số 200 Nguyễn Sơn, Q. Long Biên, TP. Hà Nội",
+    "obligations": [
+      "Kiểm kê KNK định kỳ cho toàn bộ đội bay nội địa và quốc tế.",
+      "Tuân thủ khung đo lường CORSIA (ICAO) và báo cáo Bộ GTVT."
+    ]
+  },
+  {
+    "id": "FAC-GT-031",
+    "name": "Công ty Cổ phần Hàng không Vietjet (Vietjet Air)",
+    "tax": "0102325379",
+    "province": "TP. Hồ Chí Minh",
+    "ministry": "Bộ Giao thông Vận tải",
+    "sector": "Vận tải Hàng không",
+    "threshold": "≥ 1.000 TOE (Nhiên liệu bay Jet A-1)",
+    "status": "Bắt buộc kiểm kê 2026",
+    "isEts": false,
+    "address": "Sân bay Quốc tế Tân Sơn Nhất, Q. Tân Bình, TP. Hồ Chí Minh",
+    "obligations": [
+      "Kiểm kê KNK hàng năm và xây dựng lộ trình sử dụng nhiên liệu hàng không bền vững (SAF)."
+    ]
+  },
+  {
+    "id": "FAC-GT-032",
+    "name": "Tổng công ty Đường sắt Việt Nam (VNR)",
+    "tax": "0100105052",
+    "province": "Hà Nội",
+    "ministry": "Bộ Giao thông Vận tải",
+    "sector": "Vận tải Đường sắt",
+    "threshold": "≥ 1.000 TOE / 3.000 tCO₂e",
+    "status": "Bắt buộc kiểm kê 2026",
+    "isEts": false,
+    "address": "118 Lê Duẩn, Q. Hoàn Kiếm, TP. Hà Nội",
+    "obligations": [
+      "Kiểm kê KNK định kỳ 2 năm/lần cho các đoàn tàu đầu máy diesel."
+    ]
+  },
+  {
+    "id": "FAC-GT-033",
+    "name": "Công ty Cổ phần Cảng Sài Gòn",
+    "tax": "0300479704",
+    "province": "TP. Hồ Chí Minh",
+    "ministry": "Bộ Giao thông Vận tải",
+    "sector": "Cảng biển & Logistics",
+    "threshold": "≥ 1.000 TOE",
+    "status": "Bắt buộc kiểm kê 2026",
+    "isEts": false,
+    "address": "Số 3 Nguyễn Tất Thành, Q.4, TP. Hồ Chí Minh",
+    "obligations": [
+      "Kiểm kê KNK thiết bị nâng hạ cẩu bốc xếp và xe chuyên dụng nội bộ cảng."
+    ]
+  },
+  {
+    "id": "FAC-GT-034",
+    "name": "Công ty Cổ phần Cảng Hải Phòng",
+    "tax": "0200111234",
+    "province": "Hải Phòng",
+    "ministry": "Bộ Giao thông Vận tải",
+    "sector": "Cảng biển & Logistics",
+    "threshold": "≥ 1.000 TOE",
+    "status": "Bắt buộc kiểm kê 2026",
+    "isEts": false,
+    "address": "8A Trần Phú, Q. Ngô Quyền, TP. Hải Phòng",
+    "obligations": [
+      "Kiểm kê KNK định kỳ 2 năm/lần nộp Sở TN&MT Hải Phòng."
+    ]
+  },
+  {
+    "id": "FAC-GT-035",
+    "name": "Công ty Cổ phần Vận tải biển Việt Nam (VOSCO)",
+    "tax": "0200108765",
+    "province": "Hải Phòng",
+    "ministry": "Bộ Giao thông Vận tải",
+    "sector": "Vận tải Biển",
+    "threshold": "≥ 1.000 TOE (Nhiên liệu dầu MFO/MDO)",
+    "status": "Bắt buộc kiểm kê 2026",
+    "isEts": false,
+    "address": "215 Lạch Tray, Q. Ngô Quyền, TP. Hải Phòng",
+    "obligations": [
+      "Kiểm kê KNK đội tàu vận tải hàng rời và dầu sản phẩm theo chuẩn IMO DCS."
+    ]
+  },
+  {
+    "id": "FAC-XD-036",
+    "name": "Tòa tháp Landmark 81 - Vinhomes Central Park",
+    "tax": "0105872345",
+    "province": "TP. Hồ Chí Minh",
+    "ministry": "Bộ Xây dựng",
+    "sector": "Tòa nhà Thương mại",
+    "threshold": "≥ 1.000 TOE (Điện năng > 11,2 triệu kWh/năm)",
+    "status": "Bắt buộc kiểm kê 2026",
+    "isEts": false,
+    "address": "720A Điện Biên Phủ, Q. Bình Thạnh, TP. Hồ Chí Minh",
+    "obligations": [
+      "Kiểm kê phát thải Scope 2 từ điện năng tiêu thụ hệ thống chiller, thang máy và chiếu sáng.",
+      "Kiểm kê rò rỉ môi chất lạnh gas điều hòa (Scope 1 fugitive emissions) nộp trước 31/03."
+    ]
+  },
+  {
+    "id": "FAC-XD-037",
+    "name": "Tòa nhà Keangnam Hanoi Landmark Tower (Landmark 72)",
+    "tax": "0102315789",
+    "province": "Hà Nội",
+    "ministry": "Bộ Xây dựng",
+    "sector": "Tòa nhà Thương mại",
+    "threshold": "≥ 1.000 TOE (Điện năng > 6,8 triệu kWh/năm)",
+    "status": "Bắt buộc kiểm kê 2026",
+    "isEts": false,
+    "address": "Đường Phạm Hùng, Q. Nam Từ Liêm, TP. Hà Nội",
+    "obligations": [
+      "Kiểm kê KNK định kỳ 2 năm/lần nộp Sở Xây dựng và Sở TN&MT Hà Nội."
+    ]
+  },
+  {
+    "id": "FAC-XD-038",
+    "name": "Tòa nhà Lotte Center Hanoi",
+    "tax": "0104123890",
+    "province": "Hà Nội",
+    "ministry": "Bộ Xây dựng",
+    "sector": "Tòa nhà Thương mại",
+    "threshold": "≥ 1.000 TOE (Điện năng > 7,5 triệu kWh/năm)",
+    "status": "Bắt buộc kiểm kê 2026",
+    "isEts": false,
+    "address": "54 Liễu Giai, Q. Ba Đình, TP. Hà Nội",
+    "obligations": [
+      "Báo cáo kiểm kê KNK cấp cơ sở định kỳ 02 năm/lần."
+    ]
+  },
+  {
+    "id": "FAC-XD-039",
+    "name": "Tòa tháp Bitexco Financial Tower",
+    "tax": "0300789012",
+    "province": "TP. Hồ Chí Minh",
+    "ministry": "Bộ Xây dựng",
+    "sector": "Tòa nhà Thương mại",
+    "threshold": "≥ 1.000 TOE",
+    "status": "Bắt buộc kiểm kê 2026",
+    "isEts": false,
+    "address": "Số 2 Hải Triều, Q.1, TP. Hồ Chí Minh",
+    "obligations": [
+      "Kiểm kê KNK định kỳ 2 năm/lần nộp trước 31/03."
+    ]
+  },
+  {
+    "id": "FAC-XD-040",
+    "name": "Khách sạn JW Marriott Hotel Hanoi",
+    "tax": "0105123987",
+    "province": "Hà Nội",
+    "ministry": "Bộ Xây dựng",
+    "sector": "Khách sạn & Nghỉ dưỡng",
+    "threshold": "≥ 1.000 TOE",
+    "status": "Bắt buộc kiểm kê 2026",
+    "isEts": false,
+    "address": "Số 8 Đỗ Đức Dục, Q. Nam Từ Liêm, TP. Hà Nội",
+    "obligations": [
+      "Kiểm kê KNK định kỳ và áp dụng các giải pháp tiết kiệm năng lượng tòa nhà."
+    ]
+  },
+  {
+    "id": "FAC-XD-041",
+    "name": "Tổng công ty Viglacera - Nhà máy Gạch ốp lát Tiên Sơn",
+    "tax": "0100100456",
+    "province": "Bắc Ninh",
+    "ministry": "Bộ Xây dựng",
+    "sector": "Vật liệu Xây dựng",
+    "threshold": "≥ 1.000 TOE / 3.000 tCO₂e",
+    "status": "Bắt buộc kiểm kê 2026",
+    "isEts": false,
+    "address": "KCN Tiên Sơn, TX. Từ Sơn, Tỉnh Bắc Ninh",
+    "obligations": [
+      "Kiểm kê KNK lò nung gạch ceramic và nhiên liệu khí đốt tự nhiên/LPG."
+    ]
+  },
+  {
+    "id": "FAC-TM-042",
+    "name": "Công ty TNHH Xử lý chất thải Việt Nam (Khu Đa Phước - VWS)",
+    "tax": "0303123789",
+    "province": "TP. Hồ Chí Minh",
+    "ministry": "Bộ Tài nguyên và Môi trường",
+    "sector": "Xử lý Chất thải rắn",
+    "threshold": "≥ 65.000 tấn rác/năm (1.800.000 tấn/năm)",
+    "status": "Bắt buộc kiểm kê 2026",
+    "isEts": false,
+    "address": "Xã Đa Phước, Huyện Bình Chánh, TP. Hồ Chí Minh",
+    "obligations": [
+      "Kiểm kê KNK phát sinh từ phân hủy kỵ khí chôn lấp rác sinh hoạt (Scope 1 methane CH₄).",
+      "Đo lường lượng khí metan thu hồi phát điện."
+    ]
+  },
+  {
+    "id": "FAC-TM-043",
+    "name": "Công ty TNHH MTV Môi trường Đô thị Hà Nội (URENCO - Nam Sơn)",
+    "tax": "0100100890",
+    "province": "Hà Nội",
+    "ministry": "Bộ Tài nguyên và Môi trường",
+    "sector": "Xử lý Chất thải rắn",
+    "threshold": "≥ 65.000 tấn rác/năm (1.500.000 tấn/năm)",
+    "status": "Bắt buộc kiểm kê 2026",
+    "isEts": false,
+    "address": "Khu liên hợp xử lý rác thải Nam Sơn, Huyện Sóc Sơn, TP. Hà Nội",
+    "obligations": [
+      "Báo cáo kiểm kê KNK cấp cơ sở nộp Bộ TN&MT trước ngày 31/03."
+    ]
+  },
+  {
+    "id": "FAC-TM-044",
+    "name": "Nhà máy Điện rác Sóc Sơn (Công ty CP Năng lượng Môi trường Thiên Ý)",
+    "tax": "0108123456",
+    "province": "Hà Nội",
+    "ministry": "Bộ Tài nguyên và Môi trường",
+    "sector": "Xử lý Chất thải rắn",
+    "threshold": "≥ 65.000 tấn rác/năm (1.400.000 tấn/năm)",
+    "status": "Bắt buộc kiểm kê 2026",
+    "isEts": false,
+    "address": "Xã Nam Sơn, Huyện Sóc Sơn, TP. Hà Nội",
+    "obligations": [
+      "Kiểm kê KNK phát sinh từ quá trình đốt rác sinh hoạt và phát điện."
+    ]
+  },
+  {
+    "id": "FAC-CT-045",
+    "name": "Tổng công ty May Việt Tiến",
+    "tax": "0300401524",
+    "province": "TP. Hồ Chí Minh",
+    "ministry": "Bộ Công Thương",
+    "sector": "Dệt may & May mặc",
+    "threshold": "≥ 1.000 TOE",
+    "status": "Bắt buộc kiểm kê 2026",
+    "isEts": false,
+    "address": "Số 7 Lê Minh Xuân, Q. Tân Bình, TP. Hồ Chí Minh",
+    "obligations": [
+      "Kiểm kê KNK định kỳ 2 năm/lần và lập hồ sơ dấu chân carbon sản phẩm xuất khẩu."
+    ]
+  },
+  {
+    "id": "FAC-CT-046",
+    "name": "Công ty CP Dệt may - Đầu tư - Thương mại Thành Công (TCM)",
+    "tax": "0301446221",
+    "province": "TP. Hồ Chí Minh",
+    "ministry": "Bộ Công Thương",
+    "sector": "Dệt may & May mặc",
+    "threshold": "≥ 1.000 TOE / 3.000 tCO₂e",
+    "status": "Bắt buộc kiểm kê 2026",
+    "isEts": false,
+    "address": "36 Tây Thạnh, Q. Tân Phú, TP. Hồ Chí Minh",
+    "obligations": [
+      "Kiểm kê KNK chuỗi dệt nhuộm may hoàn tất."
+    ]
+  },
+  {
+    "id": "FAC-CT-047",
+    "name": "Tổng công ty Cổ phần May Nhà Bè (NBC)",
+    "tax": "0300398765",
+    "province": "TP. Hồ Chí Minh",
+    "ministry": "Bộ Công Thương",
+    "sector": "Dệt may & May mặc",
+    "threshold": "≥ 1.000 TOE",
+    "status": "Bắt buộc kiểm kê 2026",
+    "isEts": false,
+    "address": "Số 4 Bến Nghé, Q.7, TP. Hồ Chí Minh",
+    "obligations": [
+      "Kiểm kê KNK định kỳ 2 năm/lần nộp trước 31/03."
+    ]
+  },
+  {
+    "id": "FAC-CT-048",
+    "name": "Tổng công ty CP Bia - Rượu - NGK Sài Gòn (Sabeco Củ Chi)",
+    "tax": "0300583659",
+    "province": "TP. Hồ Chí Minh",
+    "ministry": "Bộ Công Thương",
+    "sector": "Chế biến Thực phẩm & Đồ uống",
+    "threshold": "≥ 1.000 TOE / 3.000 tCO₂e",
+    "status": "Bắt buộc kiểm kê 2026",
+    "isEts": false,
+    "address": "KCN Tây Bắc Củ Chi, Huyện Củ Chi, TP. Hồ Chí Minh",
+    "obligations": [
+      "Kiểm kê KNK hơi nước nồi hơi, thu hồi khí CO₂ lên men bia và điện năng tiêu thụ."
+    ]
+  },
+  {
+    "id": "FAC-CT-049",
+    "name": "Công ty CP Sữa Việt Nam - Nhà máy Sữa Mega Vinamilk",
+    "tax": "0300588569",
+    "province": "Bình Dương",
+    "ministry": "Bộ Công Thương",
+    "sector": "Chế biến Thực phẩm & Đồ uống",
+    "threshold": "≥ 1.000 TOE / 3.000 tCO₂e",
+    "status": "Bắt buộc kiểm kê 2026",
+    "isEts": false,
+    "address": "KCN Mỹ Phước 2, TX. Bến Cát, Tỉnh Bình Dương",
+    "obligations": [
+      "Kiểm kê KNK cấp cơ sở định kỳ 2 năm/lần và công bố lộ trình trung hòa carbon Net Zero."
+    ]
+  },
+  {
+    "id": "FAC-CT-050",
+    "name": "Công ty Cổ phần Acecook Việt Nam",
+    "tax": "0300808687",
+    "province": "TP. Hồ Chí Minh",
+    "ministry": "Bộ Công Thương",
+    "sector": "Chế biến Thực phẩm & Đồ uống",
+    "threshold": "≥ 1.000 TOE",
+    "status": "Bắt buộc kiểm kê 2026",
+    "isEts": false,
+    "address": "Lô II-3, KCN Tân Bình, Q. Tân Phú, TP. Hồ Chí Minh",
+    "obligations": [
+      "Kiểm kê KNK lò chiên mì và nồi hơi sinh khối nộp trước 31/03."
+    ]
+  },
+  {
+    "id": "FAC-NN-051",
+    "name": "Công ty Cổ phần Chăn nuôi C.P. Việt Nam",
+    "tax": "3600224523",
+    "province": "Đồng Nai",
+    "ministry": "Bộ Nông nghiệp & PTNT",
+    "sector": "Chăn nuôi & Chế biến Thực phẩm",
+    "threshold": "≥ 3.000 tCO₂e",
+    "status": "Bắt buộc kiểm kê 2026",
+    "isEts": false,
+    "address": "KCN Biên Hòa 2, TP. Biên Hòa, Tỉnh Đồng Nai",
+    "obligations": [
+      "Kiểm kê KNK phát sinh từ hệ thống chuồng trại chăn nuôi công nghiệp (Methane CH₄) và nhà máy thức ăn chăn nuôi."
+    ]
+  },
+  {
+    "id": "FAC-NN-052",
+    "name": "Tập đoàn Dabaco Việt Nam",
+    "tax": "2300100456",
+    "province": "Bắc Ninh",
+    "ministry": "Bộ Nông nghiệp & PTNT",
+    "sector": "Chăn nuôi & Chế biến Thực phẩm",
+    "threshold": "≥ 1.000 TOE / 3.000 tCO₂e",
+    "status": "Bắt buộc kiểm kê 2026",
+    "isEts": false,
+    "address": "Số 35 Lý Thái Tổ, TP. Bắc Ninh, Tỉnh Bắc Ninh",
+    "obligations": [
+      "Kiểm kê KNK định kỳ 2 năm/lần nộp Sở NN&PTNT Bắc Ninh trước 31/03."
+    ]
+  },
+  {
+    "id": "FAC-CT-053",
+    "name": "Tổng công ty Giấy Việt Nam (Nhà máy Giấy Bãi Bằng)",
+    "tax": "2600100890",
+    "province": "Phú Thọ",
+    "ministry": "Bộ Công Thương",
+    "sector": "Giấy & Bột giấy",
+    "threshold": "≥ 1.000 TOE / 3.000 tCO₂e",
+    "status": "Bắt buộc kiểm kê 2026",
+    "isEts": false,
+    "address": "Thị trấn Phong Châu, Huyện Phù Ninh, Tỉnh Phú Thọ",
+    "obligations": [
+      "Kiểm kê KNK lò thu hồi kiềm và nồi hơi đốt than nộp trước 31/03."
+    ]
+  },
+  {
+    "id": "FAC-CT-054",
+    "name": "Công ty Cổ phần Giấy An Hòa",
+    "tax": "5000123456",
+    "province": "Tuyên Quang",
+    "ministry": "Bộ Công Thương",
+    "sector": "Giấy & Bột giấy",
+    "threshold": "≥ 1.000 TOE / 3.000 tCO₂e",
+    "status": "Bắt buộc kiểm kê 2026",
+    "isEts": false,
+    "address": "Xã An Hòa, Huyện Sơn Dương, Tỉnh Tuyên Quang",
+    "obligations": [
+      "Kiểm kê KNK định kỳ 2 năm/lần."
+    ]
+  }
+];
+
+    function renderFacilitiesTable(list) {
+      const tbody = document.getElementById('facilitiesTableBody');
+      const countLabel = document.getElementById('facilityCountLabel');
+      if (!tbody) return;
+
+      if (!list || list.length === 0) {
+        tbody.innerHTML = '<tr><td colspan="8" style="text-align:center; padding:2.5rem 1rem; color:#64748b;">Không tìm thấy cơ sở nào phù hợp với bộ lọc tìm kiếm.<br><span style="font-size:0.8rem; color:#94a3b8;">Thử tìm kiếm với từ khóa khác hoặc xóa bộ lọc.</span></td></tr>';
+        if (countLabel) countLabel.innerHTML = 'Tìm thấy <strong>0</strong> cơ sở phù hợp trong danh mục QĐ 42/2026/QĐ-TTg';
+        return;
+      }
+
+      if (countLabel) {
+        countLabel.innerHTML = 'Đang hiển thị <strong>' + list.length + '</strong> cơ sở phù hợp trong danh mục QĐ 42/2026/QĐ-TTg';
+      }
+
+      tbody.innerHTML = list.map(function(f) {
+        var etsHtml = f.isEts ? '<span class="gs-tag-ets">Sàn V-ETS</span>' : '';
+        return '<tr onclick="openFacilityModal(\'' + f.id + '\')">' +
+          '<td><span style="font-size:0.75rem; color:#64748b; font-family:monospace;">' + f.id + '</span></td>' +
+          '<td><strong style="color:#0f172a; font-size:0.88rem;">' + f.name + '</strong><div style="font-size:0.75rem; color:#64748b; margin-top:0.15rem;">' + f.address + '</div></td>' +
+          '<td><span style="font-family:monospace; color:#334155; font-size:0.8rem;">' + f.tax + '</span></td>' +
+          '<td><span style="font-weight:600; color:#334155;">' + f.province + '</span></td>' +
+          '<td><div style="font-size:0.82rem; font-weight:600; color:#0f172a;">' + f.sector + '</div><div style="font-size:0.75rem; color:#64748b;">' + f.ministry + '</div></td>' +
+          '<td><span style="font-size:0.78rem; color:#475569;">' + f.threshold + '</span></td>' +
+          '<td><span class="gs-tag-req">' + f.status + '</span>' + etsHtml + '</td>' +
+          '<td style="text-align:right;"><button type="button" class="gs-btn-view-req" onclick="event.stopPropagation(); openFacilityModal(\'' + f.id + '\')">Hồ sơ nghĩa vụ &rarr;</button></td>' +
+        '</tr>';
+      }).join('');
+    }
+
+    function filterFacilities() {
+      var kwInput = document.getElementById('facilitySearchInput');
+      var kw = (kwInput ? kwInput.value : '').toLowerCase().trim();
+      var minInput = document.getElementById('ministryFilter');
+      var ministry = minInput ? minInput.value : '';
+      var provInput = document.getElementById('provinceFilter');
+      var province = provInput ? provInput.value : '';
+      var secInput = document.getElementById('sectorFilter');
+      var sector = secInput ? secInput.value : '';
+
+      var filtered = facilitiesData.filter(function(f) {
+        var matchKw = !kw || f.name.toLowerCase().indexOf(kw) !== -1 || f.tax.toLowerCase().indexOf(kw) !== -1 || f.address.toLowerCase().indexOf(kw) !== -1 || f.province.toLowerCase().indexOf(kw) !== -1;
+        var matchMinistry = !ministry || f.ministry === ministry;
+        var matchProvince = !province || f.province === province;
+        var matchSector = !sector || f.sector.indexOf(sector) !== -1;
+        return matchKw && matchMinistry && matchProvince && matchSector;
+      });
+
+      renderFacilitiesTable(filtered);
+    }
+
+    function switchLookupTab(tab) {
+      var btnSearch = document.getElementById('tabBtnSearch');
+      var btnCalc = document.getElementById('tabBtnCalc');
+      var bodySearch = document.getElementById('tabBodySearch');
+      var bodyCalc = document.getElementById('tabBodyCalc');
+
+      if (tab === 'search') {
+        if (btnSearch) btnSearch.classList.add('active');
+        if (btnCalc) btnCalc.classList.remove('active');
+        if (bodySearch) bodySearch.style.display = 'block';
+        if (bodyCalc) bodyCalc.style.display = 'none';
+      } else {
+        if (btnCalc) btnCalc.classList.add('active');
+        if (btnSearch) btnSearch.classList.remove('active');
+        if (bodySearch) bodySearch.style.display = 'none';
+        if (bodyCalc) bodyCalc.style.display = 'block';
+        runSelfAssessment();
+      }
+    }
+
+    function openFacilityModal(id) {
+      var f = facilitiesData.find(function(item) { return item.id === id; });
+      if (!f) return;
+
+      var obligationsHtml = f.obligations.map(function(o) {
+        return '<li style="margin-bottom:0.6rem; line-height:1.5;">' + o + '</li>';
+      }).join('');
+
+      var etsBadge = f.isEts ? '<span class="gs-tag-ets">Đối tượng thí điểm Sàn V-ETS</span>' : '';
+
+      document.getElementById('facilityModalBody').innerHTML = 
+        '<div style="background:#f0fdf4; border:1px solid #bbf7d0; border-radius:6px; padding:1.25rem; margin-bottom:1.5rem;">' +
+          '<div style="display:flex; justify-content:space-between; align-items:flex-start; flex-wrap:wrap; gap:0.5rem; margin-bottom:0.75rem;">' +
+            '<div>' +
+              '<span class="gs-tag-req" style="margin-bottom:0.35rem;">' + f.status + '</span>' + etsBadge +
+              '<h2 style="font-size:1.25rem; font-weight:800; color:#0f172a; margin:0.35rem 0 0 0;">' + f.name + '</h2>' +
+            '</div>' +
+            '<span style="font-family:monospace; background:#e2e8f0; padding:0.25rem 0.5rem; border-radius:3px; font-size:0.8rem; font-weight:700;">' + f.id + '</span>' +
+          '</div>' +
+          '<div style="display:grid; grid-template-columns:1fr 1fr; gap:0.6rem; font-size:0.85rem; color:#334155; margin-top:1rem; padding-top:0.75rem; border-top:1px solid #bbf7d0;">' +
+            '<div><strong>Mã số thuế:</strong> ' + f.tax + '</div>' +
+            '<div><strong>Địa phương:</strong> ' + f.province + '</div>' +
+            '<div><strong>Bộ quản lý:</strong> ' + f.ministry + '</div>' +
+            '<div><strong>Lĩnh vực:</strong> ' + f.sector + '</div>' +
+            '<div style="grid-column: span 2;"><strong>Địa chỉ cơ sở:</strong> ' + f.address + '</div>' +
+            '<div style="grid-column: span 2;"><strong>Ngưỡng định lượng xác định:</strong> <span style="color:#b91c1c; font-weight:700;">' + f.threshold + '</span></div>' +
+          '</div>' +
+        '</div>' +
+        '<h3 style="font-size:1rem; font-weight:800; color:#0f172a; margin:1.5rem 0 0.75rem 0;">Căn cứ Pháp lý &amp; Nghĩa vụ Bắt buộc của Doanh nghiệp</h3>' +
+        '<div style="background:#fef2f2; border-left:4px solid #dc2626; padding:0.85rem 1rem; border-radius:3px; font-size:0.85rem; color:#991b1b; margin-bottom:1.25rem;">' +
+          '<strong>Căn cứ:</strong> Quyết định số 42/2026/QĐ-TTg ngày 10/08/2026 của Thủ tướng Chính phủ và Nghị định số 06/2022/NĐ-CP.' +
+        '</div>' +
+        '<ul style="padding-left:1.25rem; font-size:0.88rem; color:#1e293b;">' +
+          obligationsHtml +
+          '<li style="margin-bottom:0.6rem; line-height:1.5;">' +
+            '<strong>Chế tài xử phạt nếu vi phạm:</strong> Phạt tiền từ <strong>500.000.000 đến 1.000.000.000 VNĐ</strong> và đình chỉ phân bổ hạn ngạch phát thải theo Nghị định 45/2022/NĐ-CP nếu không thực hiện kiểm kê hoặc gian dối số liệu.' +
+          '</li>' +
+        '</ul>' +
+        '<div style="margin-top:2rem; display:flex; gap:0.75rem; justify-content:flex-end; flex-wrap:wrap;">' +
+          '<a href="docs/42-2026-qd-ttg-danh-muc-kiem-ke-knk.pdf" target="_blank" class="gs-action-pill" style="color:#0f172a; border-color:#cbd5e1; text-decoration:none; padding:0.5rem 1rem;">' +
+            'Xem QĐ 42/2026 (PDF)' +
+          '</a>' +
+          '<a href="login.html" style="background:var(--gs-primary); color:#ffffff; font-weight:700; font-size:0.85rem; padding:0.55rem 1.25rem; border-radius:4px; text-decoration:none;">' +
+            'Lập Báo Cáo KNK Cơ Sở Ngay &rarr;' +
+          '</a>' +
+        '</div>';
+
+      document.getElementById('facilityModal').classList.add('active');
+    }
+
+    function closeFacilityModal(e) {
+      document.getElementById('facilityModal').classList.remove('active');
+    }
+
+    function runSelfAssessment() {
+      var elecInput = document.getElementById('calcElectricity');
+      var elecKwh = parseFloat(elecInput ? elecInput.value : 0) || 0;
+      var coalInput = document.getElementById('calcCoal');
+      var coalTon = parseFloat(coalInput ? coalInput.value : 0) || 0;
+      var oilInput = document.getElementById('calcOil');
+      var oilLiter = parseFloat(oilInput ? oilInput.value : 0) || 0;
+      var gasInput = document.getElementById('calcGas');
+      var gasKg = parseFloat(gasInput ? gasInput.value : 0) || 0;
+
+      var toeElec = elecKwh * 0.000086;
+      var toeCoal = coalTon * 0.7;
+      var toeOil = oilLiter * 0.00086;
+      var toeGas = gasKg * 0.0011;
+      var totalToe = toeElec + toeCoal + toeOil + toeGas;
+
+      var co2Elec = elecKwh * 0.0007221;
+      var co2Coal = coalTon * 2.45;
+      var co2Oil = oilLiter * 0.00268;
+      var co2Gas = gasKg * 0.00298;
+      var totalCo2 = co2Elec + co2Coal + co2Oil + co2Gas;
+
+      var isRequired = totalToe >= 1000 || totalCo2 >= 3000;
+
+      var resToeEl = document.getElementById('calcResToe');
+      var resCo2El = document.getElementById('calcResCo2');
+      var badgeEl = document.getElementById('calcStatusBadge');
+      var titleEl = document.getElementById('calcStatusTitle');
+      var descEl = document.getElementById('calcStatusDesc');
+
+      if (resToeEl) resToeEl.innerText = totalToe.toLocaleString('vi-VN', {maximumFractionDigits: 1}) + ' TOE/năm';
+      if (resCo2El) resCo2El.innerText = totalCo2.toLocaleString('vi-VN', {maximumFractionDigits: 0}) + ' tCO₂e/năm';
+
+      if (badgeEl && titleEl && descEl) {
+        if (isRequired) {
+          badgeEl.className = 'calc-res-status req';
+          titleEl.innerText = '🔴 BẮT BUỘC KIỂM KÊ KNK CẤP CƠ SỞ';
+          descEl.innerHTML = 'Quy mô năng lượng (<strong>' + totalToe.toLocaleString('vi-VN', {maximumFractionDigits:1}) + ' TOE</strong>) hoặc lượng phát thải (<strong>' + totalCo2.toLocaleString('vi-VN', {maximumFractionDigits:0}) + ' tCO₂e</strong>) của cơ sở đã <strong>vượt ngưỡng quy định</strong> tại Nghị định 06/2022/NĐ-CP. Doanh nghiệp bắt buộc phải lập báo cáo kiểm kê KNK định kỳ 02 năm/lần nộp trước ngày 31/03.';
+        } else {
+          badgeEl.className = 'calc-res-status voluntary';
+          titleEl.innerText = '🟢 CHƯA THUỘC DIỆN BẮT BUỘC THEO DANH MỤC';
+          descEl.innerHTML = 'Quy mô năng lượng (<strong>' + totalToe.toLocaleString('vi-VN', {maximumFractionDigits:1}) + ' TOE</strong>) và phát thải (<strong>' + totalCo2.toLocaleString('vi-VN', {maximumFractionDigits:0}) + ' tCO₂e</strong>) hiện ở dưới ngưỡng bắt buộc. Tuy nhiên, doanh nghiệp được khuyến khích kiểm kê tự nguyện để nâng cao năng lực cạnh tranh chuỗi cung ứng và chuẩn bị cho thuế Carbon.';
+        }
+      }
+    }
+
+    // Initialize table and check URL hash on load
+    document.addEventListener('DOMContentLoaded', function() {
+      if (typeof renderFacilitiesTable === 'function' && typeof facilitiesData !== 'undefined') {
+        renderFacilitiesTable(facilitiesData);
+      }
+      if (window.location.hash === '#tra-cuu-qd42') {
+        filterCategory('tracuu');
+      }
+    });
+  </script>
+  <script src="js/page-transition.js"></script>
+</body>
+</html>

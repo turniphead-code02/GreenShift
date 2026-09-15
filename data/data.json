@@ -1,0 +1,155 @@
+{
+  "Đốt nhiên liệu cố định": {
+    "Nhóm thiết bị sinh hơi và cấp nhiệt": [
+      "Lò hơi công nghiệp",
+      "Lò hơi đốt cặn dầu/dầu đá phiến",
+      "Lò hơi đốt dầu DO",
+      "Lò hơi đốt khí hóa lỏng",
+      "Lò hơi đốt than bột Bitum",
+      "Lò hơi ghi rải than Bitum",
+      "Lò hơi tầng sôi đốt than Bitum",
+      "Lò hơi đốt kiểu lốc xoáy",
+      "Lò hơi ghi nạp liệu than Bitum/Sub-bitum khác",
+      "Lò hơi tầng sôi đốt than bùn",
+      "Lò hơi đốt sinh khối (đốt gỗ và phế phẩm gỗ)",
+      "Lò hơi đốt sinh khối thu hồi dịch đen/lignin",
+      "Lò hơi đốt khí tự nhiên",
+      "Lò dầu truyền nhiệt",
+      "Lò sấy hơi nước",
+      "Lò nung thủy tinh",
+      "Lò sấy gỗ, giấy, sơn, vải"
+    ],
+    "Nhóm thiết bị phát điện và động lực cố định": [
+      "Máy phát điện dự phòng và liên tục",
+      "Tuabin khí",
+      "Tuabin khí chạy bằng khí tự nhiên",
+      "Tuabin khí chu trình hỗn hợp",
+      "Động cơ đốt trong cố định",
+      "Động cơ Diesel lớn >600 mã lực (447 kW)",
+      "Động cơ sử dụng nhiên liệu kép lớn",
+      "Động cơ xoay chiều đốt khí tự nhiên 2 kỳ nén nghèo",
+      "Động cơ xoay chiều đốt khí tự nhiên 4 kỳ nén nghèo",
+      "Động cơ xoay chiều đốt khí tự nhiên 4 kỳ nén giàu"
+    ],
+    "Nhóm thiết bị nhiệt luyện và nung sấy công nghiệp Các lò sử dụng nhiệt trực": [
+      "Lò nung",
+      "Lò nung clinker xi măng và lò nung vôi",
+      "Lò nung gốm sứ/gạch",
+      "Lò nung cảm ứng tần số",
+      "Lò sấy",
+      "Lò điện sấy khuôn mẫu",
+      "Lò sấy nông sản, thực phẩm",
+      "Lò sấy công nghiệp trong chế biến gỗ, hóa chất, nhựa đường",
+      "Lò luyện cốc",
+      "Lò cao",
+      "Lò thổi oxy",
+      "Lò hồ quang điện trong luyện kim"
+    ],
+    "Nhóm thiết bị lò sưởi và đun nấu gia dụng / thương mại": [
+      "Lò sưởi ấm",
+      "Lò sưởi ấm trung tâm",
+      "Lò sưởi củi",
+      "Lò sưởi không gian dùng than Anthracite",
+      "Bếp đun nấu",
+      "Bếp đun nấu dùng gas hóa lỏng",
+      "Bếp đun nấu dùng than Bitum",
+      "Bếp dầu hỏa dùng bấc",
+      "Bếp đun sinh khối (gỗ hở)",
+      "Bếp đun sinh khối (củi truyền thống)",
+      "Bếp đun sinh khối (củi không chất xúc tác)",
+      "Bếp đun sinh khối (củi có chất xúc tác)",
+      "Bếp đun sinh khối (than củi)",
+      "Bếp đun sinh khối (phế thải nông nghiệp)",
+      "Bếp đun sinh khối (phân động vật)"
+    ],
+    "Nhóm thiết bị tiêu hủy chất thải Các thiết bị đốt xử lý chất thải hoặc khí dư tại cơ": [
+      "Lò đốt rác thải sinh hoạt/y tế/nguy hại của cơ sở",
+      "Đuốc đốt khí gas dư"
+    ]
+  },
+  "Đốt nhiên liệu di động": {
+    "Nhóm phương tiện vận tải đường bộ": [
+      "Xe ô tô con",
+      "Xe tải nhẹ và tải nặng",
+      "Xe buýt",
+      "Xe máy"
+    ],
+    "Nhóm phương tiện vận tải đường thủy": [
+      "Tàu thủy chở hàng rời",
+      "Tàu chở dầu/hóa chất",
+      "Tàu container",
+      "Tàu hàng khô",
+      "Tàu hỗ trợ mỏ",
+      "Tàu lạnh",
+      "Tàu chở xe tự hành",
+      "Phà và tàu khách",
+      "Sà lan",
+      "Xuồng máy"
+    ],
+    "Nhóm phương tiện vận tải đường sắt": [
+      "Đầu máy xe lửa chạy dầu diesel",
+      "Nhóm phương tiện hàng không: Các phương tiện bay",
+      "Máy bay phản lực",
+      "Máy bay động cơ cánh quạt",
+      "Máy bay thương mại cỡ lớn",
+      "Máy bay phản lực vùng",
+      "Hàng không quân sự",
+      "Tiêm kích chiến đấu",
+      "Huấn luyện",
+      "Nhóm thiết bị động lực di động phi lộ",
+      "Xe nâng",
+      "Máy kéo nông nghiệp",
+      "Máy cưa xích",
+      "Máy xúc",
+      "Máy ủi",
+      "Máy cày",
+      "Máy gặt",
+      "Máy đóng cọc xây dựng"
+    ]
+  },
+  "Phát thải rò rỉ và phát tán không kiểm soát": {
+    "Khác": [
+      "Hệ thống lạnh và điều hòa không khí",
+      "Thiết bị thông gió mỏ/hầm/lò",
+      "Thiết bị khử khí mỏ",
+      "Máy sản xuất nước lạnh Chillers (HFC-134a, R-410A)",
+      "Điều hòa trung tâm nguyên cụm/đa cụm (PAC/VRV/VRF)",
+      "Máy điều hòa cục bộ",
+      "Thiết bị lạnh thương mại/gia dụng",
+      "Kho cấp đông, đông lạnh thực phẩm",
+      "Điều hòa không khí trên xe ô tô (MAC)",
+      "Thiết bị truyền tải và phân phối điện: Thiết bị điện cao áp sử dụng khí cách điện",
+      "Máy cắt điện cao áp cách điện bằng khí SF6",
+      "Trạm biến áp cách điện bằng khí (GIS)",
+      "Hệ thống phòng cháy chữa cháy (PCCC)",
+      "Bình chữa cháy xách tay",
+      "Hệ thống chữa cháy bằng khí trung tâm (FM-200/HFC-227ea, hệ thống"
+    ],
+    "Hệ thống công nghệ dầu khí và khí đốt": [
+      "Bể chứa xăng dầu",
+      "Hệ thống van",
+      "Mặt bích đường ống",
+      "Hệ thống van xả áp an toàn",
+      "Trạm giảm áp ga",
+      "Trạm nén khí mỏ và giếng khai thác"
+    ]
+  },
+  "Phát thải từ quá trình công nghiệp": {
+    "Khác": [
+      "Lò phản ứng hóa/lý chuyên dụng: Nơi diễn ra các phản ứng phân hủy hoặc hoàn",
+      "Lò phân hủy đá vôi trong",
+      "Lò phản ứng reforming hơi nước",
+      "Lò thổi oxy hoặc lò hồ quang điện trong luyện thép"
+    ],
+    "Bể điện phân hóa chất/kim loại": [
+      "Bể điện phân nhôm nóng chảy"
+    ]
+  },
+  "Sử dụng đất, thay đổi sử dụng đất và lâm nghiệp (LULUCF)": {
+    "Khác": [
+      "Bể hấp thụ và phát thải sinh học",
+      "Khu vực rừng trồng của tổ chức",
+      "Đất ngập nước nhân tạo"
+    ]
+  }
+}
